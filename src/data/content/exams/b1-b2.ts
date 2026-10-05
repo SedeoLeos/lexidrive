@@ -8,7 +8,7 @@ export const EXAM_B1_B2: ExamSeed = {
   toLevel: 'B2',
   title: 'Examen de passage B1 ➔ B2',
   description:
-    "Valide l'autonomie : present perfect, past continuous, modaux, conditionnels, faux amis et argumentation. 80 % requis.",
+    "Valide l'autonomie : present perfect, past continuous, modaux, conditionnels, faux amis, argumentation, pourcentages et anglais technique d'atelier. 80 % requis.",
   passRatio: 0.8,
   questions: [
     examMcq(
@@ -150,6 +150,51 @@ export const EXAM_B1_B2: ExamSeed = {
       'We must protect the ___.',
       'environment',
       'E-N-V-I-R-O-N-M-E-N-T : le N avant -ment est souvent oublié.',
+    ),
+    examMcq(
+      'Nombres & maths',
+      "« 2,5 % » s'écrit et se lit :",
+      [
+        '2,5% — two comma five percent',
+        '2.5% — two point five percent',
+        '2.5% — two dot five percents',
+        '2,5% — two and five percent',
+      ],
+      '2.5% — two point five percent',
+      'Décimale = point (point five) ; percent est invariable.',
+    ),
+    examMcq(
+      'Nombres & maths',
+      'Complète : « Sales rose ___ 10 % to 2 million. »',
+      ['by', 'to', 'of', 'at'],
+      'by',
+      "BY = l'écart, TO = le niveau atteint.",
+    ),
+    examMcq(
+      'Anglais technique',
+      'Consigne de sécurité correcte :',
+      [
+        'Never open the cover while the machine is running.',
+        "Don't never open the cover.",
+        'You not open the cover.',
+        'Opening never the cover.',
+      ],
+      'Never open the cover while the machine is running.',
+      'Never + impératif, sans double négation.',
+    ),
+    examMcq(
+      'Anglais technique',
+      'Le contraire de « tighten » :',
+      ['loosen', 'lose', 'lighten', 'untie'],
+      'loosen',
+      'Tighten (serrer) ↔ loosen (desserrer).',
+    ),
+    examFill(
+      'Anglais technique',
+      'Écris le mot manquant (sécurité, adjectif + nom : lunettes de protection).',
+      'Always wear ___ goggles.',
+      'safety',
+      'Safety goggles.',
     ),
   ],
 };

@@ -43,7 +43,7 @@ export function ExamPage({ examId }: { examId: string }) {
       <FocusTemplate closeIcon="x" showSession={false}>
         <EmptyState
           icon="lock"
-          title="Examen pas encore disponible"
+          title="Examen non disponible"
           message={error.message}
           actionLabel="Retour"
           onAction={() => router.back()}
@@ -106,8 +106,9 @@ export function ExamPage({ examId }: { examId: string }) {
         <Surface className="gap-2">
           <AppText variant="subheading">Les règles</AppText>
           <AppText variant="caption" tone="soft">
-            QCM et textes à trous orthographiques. Aucune correction n'est affichée avant la remise de la copie. Tu peux
-            naviguer entre les questions et modifier tes réponses.
+            Accès direct : pas besoin d'avoir suivi les leçons si tu as déjà le niveau. QCM et textes à trous
+            orthographiques, avec une partie nombres et maths et, dès B1, de l'anglais technique. Aucune correction
+            n'est affichée avant la remise de la copie ; tu peux naviguer entre les questions et modifier tes réponses.
           </AppText>
         </Surface>
         <Button label="Commencer l'examen" icon="arrow-right" fullWidth onPress={() => setPhase('running')} />

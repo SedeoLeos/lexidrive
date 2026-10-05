@@ -51,9 +51,9 @@ export function DashboardPage() {
   const { exam, nextLesson, streak } = data;
   const examCaption = !exam.exam
     ? ''
-    : exam.eligible
-      ? `${exam.questionCount} questions · ${Math.round(exam.exam.passRatio * 100)} % requis pour atteindre ${exam.exam.toLevel}`
-      : `Termine encore ${exam.lessonsRemaining} leçon(s) de ${data.level} pour l'ouvrir`;
+    : exam.prepared
+      ? `Leçons validées, tu es prêt · ${exam.questionCount} questions`
+      : `Déjà ce niveau ? Teste-toi directement · ${exam.questionCount} questions`;
 
   return (
     <ScreenTemplate header={header}>
@@ -62,7 +62,7 @@ export function DashboardPage() {
         meta={data.levelMeta}
         lessonsCompleted={data.lessonsCompleted}
         lessonsTotal={data.lessonsTotal}
-        examEligible={exam.eligible}
+        examReady={exam.prepared}
         isFinal={data.nextLevel === null}
       />
 
@@ -112,7 +112,6 @@ export function DashboardPage() {
             icon="award"
             label={exam.exam.title}
             caption={examCaption}
-            disabled={!exam.eligible}
             onPress={() => exam.exam && router.push(`/exam/${exam.exam.id}`)}
           />
         ) : null}

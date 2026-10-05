@@ -63,7 +63,7 @@ export function QuizPage({ lessonId }: { lessonId: string }) {
     const correct = details.filter((d) => d.correct).length;
     const outcome = await submitLessonQuiz.execute(lesson.id, correct, details.length);
     const exam = await getExamEligibility.execute(lesson.level);
-    setResult({ outcome, details, examUnlocked: outcome.completed && exam.eligible && exam.exam !== null });
+    setResult({ outcome, details, examUnlocked: outcome.completed && exam.prepared && exam.exam !== null });
   };
 
   if (result) {
@@ -95,7 +95,7 @@ export function QuizPage({ lessonId }: { lessonId: string }) {
         {result.examUnlocked ? (
           <Surface tone="brand" className="gap-3">
             <AppText variant="subheading" tone="brand">
-              L'examen de passage est ouvert.
+              Tu es prêt pour l'examen de passage.
             </AppText>
             <AppText variant="caption" tone="soft">
               Toutes les leçons du niveau {lesson.level} sont validées. Tente l'examen quand tu te sens prêt.

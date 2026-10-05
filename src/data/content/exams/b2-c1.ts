@@ -11,7 +11,7 @@ export const EXAM_B2_C1: ExamSeed = {
   toLevel: 'C1',
   title: 'Examen de passage B2 ➔ C1',
   description:
-    'Le saut vers la précision : vocabulaire des affaires, phrasal verbs, passif, conditionnels mixtes et nuances. 80 % requis.',
+    'Le saut vers la précision : vocabulaire des affaires, phrasal verbs, passif, conditionnels mixtes, nuances, formules mathématiques et anglais informatique. 80 % requis.',
   passRatio: 0.8,
   questions: [
     examMcq(
@@ -163,6 +163,41 @@ export const EXAM_B2_C1: ExamSeed = {
       'The project is behind ___.',
       'schedule',
       'S-C-H-E-D-U-L-E.',
+    ),
+    examMcq(
+      'Nombres & maths',
+      '« x² » se lit :',
+      ['x two', 'x squared', 'x double', 'x square root'],
+      'x squared',
+      'Squared = au carré.',
+    ),
+    examMcq(
+      'Nombres & maths',
+      'Complète : « The pool is 25 metres ___. »',
+      ['length', 'long', 'longer', 'lengthy'],
+      'long',
+      'Après une mesure : adjectif (long, wide, high).',
+    ),
+    examMcq(
+      'Anglais technique',
+      'Complète : « The app keeps ___ when I upload a file. »',
+      ['crash', 'crashing', 'to crash', 'crashed'],
+      'crashing',
+      'Keep + -ING = problème récurrent.',
+    ),
+    examMcq(
+      'Anglais technique',
+      'Verbe correct : « Please ___ your data before the update. »',
+      ['backup', 'back up', 'back-upped', 'backed'],
+      'back up',
+      'Verbe en deux mots (back up), nom en un mot (a backup).',
+    ),
+    examFill(
+      'Anglais technique',
+      'Écris le mot manquant (solution de contournement, en un mot).',
+      "Until the patch is released, here's a ___.",
+      'workaround',
+      'Work + around.',
     ),
   ],
 };

@@ -12,7 +12,7 @@ Son cœur est un **Bootcamp quotidien de 7 heures fractionnables** : chaque minu
 ```bash
 npm install
 npx expo start          # puis « a » (Android) / « i » (iOS) dans un development build
-npm test                # 155 tests : logique, cas d'usage, intégrité du contenu
+npm test                # 229 tests : logique, cas d'usage, intégrité du contenu
 npm run typecheck
 npm run export:content  # régénère docs/CONTENU_PEDAGOGIQUE.md depuis les données
 npm run build:lexicon   # régénère le lexique orthographique hors ligne (SCOWL)
@@ -22,16 +22,16 @@ npm run build:lexicon   # régénère le lexique orthographique hors ligne (SCOW
 
 ## Fonctionnalités
 
-| Besoin                                                                                   | Où                                                                    |
-| ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| Parcours A1 → C2, niveaux verrouillés                                                    | `CoursesPage`, `GetCourseCatalogUseCase`, `isLevelUnlocked`           |
-| Leçon : thème, 20 mots, astuce, 5 phrases                                                | `LessonPage` (onglets Vocabulaire / Grammaire / Phrases)              |
-| 20+ quiz par leçon (QCM, remise en ordre, texte à trous, correction)                     | `QuizRunner`, `evaluateQuiz`                                          |
-| 7 h quotidiennes fractionnables, suivies en temps réel                                   | `useStudySession` → `RecordStudyTimeUseCase` → table `study_time_log` |
-| Examens de passage stricts (80 %) + écran « Félicitations, tu as atteint le niveau X ! » | `ExamPage`, `SubmitExamUseCase`, `LevelUpPage`                        |
-| Journal de Vie & Débat (FR + traduction EN), correcteur local, coffre-fort               | `JournalPage`, `JournalEditor`, `JournalHistoryPage`                  |
-| Dictionnaire pop-up EN ⇄ FR + 🔊 accent UK/US                                            | `DictionaryPopup`, `DictionaryPage`, `SpeakerButton`                  |
-| Rappel quotidien local + série de jours                                                  | `ProfilePage`, `ExpoNotificationService`, `computeStreak`             |
+| Besoin                                                                                                     | Où                                                                    |
+| ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| Parcours A1 → C2, niveaux verrouillés                                                                      | `CoursesPage`, `GetCourseCatalogUseCase`, `isLevelUnlocked`           |
+| Leçon : thème, 20 mots, astuce, 5 phrases                                                                  | `LessonPage` (onglets Vocabulaire / Grammaire / Phrases)              |
+| 20+ quiz par leçon (QCM, remise en ordre, texte à trous, correction)                                       | `QuizRunner`, `evaluateQuiz`                                          |
+| 7 h quotidiennes fractionnables, suivies en temps réel                                                     | `useStudySession` → `RecordStudyTimeUseCase` → table `study_time_log` |
+| Examens de passage stricts (80 %), en accès direct, + écran « Félicitations, tu as atteint le niveau X ! » | `ExamPage`, `SubmitExamUseCase`, `LevelUpPage`                        |
+| Journal de Vie & Débat (FR + traduction EN), correcteur local, coffre-fort                                 | `JournalPage`, `JournalEditor`, `JournalHistoryPage`                  |
+| Dictionnaire pop-up EN ⇄ FR + 🔊 accent UK/US                                                              | `DictionaryPopup`, `DictionaryPage`, `SpeakerButton`                  |
+| Rappel quotidien local + série de jours                                                                    | `ProfilePage`, `ExpoNotificationService`, `computeStreak`             |
 
 ### Suivi du temps (7 h fractionnables)
 
@@ -42,7 +42,7 @@ npm run build:lexicon   # régénère le lexique orthographique hors ligne (SCOW
 
 ### Examens
 
-Chaque transition (A1→A2, A2→B1, B1→B2, B2→C1, C1→C2) a un examen de 20 questions (QCM + textes à trous orthographiques). Il s'ouvre quand **toutes les leçons du niveau sont validées** (≥ 60 % au quiz), aucune correction n'apparaît pendant l'épreuve, et il faut **80 %** pour passer. En cas de réussite, le niveau est mis à jour, le suivant est débloqué et l'écran de félicitations s'affiche.
+Chaque transition (A1→A2, A2→B1, B1→B2, B2→C1, C1→C2) a un examen de 25 questions (QCM + textes à trous orthographiques), avec une section **Nombres & maths** et, dès B1, **Anglais technique**. L'examen du niveau actuel est **ouvert en accès direct** : quelqu'un qui a déjà le niveau peut le passer sans suivre les leçons, puis enchaîner l'examen suivant. Les leçons restent recommandées (« Prêt pour l'examen » quand elles sont toutes validées). Aucune correction n'apparaît pendant l'épreuve, et il faut **80 %** pour passer. En cas de réussite, le niveau est mis à jour, le suivant est débloqué et l'écran de félicitations s'affiche.
 
 ## Architecture
 
@@ -105,9 +105,9 @@ Les tables de contenu sont ré-insérées quand `CONTENT_VERSION` change ; les d
 
 Tout le contenu est en texte dans `src/data/content/` et lisible dans **[docs/CONTENU_PEDAGOGIQUE.md](docs/CONTENU_PEDAGOGIQUE.md)** :
 
-- **Volet 1** : 14 leçons (2 par niveau, 3 pour B1 et B2) avec 20 mots, une astuce, 5 phrases, 21 quiz répartis en catégories A/B/C (294 au total) avec explications, et une consigne de journal ; plus 30 consignes générales (vie / débat).
-- **Volet 2** : 56 mots piliers (faux amis, calques) avec alternatives et collocations, ~70 connecteurs et idiomes classés de B1 à C2, et un socle de ~350 mots fréquents, soit 720 entrées de dictionnaire une fois fusionnées avec le vocabulaire des leçons.
-- **Volet 3** : 5 examens de passage de 20 questions corrigées, dont A2→B1, B2→C1 et C1→C2.
+- **Volet 1** : 22 leçons, dont une filière **Nombres & maths** (A1 compter, A2 calculer, B1 pourcentages et graphiques, B2 géométrie et équations, C2 langage de la démonstration) et une filière **Anglais technique** (B1 outils et sécurité, B2 informatique et dépannage, C1 spécifications) ; chacune avec 20 mots, une astuce, 5 phrases, 21 quiz répartis en catégories A/B/C (462 au total) avec explications, et une consigne de journal ; plus 30 consignes générales (vie / débat).
+- **Volet 2** : 56 mots piliers (faux amis, calques) avec alternatives et collocations, ~70 connecteurs et idiomes classés de B1 à C2, et un socle de ~350 mots fréquents, soit 862 entrées de dictionnaire une fois fusionnées avec le vocabulaire des leçons.
+- **Volet 3** : 5 examens de passage de 25 questions corrigées (grammaire, vocabulaire, orthographe, nombres et maths, anglais technique).
 
 Les tests `src/__tests__/content.test.ts` vérifient ce contrat : 20 mots, 20+ quiz bien formés dans les 3 catégories, un examen par transition, des fautes volontaires bien signalées par le correcteur, etc.
 

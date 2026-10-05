@@ -11,7 +11,7 @@ export const EXAM_C1_C2: ExamSeed = {
   toLevel: 'C2',
   title: 'Examen de passage C1 ➔ C2',
   description:
-    "L'excellence : registre littéraire et académique, ironie, inversions, concessives avancées et précision lexicale. 80 % requis.",
+    "L'excellence : registre littéraire et académique, ironie, inversions, concessives avancées, précision lexicale, langage de la démonstration et spécifications techniques. 80 % requis.",
   passRatio: 0.8,
   questions: [
     examMcq(
@@ -168,6 +168,56 @@ export const EXAM_C1_C2: ExamSeed = {
       'The article was laced with ___.',
       'innuendo',
       'I-N-N-U-E-N-D-O.',
+    ),
+    examMcq(
+      'Mathématiques',
+      'Définition mathématique correcte :',
+      [
+        'Let f is a continuous function.',
+        'Let f be a continuous function.',
+        'Let f to be a continuous function.',
+        'Let be f a continuous function.',
+      ],
+      'Let f be a continuous function.',
+      'Let + sujet + BE (subjonctif).',
+    ),
+    examMcq(
+      'Mathématiques',
+      '« La réciproque est fausse » :',
+      [
+        'The converse does not hold.',
+        'The reciprocal does not hold.',
+        'The inverse is not holding.',
+        'The opposite is wrong in general.',
+      ],
+      'The converse does not hold.',
+      'Converse = réciproque ; hold = être vérifié.',
+    ),
+    examMcq(
+      'Anglais technique',
+      "Modal d'une exigence OBLIGATOIRE dans une spécification :",
+      ['may', 'should', 'shall', 'might'],
+      'shall',
+      'Shall/must = obligatoire, should = recommandé, may = optionnel.',
+    ),
+    examMcq(
+      'Anglais technique',
+      'Exigence la mieux rédigée :',
+      [
+        'The system will be fast.',
+        'The system shall respond within 200 ms.',
+        'The system should be quite quick.',
+        'The system must be user-friendly and fast.',
+      ],
+      'The system shall respond within 200 ms.',
+      'Modal contractuel + valeur mesurable.',
+    ),
+    examFill(
+      'Anglais technique',
+      'Écris le mot manquant (conformité).',
+      '___ with ISO standards is mandatory.',
+      'Compliance',
+      'Comply → compliance.',
     ),
   ],
 };
