@@ -1,0 +1,106 @@
+import type { Level } from '@/core/constants/levels';
+import type { DictionarySeed } from '../types';
+
+/**
+ * Expressions idiomatiques et connecteurs logiques, classés de B1 à C2,
+ * pour structurer des écrits fluides pendant les séances de journal et de débat.
+ */
+
+const idiom = (level: Level, word: string, translation: string, example: string, note?: string): DictionarySeed => ({
+  word, translation, example, note, level, category: 'idiom', partOfSpeech: 'idiom',
+});
+
+const connector = (
+  level: Level,
+  word: string,
+  translation: string,
+  example: string,
+  note: string,
+  alternatives: string[] = [],
+): DictionarySeed => ({
+  word, translation, example, note, alternatives, level, category: 'connector', partOfSpeech: 'connector',
+});
+
+export const IDIOMS_AND_CONNECTORS: DictionarySeed[] = [
+  // ── B1 · Connecteurs ──
+  connector('B1', 'first of all', "tout d'abord", 'First of all, I would like to thank you.', 'Ouvre une énumération.', ['firstly', 'to begin with']),
+  connector('B1', 'in addition', 'de plus, en outre', 'In addition, the hotel offers free parking.', 'Ajoute une idée. Suivi d\'une virgule.', ['moreover', 'furthermore', 'what is more']),
+  connector('B1', 'however', 'cependant', 'The plan is good. However, it is expensive.', 'En début de phrase, suivi d\'une virgule. Ne relie pas deux propositions comme « but ».', ['nevertheless', 'yet']),
+  connector('B1', 'because of', 'à cause de', 'The match was cancelled because of the rain.', '« Because of » + nom ; « because » + sujet + verbe.', ['due to', 'owing to']),
+  connector('B1', 'so that', 'afin que, pour que', 'I left early so that I could catch the train.', 'Exprime le but avec un sujet + can/could.', ['in order to (+ verbe)']),
+  connector('B1', 'for example', 'par exemple', 'Many fruits, for example apples, are rich in fibre.', 'Introduit un exemple.', ['for instance', 'such as']),
+  connector('B1', 'in my opinion', 'à mon avis', 'In my opinion, public transport should be free.', 'Évitez « according to me », peu naturel.', ['in my view', 'personally', 'as I see it']),
+  connector('B1', 'finally', 'enfin, pour finir', 'Finally, I would like to add a personal note.', 'Dernier point d\'une liste. Pour « au bout du compte » : eventually.', ['lastly', 'last but not least']),
+  connector('B1', 'as a result', 'par conséquent', 'He missed the bus. As a result, he was late.', 'Introduit une conséquence.', ['consequently', 'therefore']),
+  connector('B1', 'on the other hand', "d'un autre côté", "It's cheap. On the other hand, it's slow.", 'Contraste deux aspects. (On the one hand… on the other hand…)'),
+  // ── B1 · Idiomes ──
+  idiom('B1', 'piece of cake', "du gâteau, c'est facile", 'The test was a piece of cake.'),
+  idiom('B1', 'break the ice', 'briser la glace', 'He told a joke to break the ice.'),
+  idiom('B1', 'under the weather', 'patraque, pas en forme', "I'm feeling a bit under the weather today."),
+  idiom('B1', 'call it a day', "s'arrêter là (pour aujourd'hui)", "It's 7 p.m. — let's call it a day."),
+  idiom('B1', 'on the same page', "sur la même longueur d'onde", 'Before we start, let\'s make sure we\'re on the same page.'),
+  idiom('B1', 'hit the road', 'prendre la route, partir', "It's late, we should hit the road."),
+  idiom('B1', 'keep an eye on', 'garder un œil sur, surveiller', 'Can you keep an eye on my bag?'),
+
+  // ── B2 · Connecteurs ──
+  connector('B2', 'moreover', 'de plus, qui plus est', 'The product is cheap. Moreover, it is eco-friendly.', 'Plus formel que « also ». Renforce un argument.', ['furthermore', 'besides', 'what is more']),
+  connector('B2', 'whereas', 'alors que, tandis que', 'I love coffee, whereas my wife prefers tea.', 'Contraste entre deux faits simultanés.', ['while']),
+  connector('B2', 'despite', 'malgré', 'Despite the rain, we went out.', '+ nom ou -ING (despite being tired). Jamais « despite of ».', ['in spite of', 'notwithstanding (C2)']),
+  connector('B2', 'unless', 'à moins que, sauf si', "We'll miss the train unless we leave now.", '= if… not. Pas de négation après unless.', ['except if', 'if… not']),
+  connector('B2', 'provided that', 'à condition que', 'You can borrow my car provided that you drive carefully.', 'Condition stricte.', ['as long as', 'providing', 'on condition that']),
+  connector('B2', 'therefore', 'donc, par conséquent', 'Costs have risen; therefore, prices will increase.', 'Registre écrit. Souvent entre point-virgule et virgule.', ['thus', 'hence', 'consequently']),
+  connector('B2', 'even though', 'même si, bien que', 'Even though he was tired, he finished the report.', 'Plus fort que « although ». ≠ even if (hypothèse).', ['although', 'though']),
+  connector('B2', 'as far as I am concerned', 'en ce qui me concerne', 'As far as I am concerned, the project is a success.', 'Introduit une opinion personnelle.', ['as for me', 'from my perspective']),
+  connector('B2', 'to sum up', 'pour résumer', 'To sum up, we need more time and more staff.', 'Annonce la conclusion.', ['in short', 'in a nutshell', 'all in all']),
+  connector('B2', 'in other words', 'autrement dit', 'He was let go — in other words, he was fired.', 'Reformule pour clarifier.', ['that is to say', 'put simply']),
+  // ── B2 · Idiomes ──
+  idiom('B2', 'the ball is in your court', "c'est à vous de jouer", "We've made our offer; the ball is in your court."),
+  idiom('B2', 'cut corners', 'bâcler, faire des économies de bouts de chandelle', "Don't cut corners on safety."),
+  idiom('B2', 'get the ball rolling', 'lancer les choses', "Let's get the ball rolling with a quick round of introductions."),
+  idiom('B2', 'a ballpark figure', 'un chiffre approximatif', 'Can you give me a ballpark figure for the budget?'),
+  idiom('B2', 'think outside the box', 'sortir des sentiers battus', 'We need to think outside the box to solve this.'),
+  idiom('B2', 'back to square one', 'retour à la case départ', 'The client rejected the design, so we are back to square one.'),
+  idiom('B2', 'hit the nail on the head', 'mettre le doigt dessus', 'You hit the nail on the head: the problem is communication.'),
+  idiom('B2', 'bite off more than you can chew', 'avoir les yeux plus gros que le ventre', 'With three projects at once, I bit off more than I could chew.'),
+
+  // ── C1 · Connecteurs ──
+  connector('C1', 'nonetheless', 'néanmoins', 'The risks are real; nonetheless, we should proceed.', 'Concession formelle, en début ou fin de proposition.', ['nevertheless', 'even so', 'all the same']),
+  connector('C1', 'albeit', 'quoique, bien que', 'The economy grew, albeit slowly.', 'Suivi d\'un adjectif, adverbe ou groupe nominal, jamais d\'une proposition complète.', ['although', 'if (a significant, if modest, gain)']),
+  connector('C1', 'hence', "d'où, c'est pourquoi", 'Sales fell sharply, hence the decision to cut costs.', 'Peut être suivi d\'un simple nom (hence the delay).', ['thus', 'therefore', 'which is why']),
+  connector('C1', 'thereby', 'de ce fait, ainsi', 'They cut prices, thereby attracting new customers.', 'Suivi de -ING : exprime la conséquence directe.', ['thus', 'in so doing']),
+  connector('C1', 'with regard to', 'en ce qui concerne', 'With regard to your request, we are happy to help.', 'Registre formel (lettre, rapport).', ['regarding', 'concerning', 'as regards']),
+  connector('C1', 'by the same token', 'de même, pour la même raison', 'Prices may rise; by the same token, they may fall.', 'Introduit un raisonnement parallèle.', ['likewise', 'similarly']),
+  connector('C1', 'that being said', 'cela dit', "The plan is ambitious. That being said, it's achievable.", 'Nuance une affirmation précédente.', ['having said that', 'even so']),
+  connector('C1', 'not to mention', 'sans parler de', 'The trip was expensive, not to mention exhausting.', 'Ajoute un élément encore plus fort.', ['let alone (négatif)', 'to say nothing of']),
+  connector('C1', 'on balance', 'tout bien considéré', 'On balance, the benefits outweigh the costs.', 'Conclusion après pesée du pour et du contre.', ['all things considered', 'all in all']),
+  connector('C1', 'to a certain extent', 'dans une certaine mesure', 'To a certain extent, I agree with you.', 'Nuance un accord ou un désaccord.', ['to some extent', 'up to a point']),
+  // ── C1 · Idiomes ──
+  idiom('C1', 'a double-edged sword', "une arme à double tranchant", 'Social media is a double-edged sword.'),
+  idiom('C1', 'the elephant in the room', 'le sujet que tout le monde évite', 'Nobody mentioned the budget cuts — the elephant in the room.'),
+  idiom('C1', 'to play devil\'s advocate', "se faire l'avocat du diable", 'Let me play devil\'s advocate for a moment.'),
+  idiom('C1', 'to beat around the bush', 'tourner autour du pot', "Stop beating around the bush and tell me the truth."),
+  idiom('C1', 'to be at a crossroads', 'être à la croisée des chemins', 'The company is at a crossroads.'),
+  idiom('C1', 'to move the goalposts', 'changer les règles en cours de route', "Every time we're close, the client moves the goalposts."),
+  idiom('C1', 'a blessing in disguise', 'un mal pour un bien', 'Losing that job was a blessing in disguise.'),
+
+  // ── C2 · Connecteurs ──
+  connector('C2', 'notwithstanding', 'nonobstant, malgré', 'Notwithstanding these difficulties, the project succeeded.', 'Très formel. Peut se placer après le nom (these objections notwithstanding).', ['despite', 'in spite of', 'regardless of']),
+  connector('C2', 'be that as it may', "quoi qu'il en soit", 'Be that as it may, we must reach a decision.', 'Écarte poliment l\'argument précédent.', ['nevertheless', 'even so', 'regardless']),
+  connector('C2', 'insofar as', 'dans la mesure où', 'The model is useful insofar as it predicts trends.', 'Limite la portée d\'une affirmation.', ['to the extent that', 'inasmuch as']),
+  connector('C2', 'conversely', 'inversement', 'Urban areas grew; conversely, rural areas declined.', 'Introduit l\'idée inverse.', ['on the contrary', 'by contrast']),
+  connector('C2', 'by the same reasoning', 'selon le même raisonnement', 'By the same reasoning, the second claim also fails.', 'Étend une logique à un autre cas.', ['by extension', 'likewise']),
+  connector('C2', 'let alone', 'et encore moins', "I can't afford a car, let alone a house.", 'Après une proposition négative.', ['much less', 'still less']),
+  connector('C2', 'inasmuch as', 'dans la mesure où, vu que', 'The report is incomplete inasmuch as it ignores costs.', 'Très soutenu ; à la fois cause et limitation.', ['insofar as', 'since']),
+  connector('C2', 'it follows that', "il s'ensuit que", 'If A equals B, it follows that B equals A.', 'Conclusion logique rigoureuse.', ['consequently', 'hence']),
+  connector('C2', 'by and large', "dans l'ensemble", 'By and large, the reforms were well received.', 'Généralisation prudente.', ['on the whole', 'broadly speaking']),
+  connector('C2', 'to all intents and purposes', 'pratiquement, de fait', 'To all intents and purposes, the matter is closed.', 'Souvent mal orthographié « for all intensive purposes ».', ['effectively', 'virtually', 'in effect']),
+  // ── C2 · Idiomes ──
+  idiom('C2', 'a Pyrrhic victory', 'une victoire à la Pyrrhus', 'Winning the lawsuit was a Pyrrhic victory: legal fees ruined them.'),
+  idiom('C2', 'to damn with faint praise', 'éreinter sous couvert de compliments', '"His handwriting is very neat" — the reference damned him with faint praise.'),
+  idiom('C2', 'to gild the lily', "en rajouter inutilement", 'Adding more adjectives would only gild the lily.'),
+  idiom('C2', 'a Sisyphean task', 'un travail de Sisyphe', 'Keeping the inbox empty is a Sisyphean task.'),
+  idiom('C2', 'to have an axe to grind', 'avoir un intérêt personnel, une rancune', 'The critic clearly has an axe to grind.'),
+  idiom('C2', 'the writing is on the wall', 'les signes avant-coureurs sont là', 'With sales collapsing, the writing was on the wall.'),
+  idiom('C2', 'to sit on the fence', 'ménager la chèvre et le chou', 'In this essay you cannot sit on the fence: take a position.'),
+  idiom('C2', 'to throw the baby out with the bathwater', 'jeter le bébé avec l\'eau du bain', 'Reform the system, but don\'t throw the baby out with the bathwater.'),
+];
