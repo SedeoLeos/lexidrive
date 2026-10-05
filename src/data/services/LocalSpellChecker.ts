@@ -15,9 +15,12 @@ export class LocalSpellChecker implements ISpellChecker {
     if (!this.loading) {
       this.loading = (async () => {
         // Lazy import keeps the ~650 KB lexicon out of the startup path.
-        const { LEXICON } = await import('../content/spelling/lexicon');
+        const [{ LEXICON }, { PROPER_NOUNS }] = await Promise.all([
+          import('../content/spelling/lexicon'),
+          import('../content/spelling/properNouns'),
+        ]);
         this.addWords(LEXICON.split('\n'));
-        this.addWords(['a', 'ok', 'email', 'emails', 'online', 'offline', 'wifi', 'smartphone', 'app', 'apps']);
+        this.addWords(['a', ...PROPER_NOUNS]);
       })();
     }
     return this.loading;
