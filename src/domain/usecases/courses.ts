@@ -2,6 +2,9 @@ import { LESSON_PASS_RATIO } from '@/core/constants/bootcamp';
 import { LEVELS, isLevelUnlocked, nextLevel, type Level } from '@/core/constants/levels';
 import type { Lesson, LessonSummary } from '../entities';
 import { scoreRatio } from '../logic/quizGrading';
+import { quizPoints, XP_POINTS } from '../logic/xp';
+import type { Reward } from '../entities';
+import type { AwardXpUseCase } from './motivation';
 import type { ICourseRepository, IExamRepository, IProgressRepository } from '../repositories';
 
 export interface LevelCatalog {
@@ -63,17 +66,37 @@ export class GetLessonUseCase {
 export interface LessonQuizOutcome {
   ratio: number;
   completed: boolean;
+  /** True the first time the lesson reaches the pass mark. */
+  firstCompletion: boolean;
+  reward: Reward | null;
 }
 
 /** Stores a quiz-bank attempt; the lesson is completed once a score ≥ LESSON_PASS_RATIO is reached. */
 export class SubmitLessonQuizUseCase {
-  constructor(private readonly progress: IProgressRepository) {}
+  constructor(
+    private readonly progress: IProgressRepository,
+    private readonly award?: AwardXpUseCase,
+  ) {}
 
-  async execute(lessonId: string, correct: number, total: number): Promise<LessonQuizOutcome> {
+  /**
+   * @param correctWithHint right answers obtained after using a hint (earn half points).
+   */
+  async execute(lessonId: string, correct: number, total: number, correctWithHint = 0): Promise<LessonQuizOutcome> {
     const ratio = scoreRatio(correct, total);
     const completed = ratio >= LESSON_PASS_RATIO;
+    const previous = await this.progress.getLessonProgress(lessonId);
+    const firstCompletion = completed && !previous?.completed;
     await this.progress.saveLessonAttempt(lessonId, ratio, completed);
     await this.progress.addScore('lesson', lessonId, correct, total);
-    return { ratio, completed };
+
+    let reward: Reward | null = null;
+    if (this.award) {
+      const hinted = Math.min(correctWithHint, correct);
+      const points = quizPoints(correct - hinted, hinted) + (firstCompletion ? XP_POINTS.lesson_completed : 0);
+      reward = firstCompletion
+        ? await this.award.execute('lesson_completed', lessonId, points, 'Leçon validée')
+        : await this.award.execute('quiz_correct', lessonId, points, `Quiz · ${correct}/${total}`);
+    }
+    return { ratio, completed, firstCompletion, reward };
   }
 }

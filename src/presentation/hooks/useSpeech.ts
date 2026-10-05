@@ -25,16 +25,24 @@ export function useSpeech() {
   }, []);
 
   const speak = useCallback(
-    async (text: string, key: string = text) => {
-      if (activeKey === key) {
+    async (
+      text: string,
+      key: string = text,
+      { slow = false, restart = false }: { slow?: boolean; restart?: boolean } = {},
+    ) => {
+      if (activeKey === key && !restart) {
         await speakText.stop();
         setActive(null);
         return;
       }
       setActive(key);
-      await speakText.execute(text, () => {
-        if (activeKey === key) setActive(null);
-      });
+      await speakText.execute(
+        text,
+        () => {
+          if (activeKey === key) setActive(null);
+        },
+        slow ? 0.7 : 1,
+      );
     },
     [speakText],
   );

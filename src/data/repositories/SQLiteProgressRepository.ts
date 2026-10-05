@@ -133,6 +133,18 @@ export class SQLiteProgressRepository implements IProgressRepository {
     );
   }
 
+  async countCompletedLessons(): Promise<number> {
+    const row = await this.db.getFirstAsync<{ n: number }>(
+      'SELECT COUNT(*) AS n FROM lesson_progress WHERE completed = 1',
+    );
+    return row?.n ?? 0;
+  }
+
+  async getTotalStudySeconds(): Promise<number> {
+    const row = await this.db.getFirstAsync<{ n: number | null }>('SELECT SUM(seconds) AS n FROM study_time_log');
+    return row?.n ?? 0;
+  }
+
   async addScore(source: ScoreSource, refId: string, score: number, maxScore: number): Promise<void> {
     await this.db.runAsync(
       'INSERT INTO score_history (source, ref_id, score, max_score, taken_at) VALUES (?, ?, ?, ?, ?)',

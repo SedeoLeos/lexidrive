@@ -63,12 +63,13 @@ export class SpeakTextUseCase {
     private readonly speech: ISpeechService,
   ) {}
 
-  async execute(text: string, onDone?: () => void): Promise<void> {
+  /** @param rateFactor multiplies the learner's preferred rate (e.g. 0.7 for "slow replay"). */
+  async execute(text: string, onDone?: () => void, rateFactor = 1): Promise<void> {
     const trimmed = text.trim();
     if (!trimmed) return;
     const { accent, speechRate } = await this.settings.get();
     await this.speech.stop();
-    await this.speech.speak(trimmed, { accent, rate: speechRate, onDone });
+    await this.speech.speak(trimmed, { accent, rate: speechRate * rateFactor, onDone });
   }
 
   stop(): Promise<void> {

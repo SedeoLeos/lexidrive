@@ -3,6 +3,7 @@ import { Alert, ScrollView, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import type { Exam, ExamAnswer, ExamResult } from '@/domain/entities';
 import { ExamNotAvailableError } from '@/domain/usecases';
+import { useRewards } from '../../state/RewardProvider';
 import { useUseCases } from '../../di/DependenciesProvider';
 import { useAsync } from '../../hooks/useAsync';
 import { useStudySession } from '../../hooks/useStudySession';
@@ -23,6 +24,7 @@ function isAnswered(answer: ExamAnswer | undefined): boolean {
 export function ExamPage({ examId }: { examId: string }) {
   const router = useRouter();
   const { startExam, submitExam } = useUseCases();
+  const { celebrate } = useRewards();
   const { data: exam, error, loading, reload } = useAsync(() => startExam.execute(examId), [startExam, examId]);
   const [phase, setPhase] = useState<'intro' | 'running' | 'result'>('intro');
   const [index, setIndex] = useState(0);
@@ -61,7 +63,8 @@ export function ExamPage({ examId }: { examId: string }) {
   const submit = async (current: Exam) => {
     setSubmitting(true);
     try {
-      const { result: graded, promotedTo } = await submitExam.execute(current, answers);
+      const { result: graded, promotedTo, reward } = await submitExam.execute(current, answers);
+      celebrate(reward);
       if (promotedTo) {
         router.replace(`/level-up/${promotedTo}?score=${graded.score}&max=${graded.maxScore}`);
         return;

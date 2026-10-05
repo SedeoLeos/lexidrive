@@ -71,4 +71,11 @@ export class SQLiteExamRepository implements IExamRepository {
       takenAt: r.taken_at,
     }));
   }
+
+  async countPassed(): Promise<number> {
+    const row = await this.db.getFirstAsync<{ n: number }>(
+      'SELECT COUNT(DISTINCT exam_id) AS n FROM exam_attempts WHERE passed = 1',
+    );
+    return row?.n ?? 0;
+  }
 }

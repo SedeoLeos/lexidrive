@@ -10,7 +10,8 @@ import {
   type ModuleProgress,
 } from '../logic/studyTime';
 import { computeStreak } from '../logic/streak';
-import type { ICourseRepository, IProgressRepository } from '../repositories';
+import type { ICourseRepository, IMotivationRepository, IProgressRepository } from '../repositories';
+import type { AwardXpUseCase } from './motivation';
 import type { ExamEligibility, GetExamEligibilityUseCase } from './exams';
 
 /**
@@ -18,7 +19,11 @@ import type { ExamEligibility, GetExamEligibilityUseCase } from './exams';
  * Returns the number of seconds actually credited.
  */
 export class RecordStudyTimeUseCase {
-  constructor(private readonly progress: IProgressRepository) {}
+  constructor(
+    private readonly progress: IProgressRepository,
+    private readonly motivation?: IMotivationRepository,
+    private readonly award?: AwardXpUseCase,
+  ) {}
 
   async execute(activity: StudyActivity, fromMs: number, toMs: number): Promise<number> {
     const slices = splitByLocalDay(fromMs, toMs);
@@ -27,7 +32,16 @@ export class RecordStudyTimeUseCase {
       await this.progress.addStudyTime(slice.dateKey, activity, slice.seconds);
       credited += slice.seconds;
     }
+    if (credited > 0) await this.rewardDailyGoal(slices[slices.length - 1].dateKey);
     return credited;
+  }
+
+  /** One bonus per day when the full Bootcamp goal is reached. */
+  private async rewardDailyGoal(dateKey: string): Promise<void> {
+    if (!this.motivation || !this.award) return;
+    if (await this.motivation.hasXp('daily_goal', dateKey)) return;
+    const [day, user] = await Promise.all([this.progress.getDailyStudy(dateKey), this.progress.getUserProgress()]);
+    if (day.totalSeconds >= user.dailyGoalMinutes * 60) await this.award.execute('daily_goal', dateKey);
   }
 }
 

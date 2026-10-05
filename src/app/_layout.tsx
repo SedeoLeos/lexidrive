@@ -17,6 +17,7 @@ import { DATABASE_NAME, initializeDatabase } from '@/data/database/database';
 import { ExpoNotificationService } from '@/data/services/ExpoNotificationService';
 import { DependenciesProvider } from '@/presentation/di/DependenciesProvider';
 import { SettingsProvider } from '@/presentation/state/SettingsProvider';
+import { RewardProvider } from '@/presentation/state/RewardProvider';
 import { LoadingState } from '@/presentation/components/molecules';
 
 void SplashScreen.preventAutoHideAsync();
@@ -51,16 +52,19 @@ export default function RootLayout() {
         <SQLiteProvider databaseName={DATABASE_NAME} onInit={initializeDatabase} useSuspense>
           <DependenciesProvider>
             <SettingsProvider>
-              <Stack
-                screenOptions={{
-                  headerShown: false,
-                  contentStyle: { backgroundColor: colors.canvas },
-                  animation: 'fade_from_bottom',
-                }}
-              >
-                <Stack.Screen name="(tabs)" />
-                <Stack.Screen name="level-up/[level]" options={{ animation: 'fade', gestureEnabled: false }} />
-              </Stack>
+              <RewardProvider>
+                <Stack
+                  screenOptions={{
+                    headerShown: false,
+                    contentStyle: { backgroundColor: colors.canvas },
+                    animation: 'fade_from_bottom',
+                  }}
+                >
+                  <Stack.Screen name="(tabs)" />
+                  <Stack.Screen name="level-up/[level]" options={{ animation: 'fade', gestureEnabled: false }} />
+                  <Stack.Screen name="welcome" options={{ animation: 'fade', gestureEnabled: false }} />
+                </Stack>
+              </RewardProvider>
             </SettingsProvider>
           </DependenciesProvider>
         </SQLiteProvider>

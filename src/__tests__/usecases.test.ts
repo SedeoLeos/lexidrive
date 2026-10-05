@@ -74,6 +74,12 @@ class FakeProgress implements IProgressRepository {
       lastStudiedAt: '',
     });
   }
+  async countCompletedLessons() {
+    return [...this.lessons.values()].filter((l) => l.completed).length;
+  }
+  async getTotalStudySeconds() {
+    return [...this.time.values()].reduce((a, b) => a + b, 0);
+  }
   async addScore(source: ScoreSource, refId: string, score: number, maxScore: number) {
     this.scores.push({ id: this.scores.length + 1, source, refId, score, maxScore, takenAt: '' });
   }
@@ -146,6 +152,9 @@ class FakeExams implements IExamRepository {
   }
   async getAttempts(examId: string) {
     return this.attempts.filter((a) => a.examId === examId);
+  }
+  async countPassed() {
+    return new Set(this.attempts.filter((a) => a.passed).map((a) => a.examId)).size;
   }
 }
 
@@ -262,5 +271,21 @@ describe('fractionable 7-hour day', () => {
     expect(data.goal.remainingSeconds).toBe(420 * 60 - 180);
     expect(data.streak.current).toBe(1);
     expect(data.nextLesson?.id).toBe('a1-01');
+  });
+});
+
+describe('quiz rewards', () => {
+  it('pays the lesson bonus only on the first completion and halves hinted answers', async () => {
+    const progress = new FakeProgress();
+    const award = { execute: jest.fn().mockResolvedValue(null) };
+    const submit = new SubmitLessonQuizUseCase(progress, award as never);
+
+    const first = await submit.execute('a1-01', 15, 20, 4);
+    expect(first.firstCompletion).toBe(true);
+    expect(award.execute).toHaveBeenLastCalledWith('lesson_completed', 'a1-01', 11 * 10 + 4 * 5 + 50, 'Leçon validée');
+
+    const again = await submit.execute('a1-01', 20, 20);
+    expect(again.firstCompletion).toBe(false);
+    expect(award.execute).toHaveBeenLastCalledWith('quiz_correct', 'a1-01', 200, 'Quiz · 20/20');
   });
 });

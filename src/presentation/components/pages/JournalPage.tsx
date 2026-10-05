@@ -4,6 +4,7 @@ import { useRouter } from 'expo-router';
 import { toLocalDateKey } from '@/core/utils/date';
 import type { JournalPrompt } from '@/domain/entities';
 import { EmptyJournalError } from '@/domain/usecases';
+import { useRewards } from '../../state/RewardProvider';
 import { useUseCases } from '../../di/DependenciesProvider';
 import { useAsync } from '../../hooks/useAsync';
 import { useStudySession } from '../../hooks/useStudySession';
@@ -29,6 +30,7 @@ export function JournalPage({ lessonId }: { lessonId?: string }) {
   const preferLesson = !!lessonId;
   const router = useRouter();
   const { getDailyPrompt, getJournalHistory, saveJournalEntry } = useUseCases();
+  const { celebrate } = useRewards();
   const {
     data: prompts,
     error,
@@ -77,8 +79,14 @@ export function JournalPage({ lessonId }: { lessonId?: string }) {
     if (!prompt) return;
     setSaving(true);
     try {
-      const saved = await saveJournalEntry.execute({ id: entryId, prompt: prompt.text, kind: prompt.kind, ...draft });
+      const { entry: saved, reward } = await saveJournalEntry.execute({
+        id: entryId,
+        prompt: prompt.text,
+        kind: prompt.kind,
+        ...draft,
+      });
       setEntryId(saved.id);
+      celebrate(reward);
       setSavedAt(formatTime(new Date()));
     } catch (e) {
       Alert.alert('Journal', e instanceof EmptyJournalError ? e.message : "La sauvegarde n'a pas abouti.");

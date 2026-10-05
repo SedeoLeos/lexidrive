@@ -1,6 +1,7 @@
 import { dayNumber, toLocalDateKey } from '@/core/utils/date';
 import { countWords } from '@/core/utils/text';
-import type { JournalDraft, JournalEntry, JournalPrompt } from '../entities';
+import type { JournalDraft, JournalEntry, JournalPrompt, Reward } from '../entities';
+import type { AwardXpUseCase } from './motivation';
 import type { ICourseRepository, IJournalRepository, IProgressRepository } from '../repositories';
 
 /**
@@ -51,18 +52,27 @@ export class EmptyJournalError extends Error {
 }
 
 export class SaveJournalEntryUseCase {
-  constructor(private readonly journal: IJournalRepository) {}
+  constructor(
+    private readonly journal: IJournalRepository,
+    private readonly award?: AwardXpUseCase,
+  ) {}
 
-  async execute(draft: Omit<JournalDraft, 'dateKey'> & { dateKey?: string }): Promise<JournalEntry> {
+  /** The first save of an entry earns XP; later edits are free (no farming by re-saving). */
+  async execute(
+    draft: Omit<JournalDraft, 'dateKey'> & { dateKey?: string },
+  ): Promise<{ entry: JournalEntry; reward: Reward | null }> {
     const frenchText = draft.frenchText.trim();
     const englishText = draft.englishText.trim();
     if (countWords(frenchText) + countWords(englishText) === 0) throw new EmptyJournalError();
-    return this.journal.save({
+    const isNew = draft.id === undefined;
+    const entry = await this.journal.save({
       ...draft,
       frenchText,
       englishText,
       dateKey: draft.dateKey ?? toLocalDateKey(),
     });
+    const reward = isNew && this.award ? await this.award.execute('journal', String(entry.id)) : null;
+    return { entry, reward };
   }
 }
 

@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { LESSON_PASS_RATIO } from '@/core/constants/bootcamp';
+import { scoreMessage } from '@/core/constants/encouragement';
 import { LessonLockedError, type LessonQuizOutcome } from '@/domain/usecases';
+import { useRewards } from '../../state/RewardProvider';
 import { useUseCases } from '../../di/DependenciesProvider';
 import { useAsync } from '../../hooks/useAsync';
 import { useStudySession } from '../../hooks/useStudySession';
@@ -21,6 +23,7 @@ interface Result {
 export function QuizPage({ lessonId }: { lessonId: string }) {
   const router = useRouter();
   const { getLesson, submitLessonQuiz, getExamEligibility } = useUseCases();
+  const { celebrate } = useRewards();
   const { data: lesson, error, loading, reload } = useAsync(() => getLesson.execute(lessonId), [getLesson, lessonId]);
   const [attempt, setAttempt] = useState(() => Date.now() % 100_000);
   const [result, setResult] = useState<Result | null>(null);
@@ -61,7 +64,9 @@ export function QuizPage({ lessonId }: { lessonId: string }) {
 
   const finish = async (details: QuizOutcome[]) => {
     const correct = details.filter((d) => d.correct).length;
-    const outcome = await submitLessonQuiz.execute(lesson.id, correct, details.length);
+    const hinted = details.filter((d) => d.correct && d.usedHint).length;
+    const outcome = await submitLessonQuiz.execute(lesson.id, correct, details.length, hinted);
+    celebrate(outcome.reward);
     const exam = await getExamEligibility.execute(lesson.level);
     setResult({ outcome, details, examUnlocked: outcome.completed && exam.prepared && exam.exam !== null });
   };
@@ -86,9 +91,8 @@ export function QuizPage({ lessonId }: { lessonId: string }) {
             {correct} bonnes réponses sur {result.details.length}
           </AppText>
           <AppText variant="body" tone={result.outcome.completed ? 'success' : 'muted'} className="text-center">
-            {result.outcome.completed
-              ? 'Leçon validée. Excellent travail.'
-              : `Il faut ${Math.round(LESSON_PASS_RATIO * 100)} % pour valider la leçon. Relis les explications et recommence.`}
+            {scoreMessage(result.outcome.ratio)}
+            {result.outcome.completed ? '' : ` (${Math.round(LESSON_PASS_RATIO * 100)} % pour valider la leçon.)`}
           </AppText>
         </View>
 
@@ -131,6 +135,13 @@ export function QuizPage({ lessonId }: { lessonId: string }) {
               setResult(null);
               setAttempt((a) => a + 1);
             }}
+          />
+          <Button
+            label="Écoute active sur cette leçon"
+            variant="secondary"
+            icon="headphones"
+            fullWidth
+            onPress={() => router.replace(`/listening?lesson=${lesson.id}`)}
           />
           <Button
             label="Revoir la leçon"

@@ -9,3 +9,6 @@ export * from './JournalEntryPage';
 export * from './JournalHistoryPage';
 export * from './DictionaryPage';
 export * from './ProfilePage';
+export * from './ReviewPage';
+export * from './ListeningPage';
+export * from './WelcomePage';
