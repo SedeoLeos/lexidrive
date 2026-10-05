@@ -7,6 +7,7 @@ import { C1_LESSONS } from './lessons/c1';
 import { C2_LESSONS } from './lessons/c2';
 import { MATHS_LESSONS } from './lessons/maths';
 import { TECHNICAL_LESSONS } from './lessons/technical';
+import { GENERATED_LESSONS } from './lessons/tracks';
 import { levelIndex } from '@/core/constants/levels';
 import { EXAM_A1_A2 } from './exams/a1-a2';
 import { EXAM_A2_B1 } from './exams/a2-b1';
@@ -18,11 +19,7 @@ import { IDIOMS_AND_CONNECTORS } from './dictionary/idioms';
 import { CORE_WORDS } from './dictionary/core';
 import { GENERAL_JOURNAL_PROMPTS } from './journal/prompts';
 
-/**
- * Bump whenever any content file changes: the app re-seeds content tables on next launch
- * (learner data is preserved).
- */
-export const CONTENT_VERSION = 2;
+export { CONTENT_VERSION } from './version';
 
 /** All lessons, general + maths/numbers + technical tracks, ordered by level then position. */
 export const LESSONS: readonly LessonSeed[] = [
@@ -34,6 +31,7 @@ export const LESSONS: readonly LessonSeed[] = [
   ...C2_LESSONS,
   ...MATHS_LESSONS,
   ...TECHNICAL_LESSONS,
+  ...GENERATED_LESSONS,
 ].sort((a, b) => levelIndex(a.level) - levelIndex(b.level) || a.order - b.order);
 
 export const EXAMS: readonly ExamSeed[] = [EXAM_A1_A2, EXAM_A2_B1, EXAM_B1_B2, EXAM_B2_C1, EXAM_C1_C2];

@@ -1,6 +1,5 @@
 import type { SQLiteDatabase } from 'expo-sqlite';
 import { normalizeSearch } from '@/core/utils/text';
-import { DICTIONARY, EXAMS, JOURNAL_PROMPTS, LESSONS } from '../content';
 import type { DictionarySeed, LessonSeed } from '../content/types';
 import { quizId, examQuestionId } from '../mappers/ids';
 
@@ -58,6 +57,8 @@ export function buildDictionarySeeds(
 
 /** Wipes and re-inserts every content table. Must run inside a transaction. */
 export async function seedContent(db: SQLiteDatabase): Promise<void> {
+  // Loaded on demand: the full curriculum is only needed when (re)seeding.
+  const { DICTIONARY, EXAMS, JOURNAL_PROMPTS, LESSONS } = await import('../content');
   await db.execAsync(`
     DELETE FROM course_quizzes;
     DELETE FROM courses;
