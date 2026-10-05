@@ -11,7 +11,7 @@ export class GetSettingsUseCase {
 
 export class ReminderPermissionDeniedError extends Error {
   constructor() {
-    super("Autorise les notifications dans les réglages du téléphone pour recevoir le rappel quotidien.");
+    super('Autorise les notifications dans les réglages du téléphone pour recevoir le rappel quotidien.');
     this.name = 'ReminderPermissionDeniedError';
   }
 }

@@ -24,11 +24,36 @@ export interface BootcampModule {
 export const BOOTCAMP_MODULES: readonly BootcampModule[] = [
   { activity: 'vocabulary', label: 'Vocabulaire', description: 'Les 20 mots du jour, en contexte.', targetMinutes: 60 },
   { activity: 'grammar', label: 'Grammaire', description: "L'astuce du jour et les phrases clés.", targetMinutes: 60 },
-  { activity: 'quiz', label: 'Quiz intensifs', description: 'Mémorisation active, vingt questions et plus.', targetMinutes: 90 },
-  { activity: 'pronunciation', label: 'Prononciation', description: 'Écoute et répétition à voix haute.', targetMinutes: 45 },
-  { activity: 'journal', label: 'Journal & Débat', description: 'Traduire sa propre vie en anglais.', targetMinutes: 75 },
-  { activity: 'dictionary', label: 'Dictionnaire', description: 'Explorer, écouter, retenir les collocations.', targetMinutes: 30 },
-  { activity: 'exam', label: 'Examens & révision', description: 'Préparer le passage au niveau suivant.', targetMinutes: 60 },
+  {
+    activity: 'quiz',
+    label: 'Quiz intensifs',
+    description: 'Mémorisation active, vingt questions et plus.',
+    targetMinutes: 90,
+  },
+  {
+    activity: 'pronunciation',
+    label: 'Prononciation',
+    description: 'Écoute et répétition à voix haute.',
+    targetMinutes: 45,
+  },
+  {
+    activity: 'journal',
+    label: 'Journal & Débat',
+    description: 'Traduire sa propre vie en anglais.',
+    targetMinutes: 75,
+  },
+  {
+    activity: 'dictionary',
+    label: 'Dictionnaire',
+    description: 'Explorer, écouter, retenir les collocations.',
+    targetMinutes: 30,
+  },
+  {
+    activity: 'exam',
+    label: 'Examens & révision',
+    description: 'Préparer le passage au niveau suivant.',
+    targetMinutes: 60,
+  },
 ];
 
 /** 7 hours = 420 minutes. Derived from the modules so the two can never drift apart. */

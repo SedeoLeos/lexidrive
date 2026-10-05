@@ -19,7 +19,9 @@ describe('curriculum content', () => {
     const ids = LESSONS.map((l) => l.id);
     expect(new Set(ids).size).toBe(ids.length);
     for (const level of LEVELS) {
-      const orders = LESSONS.filter((l) => l.level === level).map((l) => l.order).sort((a, b) => a - b);
+      const orders = LESSONS.filter((l) => l.level === level)
+        .map((l) => l.order)
+        .sort((a, b) => a - b);
       orders.forEach((o, i) => expect(o).toBe(i + 1));
     }
   });
@@ -107,8 +109,12 @@ describe('curriculum content', () => {
 
   it('classifies idioms and connectors from B1 to C2', () => {
     for (const level of ['B1', 'B2', 'C1', 'C2'] as const) {
-      expect(IDIOMS_AND_CONNECTORS.filter((e) => e.level === level && e.category === 'connector').length).toBeGreaterThanOrEqual(8);
-      expect(IDIOMS_AND_CONNECTORS.filter((e) => e.level === level && e.category === 'idiom').length).toBeGreaterThanOrEqual(5);
+      expect(
+        IDIOMS_AND_CONNECTORS.filter((e) => e.level === level && e.category === 'connector').length,
+      ).toBeGreaterThanOrEqual(8);
+      expect(
+        IDIOMS_AND_CONNECTORS.filter((e) => e.level === level && e.category === 'idiom').length,
+      ).toBeGreaterThanOrEqual(5);
     }
   });
 
