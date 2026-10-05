@@ -1,7 +1,7 @@
 import type { SQLiteDatabase } from 'expo-sqlite';
 import { LEVELS } from '@/core/constants/levels';
 import { DAILY_GOAL_MINUTES } from '@/core/constants/bootcamp';
-import { CONTENT_VERSION } from '../content';
+import { CONTENT_VERSION } from '../content/version';
 import { seedContent } from './seed';
 
 /**
