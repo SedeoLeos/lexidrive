@@ -1,11 +1,14 @@
 import { LESSON_PASS_RATIO } from '@/core/constants/bootcamp';
-import { LEVELS, isLevelUnlocked, type Level } from '@/core/constants/levels';
+import { LEVELS, isLevelUnlocked, nextLevel, type Level } from '@/core/constants/levels';
 import type { Lesson, LessonSummary } from '../entities';
 import { scoreRatio } from '../logic/quizGrading';
-import type { ICourseRepository, IProgressRepository } from '../repositories';
+import type { ICourseRepository, IExamRepository, IProgressRepository } from '../repositories';
 
 export interface LevelCatalog {
   level: Level;
+  nextLevel: Level | null;
+  /** Exam leading out of this level (null at C2). */
+  examId: string | null;
   unlocked: boolean;
   current: boolean;
   lessons: LessonSummary[];
@@ -16,6 +19,7 @@ export class GetCourseCatalogUseCase {
   constructor(
     private readonly courses: ICourseRepository,
     private readonly progress: IProgressRepository,
+    private readonly exams: IExamRepository,
   ) {}
 
   async execute(): Promise<LevelCatalog[]> {
@@ -23,6 +27,8 @@ export class GetCourseCatalogUseCase {
     return Promise.all(
       LEVELS.map(async (level) => ({
         level,
+        nextLevel: nextLevel(level),
+        examId: (await this.exams.getExamFrom(level))?.id ?? null,
         unlocked: isLevelUnlocked(level, user.currentLevel),
         current: level === user.currentLevel,
         lessons: await this.courses.getLessonSummaries(level),

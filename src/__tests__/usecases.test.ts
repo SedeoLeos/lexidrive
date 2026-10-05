@@ -172,7 +172,7 @@ function setup() {
     exams,
     eligibility,
     submitQuiz: new SubmitLessonQuizUseCase(progress),
-    startExam: new StartExamUseCase(exams, progress, eligibility),
+    startExam: new StartExamUseCase(exams, progress),
     submitExam: new SubmitExamUseCase(exams, progress),
     record: new RecordStudyTimeUseCase(progress),
     dashboard: new GetDashboardUseCase(progress, courses, eligibility),
@@ -193,16 +193,26 @@ describe('lesson completion', () => {
 });
 
 describe('level exams', () => {
-  it('stays locked until every lesson of the level is completed', async () => {
+  it('is open immediately so a learner who already has the level can test directly', async () => {
     const { eligibility, startExam, submitQuiz } = setup();
-    expect((await eligibility.execute('A1')).lessonsRemaining).toBe(2);
-    await expect(startExam.execute('exam-A1-A2')).rejects.toBeInstanceOf(ExamNotAvailableError);
+    const status = await eligibility.execute('A1');
+    expect(status.eligible).toBe(true);
+    expect(status.prepared).toBe(false);
+    expect(status.lessonsRemaining).toBe(2);
+    await expect(startExam.execute('exam-A1-A2')).resolves.toMatchObject({ toLevel: 'A2' });
 
     await submitQuiz.execute('a1-01', 20, 20);
     await submitQuiz.execute('a1-02', 20, 20);
-    const status = await eligibility.execute('A1');
-    expect(status.eligible).toBe(true);
-    await expect(startExam.execute('exam-A1-A2')).resolves.toMatchObject({ toLevel: 'A2' });
+    expect((await eligibility.execute('A1')).prepared).toBe(true);
+  });
+
+  it('lets a strong learner climb level after level without lessons', async () => {
+    const { startExam, submitExam, progress } = setup();
+    const first = await startExam.execute('exam-A1-A2');
+    expect((await submitExam.execute(first, answersWith(9))).promotedTo).toBe('A2');
+    const second = await startExam.execute('exam-A2-B1');
+    expect((await submitExam.execute(second, answersWith(10))).promotedTo).toBe('B1');
+    expect(progress.level).toBe('B1');
   });
 
   it('refuses an exam that does not start from the current level', async () => {

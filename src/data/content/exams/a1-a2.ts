@@ -8,7 +8,7 @@ export const EXAM_A1_A2: ExamSeed = {
   toLevel: 'A2',
   title: 'Examen de passage A1 ➔ A2',
   description:
-    'Vérifie les fondations : le verbe être, le présent simple, les articles, les quantités et le vocabulaire du quotidien. 80 % requis.',
+    "Vérifie les fondations : le verbe être, le présent simple, les articles, les quantités, les nombres, l'heure et le vocabulaire du quotidien. Ouvert aussi à ceux qui ont déjà le niveau : 80 % requis.",
   passRatio: 0.8,
   questions: [
     examMcq(
@@ -138,6 +138,35 @@ export const EXAM_A1_A2: ExamSeed = {
       'I want to ___ a new phone.',
       'buy',
       'Buy (acheter) ≠ by (par) ≠ bye (au revoir).',
+    ),
+    examMcq(
+      'Nombres & maths',
+      '« 15 » se dit :',
+      ['fifty', 'fifteen', 'five-teen', 'fiveteen'],
+      'fifteen',
+      '15 = fifteen (accent sur -TEEN). 50 = fifty.',
+    ),
+    examMcq(
+      'Nombres & maths',
+      '« Il est 7 h 30 » :',
+      ["It's half past seven.", "It's half to seven.", "It's seven and half.", "It's thirty past half seven."],
+      "It's half past seven.",
+      'Half PAST + heure.',
+    ),
+    examMcq(
+      'Nombres & maths',
+      '« Troisième » :',
+      ['threeth', 'third', 'thirth', 'three'],
+      'third',
+      'First, second, third : les trois premiers ordinaux sont irréguliers.',
+    ),
+    examFill('Nombres & maths', 'Écris le nombre 12 en lettres.', 'A year has ___ months.', 'twelve', 'T-W-E-L-V-E.'),
+    examFill(
+      'Nombres & maths',
+      'Écris le nombre 40 en lettres.',
+      'There are ___ students in the room.',
+      'forty',
+      'Forty, sans U.',
     ),
   ],
 };

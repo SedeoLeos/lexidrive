@@ -4,7 +4,7 @@ import { LEVEL_META } from '@/core/constants/levels';
 import { useUseCases } from '../../di/DependenciesProvider';
 import { useAsync } from '../../hooks/useAsync';
 import { AppText, Pill } from '../atoms';
-import { ErrorState, LoadingState } from '../molecules';
+import { ErrorState, LoadingState, QuickActionTile } from '../molecules';
 import { LessonListItem } from '../organisms';
 import { ScreenTemplate } from '../templates';
 
@@ -73,6 +73,14 @@ export function CoursesPage() {
                 />
               ))}
             </View>
+            {section.current && section.examId ? (
+              <QuickActionTile
+                icon="award"
+                label={`Examen de passage ${section.level} ➔ ${section.nextLevel}`}
+                caption="Déjà ce niveau ? Teste-toi sans faire les leçons."
+                onPress={() => router.push(`/exam/${section.examId}`)}
+              />
+            ) : null}
           </View>
         );
       })}

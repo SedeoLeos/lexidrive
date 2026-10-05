@@ -7,12 +7,13 @@ export interface LevelHeroProps {
   meta: LevelMeta;
   lessonsCompleted: number;
   lessonsTotal: number;
-  examEligible: boolean;
+  /** Every lesson of the level is completed. */
+  examReady: boolean;
   isFinal: boolean;
 }
 
 /** The unlocked level, displayed as a large hairline monogram with the A1 → C2 path beneath. */
-export function LevelHero({ level, meta, lessonsCompleted, lessonsTotal, examEligible, isFinal }: LevelHeroProps) {
+export function LevelHero({ level, meta, lessonsCompleted, lessonsTotal, examReady, isFinal }: LevelHeroProps) {
   const reached = LEVELS.indexOf(level);
   return (
     <View className="gap-5">
@@ -25,8 +26,8 @@ export function LevelHero({ level, meta, lessonsCompleted, lessonsTotal, examEli
             {level}
           </AppText>
         </View>
-        {examEligible ? (
-          <Pill label="Examen ouvert" tone="solid" className="mb-4" />
+        {examReady ? (
+          <Pill label="Prêt pour l'examen" tone="solid" className="mb-4" />
         ) : isFinal ? (
           <Pill label="Maîtrise" className="mb-4" />
         ) : null}

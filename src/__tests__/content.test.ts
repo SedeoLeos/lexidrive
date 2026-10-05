@@ -15,6 +15,12 @@ describe('curriculum content', () => {
     }
   });
 
+  it('includes the numbers/maths and technical English tracks', () => {
+    for (const id of ['a1-03', 'a2-03', 'b1-04', 'b2-05', 'c2-03', 'b1-05', 'b2-04', 'c1-03']) {
+      expect(LESSONS.some((l) => l.id === id)).toBe(true);
+    }
+  });
+
   it('has unique lesson ids and contiguous order per level', () => {
     const ids = LESSONS.map((l) => l.id);
     expect(new Set(ids).size).toBe(ids.length);
@@ -85,7 +91,8 @@ describe('curriculum content', () => {
       const exam = EXAMS.find((e) => e.fromLevel === LEVELS[i]);
       expect(exam).toBeDefined();
       expect(exam!.toLevel).toBe(LEVELS[i + 1]);
-      expect(exam!.questions).toHaveLength(20);
+      expect(exam!.questions).toHaveLength(25);
+      expect(exam!.questions.some((q) => /Nombres|Math/.test(q.section))).toBe(true);
       expect(exam!.passRatio).toBeGreaterThanOrEqual(0.7);
       expect(exam!.questions.some((q) => q.kind === 'fill')).toBe(true);
       for (const q of exam!.questions) {
@@ -142,7 +149,7 @@ describe('spelling quizzes agree with the offline spell checker', () => {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   const { isWordCorrect } = require('@/domain/logic/spelling') as typeof import('@/domain/logic/spelling');
   const lexicon = new Set(LEXICON.split('\n'));
-  const HOMOPHONE_TRAPS = ['bred', 'by', 'form', 'fare', 'draught', 'of', 'self-depreciating'];
+  const HOMOPHONE_TRAPS = ['bred', 'by', 'form', 'fare', 'draught', 'of', 'self-depreciating', 'constrain'];
   const quizzes = LESSONS.flatMap((l) => l.quizzes.map((q) => [l.id, q] as const));
 
   it.each(quizzes.filter(([, q]) => q.kind === 'correct').map(([id, q]) => [id, q]))(

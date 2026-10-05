@@ -374,6 +374,184 @@ Si tu peux compter la chose (1 pomme, 2 pommes) : How MANY apples? / an apple. S
 
 Raconte ton dernier passage au marché ou au supermarché : qu'as-tu acheté, combien ça a coûté, comment as-tu payé ? Puis écris un petit dialogue imaginaire avec un vendeur en anglais (minimum 6 répliques).
 
+## A1 · Leçon 3 — Les nombres et les chiffres
+
+_Étape Débutant · Fondations_
+
+### 1. Thème
+
+Compter de 0 à 1 000, dire son âge, un prix, un numéro de téléphone, une heure et une date.
+
+### 2. Les 20 mots du jour
+
+| Anglais | Français | Exemple en contexte |
+|---|---|---|
+| **number** | nombre / numéro | What is your phone number? |
+| **digit** | chiffre (0 à 9) | The code has four digits. |
+| **zero** | zéro | Zero comes before one. |
+| **eleven** | onze | My son is eleven. |
+| **twelve** | douze | There are twelve eggs in the box. |
+| **thirteen** | treize | She is thirteen years old. |
+| **thirty** | trente | The bus leaves in thirty minutes. |
+| **fifteen** | quinze | It costs fifteen euros. |
+| **fifty** | cinquante | My father is fifty. |
+| **twenty-one** | vingt et un | Twenty-one students are in the class. |
+| **hundred** | cent | A hundred people came. |
+| **thousand** | mille | The bike costs a thousand dollars. |
+| **first** | premier | This is my first day. |
+| **second** | deuxième / seconde | Take the second street. |
+| **third** | troisième | I live on the third floor. |
+| **half** | demi / moitié | It is half past seven. |
+| **quarter** | quart | It is a quarter to nine. |
+| **o'clock** | heure pile | The class starts at ten o'clock. |
+| **count** | compter | Can you count to twenty in English? |
+| **how many** | combien (dénombrable) | How many brothers do you have? |
+
+### 3. L'astuce du jour — 13 ou 30 ? L'accent qui change tout
+
+Les nombres en -TEEN (13 à 19) portent l'accent sur la FIN : thir-TEEN, fif-TEEN. Les dizaines en -TY (30, 40…) portent l'accent sur le DÉBUT : THIR-ty, FIF-ty. Au téléphone, on lit les chiffres un par un et le 0 se dit « oh » ou « zero ». Pour l'heure : past = et (après), to = moins (avant l'heure suivante).
+
+> **Raccourci :** -TEEN = accent à la fin et son long. -TY = accent au début et son court. Heure : PAST pour « et », TO pour « moins ».
+
+- fourteen (14) ≠ forty (40)
+- My number is oh-six, two-four, nine-nine…
+- It's half past six (6 h 30).
+- It's a quarter to eight (7 h 45).
+
+### 4. Les 5 phrases clés
+
+- **What's your phone number?** — Quel est ton numéro de téléphone ?
+- **Sorry, was that fifteen or fifty?** — Pardon, c'était quinze ou cinquante ?
+- **What time is it? — It's half past three.** — Quelle heure est-il ? — Il est trois heures et demie.
+- **My birthday is on the third of May.** — Mon anniversaire est le 3 mai.
+- **Can you write it down, please?** — Pouvez-vous l'écrire, s'il vous plaît ?
+
+### 5. Banque de quiz (21 questions)
+
+#### Catégorie A — Vocabulaire
+
+1. **« 40 » s'écrit :**
+   - a) fourty
+   - b) forty
+   - c) fourteen
+   - d) for ty
+   - ✅ Réponse : **forty**
+   - 💡 Forty perd le U de « four ». Fourteen = 14.
+2. **« Un chiffre » (0 à 9) se dit :**
+   - a) a figure only
+   - b) a digit
+   - c) a number plate
+   - d) a count
+   - ✅ Réponse : **a digit**
+   - 💡 « Digit » = un chiffre de 0 à 9. « Number » = le nombre entier, « figure » s'emploie aussi pour les chiffres d'une statistique.
+3. **« Troisième » :**
+   - a) threeth
+   - b) third
+   - c) thirdth
+   - d) three
+   - ✅ Réponse : **third**
+   - 💡 Les trois premiers ordinaux sont irréguliers : first, second, third. Ensuite : fourth, fifth…
+4. **Quel nombre est 13 ?**
+   - a) thirty
+   - b) thirteen
+   - c) three-teen
+   - d) thirdteen
+   - ✅ Réponse : **thirteen**
+   - 💡 13 = thirteen (accent sur -TEEN). 30 = thirty.
+5. **« Il est 9 h 45 » :**
+   - a) It's a quarter past nine.
+   - b) It's a quarter to ten.
+   - c) It's nine and three quarters.
+   - d) It's half past nine.
+   - ✅ Réponse : **It's a quarter to ten.**
+   - 💡 Un quart AVANT dix heures → a quarter TO ten.
+6. **« Mille » :**
+   - a) a million
+   - b) a thousand
+   - c) a hundred
+   - d) a mile
+   - ✅ Réponse : **a thousand**
+   - 💡 Thousand = 1 000. « Mile » est une unité de distance (1,6 km).
+7. **Association : « How … people? »**
+   - a) many
+   - b) much
+   - c) lot
+   - d) number
+   - ✅ Réponse : **many**
+   - 💡 Les personnes se comptent → How MANY.
+
+#### Catégorie B — Grammaire & syntaxe
+
+1. **Complète : « I am ___ years old. » (25)**
+   - a) twenty-five
+   - b) twenty five years have
+   - c) twentieth-five
+   - d) twenty-fifth
+   - ✅ Réponse : **twenty-five**
+   - 💡 Les nombres composés 21-99 prennent un trait d'union : twenty-five.
+2. **« 2 h 30 » se dit :**
+   - a) half past two
+   - b) half to two
+   - c) two and half
+   - d) half two past
+   - ✅ Réponse : **half past two**
+   - 💡 Half PAST + heure : half past two.
+3. **Date correcte à l'oral (UK) :**
+   - a) the three May
+   - b) the third of May
+   - c) the May three
+   - d) the third May of
+   - ✅ Réponse : **the third of May**
+   - 💡 À l'oral britannique : the + ordinal + of + mois.
+4. **Complète : « ___ is your birthday? — In June. »**
+   - a) What
+   - b) When
+   - c) Who
+   - d) How
+   - ✅ Réponse : **When**
+   - 💡 Question de temps → When.
+5. **Complète : « There ___ twelve months in a year. »**
+   - a) is
+   - b) are
+   - c) has
+   - d) have
+   - ✅ Réponse : **are**
+   - 💡 There are + pluriel.
+6. **Remets les mots dans l'ordre.** — mots : _? / number / phone / What's / your_
+   - ✅ Réponse : **What's your phone number ?**
+   - 💡 Possessif « your » avant le nom : your phone number.
+7. **Remets les mots dans l'ordre.** — mots : _a / four / is / It / past / quarter_
+   - ✅ Réponse : **It is a quarter past four**
+   - 💡 4 h 15 = a quarter past four.
+
+#### Catégorie C — Orthographe & textes à trous
+
+1. **Écris le nombre 12 en lettres.** — « There are ___ eggs in a box. »
+   - ✅ Réponse : **twelve**
+   - 💡 T-W-E-L-V-E : le F de « five » n'existe pas ici.
+2. **Écris l'ordinal de « one ».** — « Today is my ___ day at work. »
+   - ✅ Réponse : **first**
+   - 💡 One → first.
+3. **Écris le nombre 100 en lettres.** — « A ___ people came to the party. »
+   - ✅ Réponse : **hundred**
+   - 💡 H-U-N-D-R-E-D : un seul N avant le D.
+4. **Un mot est mal orthographié. Écris-le correctement.** — « My brother is fourty years old. »
+   - ✅ « fourty » → **forty**
+   - 💡 Forty : on retire le U de « four ».
+5. **Un mot est mal orthographié. Écris-le correctement.** — « The meeting is on the tird floor. »
+   - ✅ « tird » → **third**
+   - 💡 Third commence par TH (≠ tired).
+6. **Un mot est mal orthographié. Écris-le correctement.** — « I can count to twelv. »
+   - ✅ « twelv » → **twelve**
+   - 💡 Twelve se termine par un E muet.
+7. **Un mot est mal orthographié. Écris-le correctement.** — « The code has four diggits. »
+   - ✅ « diggits » → **digits**
+   - 💡 Digit : un seul G.
+
+### 6. Journal de Vie & Débat
+
+Écris ta journée en chiffres : heure de réveil, nombre de cafés, prix de ton déjeuner, nombre de pas, heure du coucher. Puis traduis chaque phrase en anglais en écrivant les nombres EN LETTRES (seven o'clock, two coffees, twelve euros…).
+
 ## A2 · Leçon 1 — Raconter son week-end
 
 _Étape Débutant · Quotidien_
@@ -729,6 +907,184 @@ AT = un point précis (at the station, at the corner, at the bus stop). ON = une
 ### 6. Journal de Vie & Débat
 
 Décris en français le trajet exact de chez toi jusqu'à ton travail, ton école ou ton marché préféré (rues, transports, repères). Puis traduis-le comme si tu expliquais le chemin à un touriste anglophone, avec au moins 5 indications (turn left, go straight on, next to…).
+
+## A2 · Leçon 3 — Calculer en anglais : les quatre opérations
+
+_Étape Débutant · Quotidien_
+
+### 1. Thème
+
+Additionner, soustraire, multiplier, diviser à voix haute ; faire l'addition au restaurant, partager une note.
+
+### 2. Les 20 mots du jour
+
+| Anglais | Français | Exemple en contexte |
+|---|---|---|
+| **plus** | plus | Two plus two equals four. |
+| **minus** | moins | Ten minus three is seven. |
+| **times** | fois | Three times four is twelve. |
+| **divided by** | divisé par | Twenty divided by five is four. |
+| **equals** | égale | Six plus one equals seven. |
+| **add** | additionner / ajouter | Add the two numbers together. |
+| **subtract** | soustraire | Subtract five from twenty. |
+| **multiply** | multiplier | Multiply the price by three. |
+| **divide** | diviser | Divide the bill between four people. |
+| **total** | total | The total is forty euros. |
+| **sum** | somme | The sum of 3 and 5 is 8. |
+| **even number** | nombre pair | Four is an even number. |
+| **odd number** | nombre impair | Seven is an odd number. |
+| **double** | double / doubler | Double ten is twenty. |
+| **result** | résultat | Check the result on your calculator. |
+| **calculator** | calculatrice | Can I use a calculator? |
+| **split the bill** | partager l'addition | Let's split the bill. |
+| **each** | chacun | It's twelve euros each. |
+| **change** | monnaie rendue | Here is your change: three euros. |
+| **mistake** | erreur | There is a mistake in the bill. |
+
+### 3. L'astuce du jour — Lire un calcul : IS ou EQUALS, et le verbe au singulier
+
+Un calcul se lit de gauche à droite : 3 + 4 = 7 → « three plus four equals seven » ou « three plus four is seven ». Le résultat est toujours au SINGULIER (equals / is, jamais are). Attention à l'ordre de SUBTRACT : subtract 5 FROM 20 = 20 − 5. Et en multiplication, « times » est le plus naturel à l'oral.
+
+> **Raccourci :** Calcul = singulier (IS / EQUALS). Subtract A FROM B = B − A. × = TIMES, ÷ = DIVIDED BY.
+
+- 8 − 3 = 5 → Eight minus three is five.
+- 6 × 7 = 42 → Six times seven is forty-two.
+- 30 ÷ 3 = 10 → Thirty divided by three equals ten.
+- Subtract four from nine: the answer is five.
+
+### 4. Les 5 phrases clés
+
+- **Let's split the bill. It's eighteen euros each.** — Partageons l'addition. Ça fait dix-huit euros chacun.
+- **I think there is a mistake in the total.** — Je crois qu'il y a une erreur dans le total.
+- **Can you add it up again, please?** — Pouvez-vous refaire le calcul, s'il vous plaît ?
+- **Five times six is thirty.** — Cinq fois six font trente.
+- **Keep the change.** — Gardez la monnaie.
+
+### 5. Banque de quiz (21 questions)
+
+#### Catégorie A — Vocabulaire
+
+1. **« × » se lit le plus souvent :**
+   - a) times
+   - b) by times
+   - c) multiple
+   - d) cross
+   - ✅ Réponse : **times**
+   - 💡 À l'oral : three times four. « Multiplied by » est plus formel.
+2. **« Nombre impair » :**
+   - a) strange number
+   - b) odd number
+   - c) uneven digit
+   - d) single number
+   - ✅ Réponse : **odd number**
+   - 💡 Odd number = impair. Even number = pair.
+3. **Le contraire de « add » :**
+   - a) divide
+   - b) subtract
+   - c) multiply
+   - d) double
+   - ✅ Réponse : **subtract**
+   - 💡 Add (ajouter) ↔ subtract (soustraire).
+4. **« Partager l'addition » :**
+   - a) share the addition
+   - b) split the bill
+   - c) divide the note
+   - d) cut the check sum
+   - ✅ Réponse : **split the bill**
+   - 💡 Split the bill (UK) / split the check (US). « Addition » est un faux ami ici.
+5. **Définition inversée : « the number you get when you add numbers together ».**
+   - a) sum
+   - b) result of division
+   - c) digit
+   - d) change
+   - ✅ Réponse : **sum**
+   - 💡 Sum = somme (résultat d'une addition).
+6. **« ÷ » se lit :**
+   - a) divided by
+   - b) divided on
+   - c) shared with
+   - d) over by
+   - ✅ Réponse : **divided by**
+   - 💡 Divided BY : twenty divided by four.
+7. **« Chacun » dans « 12 € chacun » :**
+   - a) each
+   - b) every
+   - c) all
+   - d) both
+   - ✅ Réponse : **each**
+   - 💡 It's twelve euros each. « Every » s'emploie devant un nom (every day).
+
+#### Catégorie B — Grammaire & syntaxe
+
+1. **Complète : « Two plus three ___ five. »**
+   - a) are
+   - b) is
+   - c) make are
+   - d) be
+   - ✅ Réponse : **is**
+   - 💡 Le résultat d'un calcul est singulier : is / equals.
+2. **« Subtract 4 from 10 » donne :**
+   - a) 4 − 10
+   - b) 10 − 4
+   - c) 10 + 4
+   - d) 4 ÷ 10
+   - ✅ Réponse : **10 − 4**
+   - 💡 Subtract A FROM B = B − A.
+3. **Complète : « Multiply the price ___ two. »**
+   - a) with
+   - b) by
+   - c) for
+   - d) to
+   - ✅ Réponse : **by**
+   - 💡 Multiply BY, divide BY.
+4. **Complète : « Divide the cake ___ four people. »**
+   - a) between
+   - b) by
+   - c) on
+   - d) from
+   - ✅ Réponse : **between**
+   - 💡 On partage ENTRE des personnes : divide between/among.
+5. **Question correcte :**
+   - a) How much is seven times eight?
+   - b) How many is seven times eight?
+   - c) How much are seven times eight?
+   - d) What make seven times eight?
+   - ✅ Réponse : **How much is seven times eight?**
+   - 💡 Formule figée : How much is…? (résultat au singulier).
+6. **Remets les mots dans l'ordre.** — mots : _forty-two / is / seven / Six / times_
+   - ✅ Réponse : **Six times seven is forty-two**
+   - 💡 Ordre de lecture d'un calcul : nombre + opération + nombre + is + résultat.
+7. **Remets les mots dans l'ordre.** — mots : _between / bill / Let's / split / the / us_
+   - ✅ Réponse : **Let's split the bill between us**
+   - 💡 « Let's » + base verbale pour proposer.
+
+#### Catégorie C — Orthographe & textes à trous
+
+1. **Écris le mot manquant (moins).** — « Ten ___ two is eight. »
+   - ✅ Réponse : **minus**
+   - 💡 M-I-N-U-S : le contraire de « plus ».
+2. **Écris le mot manquant (calculatrice).** — « Can I use a ___ for this exercise? »
+   - ✅ Réponse : **calculator**
+   - 💡 Calculate + or → calculator (terminaison -OR).
+3. **Écris le mot manquant (pair).** — « Two, four and six are ___ numbers. »
+   - ✅ Réponse : **even**
+   - 💡 Even = pair.
+4. **Un mot est mal orthographié. Écris-le correctement.** — « Twenty devided by four is five. »
+   - ✅ « devided » → **divided**
+   - 💡 Divide commence par DI- (comme en français « diviser »).
+5. **Un mot est mal orthographié. Écris-le correctement.** — « You need to substract three from nine. »
+   - ✅ « substract » → **subtract**
+   - 💡 Piège du français : en anglais pas de S après SUB → subtract.
+6. **Un mot est mal orthographié. Écris-le correctement.** — « Five plus five equels ten. »
+   - ✅ « equels » → **equals**
+   - 💡 Equal + s : e-q-u-a-l-s.
+7. **Un mot est mal orthographié. Écris-le correctement.** — « Can you multiplie these numbers? »
+   - ✅ « multiplie » → **multiply**
+   - 💡 Multiply se termine par -Y (comme apply, reply).
+
+### 6. Journal de Vie & Débat
+
+Raconte un repas ou un achat partagé (restaurant, courses entre colocataires, cadeau commun). Écris en français les calculs que vous avez faits, puis traduis-les en anglais en lisant chaque opération à voix haute (plus, minus, times, divided by, each, the total is…).
 
 ## B1 · Leçon 1 — Négocier au marché
 
@@ -1265,6 +1621,362 @@ En français, « depuis » s'emploie avec le présent. En anglais, une action qu
 
 Imagine un entretien d'embauche en anglais. Présente ton parcours en français (études, postes, durée, réussites, points forts), puis traduis-le avec au moins 3 phrases au present perfect avec FOR ou SINCE.
 
+## B1 · Leçon 4 — Chiffres, pourcentages et graphiques
+
+_Étape Cœur · Autonomie_
+
+### 1. Thème
+
+Présenter des résultats chiffrés au travail : pourcentages, décimales, moyennes, hausses et baisses sur un graphique.
+
+### 2. Les 20 mots du jour
+
+| Anglais | Français | Exemple en contexte |
+|---|---|---|
+| **percent** | pour cent | Sales rose by ten percent. |
+| **percentage** | pourcentage | What percentage of clients are happy? |
+| **decimal point** | virgule (décimale) | 3.5 is read "three point five". |
+| **fraction** | fraction | A half is a simple fraction. |
+| **average** | moyenne / moyen | The average age is 34. |
+| **figure** | chiffre (statistique) | The latest figures are good. |
+| **rise** | augmenter / hausse | Prices rose in March. |
+| **fall** | baisser / baisse | Unemployment fell slightly. |
+| **increase** | augmentation | There was a sharp increase in costs. |
+| **decrease** | diminution | We saw a small decrease in sales. |
+| **steady** | stable / régulier | Growth remained steady. |
+| **peak** | pic / atteindre un pic | Sales peaked in December. |
+| **chart** | graphique | Look at the chart on page two. |
+| **graph** | courbe / graphique | The graph shows a clear trend. |
+| **pie chart** | camembert | The pie chart shows our market share. |
+| **bar chart** | histogramme | This bar chart compares the regions. |
+| **approximately** | environ | Approximately 200 people replied. |
+| **double** | doubler | Our revenue doubled in two years. |
+| **third** | tiers | A third of the staff work from home. |
+| **per** | par (ratio) | The car uses 5 litres per 100 km. |
+
+### 3. L'astuce du jour — Point ou virgule ? Et BY / TO / OF avec les chiffres
+
+L'anglais inverse le français : la décimale s'écrit avec un POINT (3.5 = « three point five ») et les milliers avec une VIRGULE (10,000). Pour décrire un changement : rise BY 5 % (de combien), rise TO 30 % (jusqu'à quel niveau), an increase OF 5 % (montant), an increase IN sales (de quoi).
+
+> **Raccourci :** Décimale = POINT, milliers = VIRGULE. BY = l'écart, TO = l'arrivée, OF = le montant, IN = la chose qui change.
+
+- 2.75 → two point seven five
+- 1,250 → one thousand two hundred and fifty
+- Sales rose by 4% to 30%.
+- There was an increase of 12% in exports.
+
+### 4. Les 5 phrases clés
+
+- **As you can see from the chart, sales peaked in July.** — Comme le montre le graphique, les ventes ont atteint un pic en juillet.
+- **The figures show a steady increase.** — Les chiffres montrent une hausse régulière.
+- **Roughly a third of respondents disagreed.** — Environ un tiers des personnes interrogées n'étaient pas d'accord.
+- **Costs went up by five percent.** — Les coûts ont augmenté de cinq pour cent.
+- **On average, we sell 300 units a week.** — En moyenne, nous vendons 300 unités par semaine.
+
+### 5. Banque de quiz (21 questions)
+
+#### Catégorie A — Vocabulaire
+
+1. **« Un camembert » (graphique) :**
+   - a) a cheese chart
+   - b) a pie chart
+   - c) a round graph
+   - d) a cake chart
+   - ✅ Réponse : **a pie chart**
+   - 💡 Pie chart = graphique circulaire. Bar chart = histogramme.
+2. **« La moyenne » :**
+   - a) the medium
+   - b) the average
+   - c) the middle-sum
+   - d) the mean only
+   - ✅ Réponse : **the average**
+   - 💡 Average (courant). « Mean » est le terme mathématique, « median » la médiane.
+3. **Synonyme de « approximately » :**
+   - a) roughly
+   - b) exactly
+   - c) precisely
+   - d) strictly
+   - ✅ Réponse : **roughly**
+   - 💡 Roughly / around / about = environ.
+4. **Le contraire de « rise » :**
+   - a) raise
+   - b) fall
+   - c) peak
+   - d) double
+   - ✅ Réponse : **fall**
+   - 💡 Rise (monter) ↔ fall (descendre). « Raise » = augmenter quelque chose (verbe transitif).
+5. **« Atteindre un pic » :**
+   - a) to peak
+   - b) to pick
+   - c) to top up
+   - d) to point
+   - ✅ Réponse : **to peak**
+   - 💡 Peak = sommet. Pick = choisir (prononciation proche, sens différent).
+6. **« The latest figures » signifie :**
+   - a) les dernières silhouettes
+   - b) les derniers chiffres
+   - c) les dernières formes
+   - d) les dernières figures de style
+   - ✅ Réponse : **les derniers chiffres**
+   - 💡 En contexte économique, « figures » = chiffres, données.
+7. **« 5 litres aux 100 km » :**
+   - a) 5 litres per 100 km
+   - b) 5 litres by 100 km
+   - c) 5 litres on 100 km
+   - d) 5 litres for each of 100 km
+   - ✅ Réponse : **5 litres per 100 km**
+   - 💡 Per = par, pour un ratio (per hour, per person).
+
+#### Catégorie B — Grammaire & syntaxe
+
+1. **« 3,5 » (français) s'écrit en anglais :**
+   - a) 3,5
+   - b) 3.5
+   - c) 3;5
+   - d) 3'5
+   - ✅ Réponse : **3.5**
+   - 💡 La décimale anglaise utilise un point : 3.5 (three point five).
+2. **Complète : « Prices rose ___ 3 %. » (écart)**
+   - a) to
+   - b) by
+   - c) of
+   - d) in
+   - ✅ Réponse : **by**
+   - 💡 BY indique l'ampleur du changement.
+3. **Complète : « Unemployment fell ___ 7 %. » (niveau atteint)**
+   - a) by
+   - b) to
+   - c) of
+   - d) at
+   - ✅ Réponse : **to**
+   - 💡 TO indique le niveau d'arrivée.
+4. **Complète : « There was an increase ___ sales. »**
+   - a) of
+   - b) in
+   - c) on
+   - d) by
+   - ✅ Réponse : **in**
+   - 💡 An increase IN + ce qui change.
+5. **Complète : « Sales have ___ since January. » (doubler)**
+   - a) doubled
+   - b) double
+   - c) doubling
+   - d) been double
+   - ✅ Réponse : **doubled**
+   - 💡 Present perfect : have + participe passé.
+6. **Remets les mots dans l'ordre.** — mots : _a / figures / increase / show / steady / The_
+   - ✅ Réponse : **The figures show a steady increase**
+   - 💡 Sujet pluriel « figures » → show (sans -s).
+7. **Remets les mots dans l'ordre.** — mots : _December / in / peaked / Sales_
+   - ✅ Réponse : **Sales peaked in December**
+   - 💡 Peak est ici un verbe au prétérit.
+
+#### Catégorie C — Orthographe & textes à trous
+
+1. **Écris le mot manquant (pourcentage).** — « What ___ of the budget is spent on training? »
+   - ✅ Réponse : **percentage**
+   - 💡 Percent + age : p-e-r-c-e-n-t-a-g-e.
+2. **Écris le mot manquant (graphique, 5 lettres).** — « Look at the ___ on the next slide. »
+   - ✅ Réponse : **chart / graph**
+   - 💡 Chart ou graph.
+3. **Écris le mot manquant (environ, en un mot).** — « ___ 500 people answered the survey. »
+   - ✅ Réponse : **Approximately / Roughly / Around / About**
+   - 💡 Approximately / roughly / around / about.
+4. **Un mot est mal orthographié. Écris-le correctement.** — « There was a slight decrese in costs. »
+   - ✅ « decrese » → **decrease**
+   - 💡 De + crease : d-e-c-r-E-A-s-e.
+5. **Un mot est mal orthographié. Écris-le correctement.** — « The avarage salary has risen. »
+   - ✅ « avarage » → **average**
+   - 💡 Average : a-v-E-r-a-g-e.
+6. **Un mot est mal orthographié. Écris-le correctement.** — « Growth has remained steddy this year. »
+   - ✅ « steddy » → **steady**
+   - 💡 Steady : s-t-E-A-d-y.
+7. **Un mot est mal orthographié. Écris-le correctement.** — « A third of the staff work part-time, acording to the report. »
+   - ✅ « acording » → **according**
+   - 💡 According : deux C.
+
+### 6. Journal de Vie & Débat
+
+Choisis des chiffres de ta vie (budget du mois, heures de sommeil, kilomètres parcourus) et décris leur évolution sur les trois derniers mois comme dans une présentation. Traduis en anglais avec au moins 3 verbes de tendance (rise, fall, peak, remain steady) et les prépositions BY / TO.
+
+## B1 · Leçon 5 — Anglais technique : outils, mesures et sécurité
+
+_Étape Cœur · Autonomie_
+
+### 1. Thème
+
+Sur un chantier, en atelier ou en maintenance : nommer les outils, suivre une procédure, respecter les consignes de sécurité.
+
+### 2. Les 20 mots du jour
+
+| Anglais | Français | Exemple en contexte |
+|---|---|---|
+| **tool** | outil | Put the tools back in the box. |
+| **screwdriver** | tournevis | I need a flat screwdriver. |
+| **wrench** | clé (à molette) | Use a wrench to tighten the bolt. |
+| **hammer** | marteau | Hand me the hammer, please. |
+| **drill** | perceuse / percer | Drill a hole in the wall. |
+| **screw** | vis | This screw is too short. |
+| **bolt** | boulon | Check that every bolt is secure. |
+| **nut** | écrou | The nut is loose. |
+| **tighten** | serrer | Tighten the screws clockwise. |
+| **loosen** | desserrer | Loosen the nut before removing the wheel. |
+| **measure** | mesurer | Measure twice, cut once. |
+| **tape measure** | mètre ruban | Use the tape measure to check the width. |
+| **safety goggles** | lunettes de protection | Always wear safety goggles. |
+| **gloves** | gants | Put on your gloves before you start. |
+| **switch off** | éteindre / couper | Switch off the power first. |
+| **plug in** | brancher | Don't plug in the machine yet. |
+| **spare part** | pièce de rechange | We need a spare part for the pump. |
+| **faulty** | défectueux | The cable is faulty. |
+| **replace** | remplacer | Replace the filter every six months. |
+| **maintenance** | entretien / maintenance | The machine needs regular maintenance. |
+
+### 3. L'astuce du jour — Les consignes techniques : impératif + marqueurs de séquence
+
+Une procédure technique anglaise est écrite à l'IMPÉRATIF (base verbale sans sujet) et rythmée par des marqueurs : First, Then, Next, After that, Finally. Les interdictions se disent « Do not / Never + verbe », les vérifications « Make sure (that) + phrase » ou « Make sure to + verbe ». Les particules indiquent le sens : switch on/off, plug in, unplug, screw in, take out.
+
+> **Raccourci :** Procédure = verbe en tête. Ordre = First / Then / Finally. Sécurité = Never… / Make sure… Le sens est dans la particule (on/off, in/out).
+
+- First, switch off the power.
+- Then loosen the four screws.
+- Never open the cover while the machine is running.
+- Make sure the cable is unplugged.
+
+### 4. Les 5 phrases clés
+
+- **Could you pass me the screwdriver?** — Tu peux me passer le tournevis ?
+- **Make sure the power is off before you start.** — Assure-toi que le courant est coupé avant de commencer.
+- **This part is faulty and needs replacing.** — Cette pièce est défectueuse et doit être remplacée.
+- **Turn it clockwise to tighten it.** — Tourne dans le sens des aiguilles d'une montre pour serrer.
+- **Wear your safety goggles at all times.** — Porte tes lunettes de protection en permanence.
+
+### 5. Banque de quiz (21 questions)
+
+#### Catégorie A — Vocabulaire
+
+1. **« Une clé à molette » :**
+   - a) a key
+   - b) a wrench
+   - c) a hammer
+   - d) a lock
+   - ✅ Réponse : **a wrench**
+   - 💡 Wrench (US) / spanner (UK). « Key » est la clé de porte.
+2. **Le contraire de « tighten » :**
+   - a) loosen
+   - b) lose
+   - c) lighten
+   - d) unscrew all
+   - ✅ Réponse : **loosen**
+   - 💡 Tighten (serrer) ↔ loosen (desserrer). « Lose » = perdre.
+3. **« Un écrou » :**
+   - a) a nut
+   - b) a screw
+   - c) a nail
+   - d) a bolt
+   - ✅ Réponse : **a nut**
+   - 💡 Nut = écrou, bolt = boulon, screw = vis, nail = clou.
+4. **« Défectueux » :**
+   - a) defective only in law
+   - b) faulty
+   - c) false
+   - d) failing to
+   - ✅ Réponse : **faulty**
+   - 💡 Faulty (courant) ou defective (plus formel).
+5. **« Une pièce de rechange » :**
+   - a) a change piece
+   - b) a spare part
+   - c) a room of exchange
+   - d) an extra piece of rechange
+   - ✅ Réponse : **a spare part**
+   - 💡 Spare part = pièce détachée / de rechange.
+6. **« Dans le sens des aiguilles d'une montre » :**
+   - a) clockwise
+   - b) watchwise
+   - c) anticlockwise
+   - d) needle way
+   - ✅ Réponse : **clockwise**
+   - 💡 Clockwise ↔ anticlockwise (UK) / counterclockwise (US).
+7. **« Brancher » un appareil :**
+   - a) plug in
+   - b) plug off
+   - c) branch
+   - d) connect out
+   - ✅ Réponse : **plug in**
+   - 💡 Plug in ↔ unplug.
+
+#### Catégorie B — Grammaire & syntaxe
+
+1. **Consigne correcte :**
+   - a) You must to switch off the power.
+   - b) Switch off the power.
+   - c) Switching off the power.
+   - d) To switch off power you.
+   - ✅ Réponse : **Switch off the power.**
+   - 💡 Impératif : base verbale en tête.
+2. **Interdiction correcte :**
+   - a) Don't never touch the blade.
+   - b) Never touch the blade.
+   - c) Not touch the blade.
+   - d) No touching blade you.
+   - ✅ Réponse : **Never touch the blade.**
+   - 💡 Never + base verbale. Pas de double négation.
+3. **Complète : « Make sure ___ the cable is unplugged. »**
+   - a) that
+   - b) to
+   - c) of
+   - d) for
+   - ✅ Réponse : **that**
+   - 💡 Make sure (that) + phrase ; make sure TO + verbe.
+4. **Complète : « The filter needs ___ every year. »**
+   - a) replace
+   - b) replacing
+   - c) to replaced
+   - d) replaced
+   - ✅ Réponse : **replacing**
+   - 💡 Need + -ING a un sens passif : il faut le remplacer.
+5. **Marqueur pour la dernière étape :**
+   - a) First
+   - b) Then
+   - c) Finally
+   - d) Next
+   - ✅ Réponse : **Finally**
+   - 💡 Finally clôt la séquence.
+6. **Remets les mots dans l'ordre.** — mots : _First / machine / off / switch / the_
+   - ✅ Réponse : **First switch off the machine**
+   - 💡 Marqueur + impératif + complément.
+7. **Remets les mots dans l'ordre.** — mots : _Always / goggles / in / safety / the / wear / workshop_
+   - ✅ Réponse : **Always wear safety goggles in the workshop**
+   - 💡 Adverbe de fréquence avant l'impératif.
+
+#### Catégorie C — Orthographe & textes à trous
+
+1. **Écris le mot manquant (tournevis).** — « Pass me the flat ___, please. »
+   - ✅ Réponse : **screwdriver**
+   - 💡 Screw + driver, en un seul mot.
+2. **Écris le mot manquant (entretien).** — « The lift needs regular ___. »
+   - ✅ Réponse : **maintenance**
+   - 💡 M-A-I-N-T-E-N-A-N-C-E (≠ « maintainance »).
+3. **Écris le mot manquant (mesurer).** — « ___ the length before you cut the pipe. »
+   - ✅ Réponse : **Measure**
+   - 💡 M-E-A-S-U-R-E.
+4. **Un mot est mal orthographié. Écris-le correctement.** — « Always wear your safty goggles. »
+   - ✅ « safty » → **safety**
+   - 💡 Safe + ty : le E reste → safety.
+5. **Un mot est mal orthographié. Écris-le correctement.** — « Use the wrentch to loosen the bolt. »
+   - ✅ « wrentch » → **wrench**
+   - 💡 Wrench : pas de T.
+6. **Un mot est mal orthographié. Écris-le correctement.** — « The cable is faulthy, replace it. »
+   - ✅ « faulthy » → **faulty**
+   - 💡 Fault + y : pas de H.
+7. **Un mot est mal orthographié. Écris-le correctement.** — « Tigthen the screws clockwise. »
+   - ✅ « Tigthen » → **Tighten**
+   - 💡 Tight + en : « gh » avant le T.
+
+### 6. Journal de Vie & Débat
+
+Décris en français une réparation ou un montage que tu as déjà fait (meuble, vélo, appareil, installation). Puis rédige en anglais la procédure étape par étape à l'impératif, avec First / Then / Finally, au moins 4 outils et 2 consignes de sécurité.
+
 ## B2 · Leçon 1 — Gérer un conflit par écrit
 
 _Étape Cœur · Aisance professionnelle_
@@ -1799,6 +2511,362 @@ Un phrasal verb = verbe + particule (up, off, over, out…), et la particule cha
 
 Raconte une réunion (travail, association, famille) qui s'est mal ou bien passée : qui parlait, ce qui a été décidé, ce que tu aurais fait différemment. Traduis-la puis rédige en anglais le compte rendu (minutes) en 5 lignes avec 3 action points et au moins 4 phrasal verbs.
 
+## B2 · Leçon 4 — Anglais technique : informatique et dépannage
+
+_Étape Cœur · Aisance professionnelle_
+
+### 1. Thème
+
+Support IT et projets numériques : décrire un bug, guider un utilisateur, faire un point d'avancement technique.
+
+### 2. Les 20 mots du jour
+
+| Anglais | Français | Exemple en contexte |
+|---|---|---|
+| **troubleshoot** | diagnostiquer / dépanner | Let's troubleshoot the connection. |
+| **bug** | bogue / anomalie | We found a bug in the login page. |
+| **crash** | planter | The app crashes when I upload a file. |
+| **freeze** | figer / bloquer | My screen keeps freezing. |
+| **reboot** | redémarrer | Try rebooting your computer. |
+| **update** | mise à jour / mettre à jour | Install the latest update. |
+| **install** | installer | Install the driver first. |
+| **back up** | sauvegarder (copie) | Back up your files every day. |
+| **backup** | sauvegarde | Do we have a recent backup? |
+| **password** | mot de passe | Reset your password. |
+| **log in** | se connecter | I can't log in to my account. |
+| **server** | serveur | The server is down. |
+| **network** | réseau | Check your network settings. |
+| **settings** | paramètres | Open the settings menu. |
+| **error message** | message d'erreur | What does the error message say? |
+| **compatible** | compatible | Is it compatible with Windows? |
+| **deploy** | déployer | We will deploy the fix tonight. |
+| **feature** | fonctionnalité | The new feature is ready. |
+| **workaround** | solution de contournement | There's a workaround until the patch. |
+| **patch** | correctif | The patch fixes the security issue. |
+
+### 3. L'astuce du jour — Le point d'avancement technique : present perfect, passif et « keeps + -ING »
+
+Pour un rapport d'incident : le PRESENT PERFECT annonce l'état actuel (We have identified the bug), le PASSIF décrit ce qui a été fait sans chercher de coupable (The server was restarted at 9 a.m., the issue has been fixed). Pour un problème qui se répète : « keep + -ING » (it keeps crashing). Attention aux paires nom/verbe : a backup / to back up, a login / to log in, a setup / to set up.
+
+> **Raccourci :** État = HAVE + participe. Action sans coupable = passif. Problème récurrent = KEEPS + -ING. Nom collé (backup), verbe séparé (back up).
+
+- We have identified the root cause.
+- The patch was deployed last night.
+- The app keeps crashing on startup.
+- Please back up your data before the update.
+
+### 4. Les 5 phrases clés
+
+- **Have you tried turning it off and on again?** — As-tu essayé de l'éteindre et de le rallumer ?
+- **Could you send me a screenshot of the error message?** — Peux-tu m'envoyer une capture d'écran du message d'erreur ?
+- **We've managed to reproduce the bug.** — Nous avons réussi à reproduire le bogue.
+- **The issue has been fixed in the latest release.** — Le problème est corrigé dans la dernière version.
+- **In the meantime, here's a workaround.** — En attendant, voici une solution de contournement.
+
+### 5. Banque de quiz (21 questions)
+
+#### Catégorie A — Vocabulaire
+
+1. **« Dépanner / diagnostiquer » un problème :**
+   - a) troubleshoot
+   - b) troublemake
+   - c) shoot down
+   - d) debunk
+   - ✅ Réponse : **troubleshoot**
+   - 💡 Troubleshoot = chercher et résoudre la cause d'une panne.
+2. **« Planter » (logiciel) :**
+   - a) to plant
+   - b) to crash
+   - c) to crush
+   - d) to clash
+   - ✅ Réponse : **to crash**
+   - 💡 Crash. « Plant » = planter un arbre, « crush » = écraser.
+3. **« Une solution de contournement » :**
+   - a) a workaround
+   - b) a turnaround
+   - c) a roundabout
+   - d) a walkaround
+   - ✅ Réponse : **a workaround**
+   - 💡 Workaround = solution provisoire.
+4. **« Les paramètres » :**
+   - a) the parameters menu only
+   - b) the settings
+   - c) the setups
+   - d) the adjustings
+   - ✅ Réponse : **the settings**
+   - 💡 Settings (menu des réglages).
+5. **Définition inversée : « a small update that fixes a problem ».**
+   - a) patch
+   - b) feature
+   - c) server
+   - d) crash
+   - ✅ Réponse : **patch**
+   - 💡 Patch = correctif.
+6. **« Une fonctionnalité » :**
+   - a) a functionality only
+   - b) a feature
+   - c) a function key
+   - d) a facility
+   - ✅ Réponse : **a feature**
+   - 💡 Feature est le mot courant en produit numérique.
+7. **« Le serveur est en panne » :**
+   - a) The server is down.
+   - b) The server is off down.
+   - c) The server is broken out.
+   - d) The server fell.
+   - ✅ Réponse : **The server is down.**
+   - 💡 Down = hors service ; up and running = opérationnel.
+
+#### Catégorie B — Grammaire & syntaxe
+
+1. **Complète : « My laptop keeps ___. »**
+   - a) freeze
+   - b) freezing
+   - c) to freeze
+   - d) frozen
+   - ✅ Réponse : **freezing**
+   - 💡 Keep + -ING = problème qui se répète.
+2. **Rapport correct (état actuel) :**
+   - a) We identified the bug yesterday and it fixed.
+   - b) The bug has been fixed.
+   - c) The bug has fixed.
+   - d) The bug is fixing.
+   - ✅ Réponse : **The bug has been fixed.**
+   - 💡 Passif au present perfect : has been + participe.
+3. **Verbe ou nom ? « Please ___ your files. »**
+   - a) backup
+   - b) back up
+   - c) back-upped
+   - d) backing
+   - ✅ Réponse : **back up**
+   - 💡 Verbe en deux mots : back up. Nom en un mot : a backup.
+4. **Complète : « I can't log ___ to my account. »**
+   - a) on
+   - b) in
+   - c) at
+   - d) into on
+   - ✅ Réponse : **in**
+   - 💡 Log in (to) / log out.
+5. **Complète : « The patch ___ deployed last night. »**
+   - a) has
+   - b) was
+   - c) is been
+   - d) have
+   - ✅ Réponse : **was**
+   - 💡 « Last night » → passif au prétérit.
+6. **Remets les mots dans l'ordre.** — mots : _? / Have / rebooting / router / the / tried / you_
+   - ✅ Réponse : **Have you tried rebooting the router ?**
+   - 💡 Try + -ING = essayer pour voir si ça marche.
+7. **Remets les mots dans l'ordre.** — mots : _bug / have / managed / reproduce / the / to / We_
+   - ✅ Réponse : **We have managed to reproduce the bug**
+   - 💡 Manage to + verbe = réussir à.
+
+#### Catégorie C — Orthographe & textes à trous
+
+1. **Écris le mot manquant (mot de passe).** — « I forgot my ___. »
+   - ✅ Réponse : **password**
+   - 💡 Pass + word, en un seul mot.
+2. **Écris le mot manquant (compatible).** — « Is this software ___ with my phone? »
+   - ✅ Réponse : **compatible**
+   - 💡 C-O-M-P-A-T-I-B-L-E (≠ « compatable »).
+3. **Écris le mot manquant (réseau).** — « The ___ is very slow today. »
+   - ✅ Réponse : **network**
+   - 💡 Net + work.
+4. **Un mot est mal orthographié. Écris-le correctement.** — « Please instal the latest update. »
+   - ✅ « instal » → **install**
+   - 💡 Install : deux L (UK accepte « instal » rarement, l'usage standard est install).
+5. **Un mot est mal orthographié. Écris-le correctement.** — « The server crashd at midnight. »
+   - ✅ « crashd » → **crashed**
+   - 💡 Prétérit régulier : crash + ED.
+6. **Un mot est mal orthographié. Écris-le correctement.** — « Check your netwerk settings. »
+   - ✅ « netwerk » → **network**
+   - 💡 Network : net + work.
+7. **Un mot est mal orthographié. Écris-le correctement.** — « We will deploi the fix tonight. »
+   - ✅ « deploi » → **deploy**
+   - 💡 Deploy se termine par -OY.
+
+### 6. Journal de Vie & Débat
+
+Raconte en français une panne informatique ou un problème technique que tu as vécu (téléphone, ordinateur, application, box Internet). Puis rédige en anglais un ticket de support de 100 mots : symptômes (keeps + -ING), ce que tu as déjà essayé (present perfect), et la solution trouvée (passif).
+
+## B2 · Leçon 5 — Mathématiques : géométrie, mesures et équations
+
+_Étape Cœur · Aisance professionnelle_
+
+### 1. Thème
+
+Lire une formule à voix haute, décrire des formes et des mesures, résoudre une équation avec un collègue ou en cours.
+
+### 2. Les 20 mots du jour
+
+| Anglais | Français | Exemple en contexte |
+|---|---|---|
+| **equation** | équation | Solve the equation for x. |
+| **solve** | résoudre | Can you solve this problem? |
+| **variable** | variable | x is the unknown variable. |
+| **squared** | au carré | Five squared is twenty-five. |
+| **cubed** | au cube | Two cubed is eight. |
+| **square root** | racine carrée | The square root of 81 is 9. |
+| **to the power of** | puissance | Ten to the power of three is a thousand. |
+| **area** | aire / superficie | The area of the room is 20 m². |
+| **perimeter** | périmètre | Calculate the perimeter of the square. |
+| **volume** | volume | What is the volume of the tank? |
+| **radius** | rayon | The radius of the circle is 3 cm. |
+| **diameter** | diamètre | The diameter is twice the radius. |
+| **angle** | angle | A right angle measures 90 degrees. |
+| **right angle** | angle droit | The corner forms a right angle. |
+| **triangle** | triangle | A triangle has three sides. |
+| **rectangle** | rectangle | The table is a rectangle. |
+| **length** | longueur | Measure the length of the wall. |
+| **width** | largeur | The width is two metres. |
+| **height** | hauteur | What is the height of the box? |
+| **round up** | arrondir (au supérieur) | Round the result up to the nearest whole number. |
+
+### 3. L'astuce du jour — Lire une formule à voix haute
+
+x² se lit « x squared », x³ « x cubed », xⁿ « x to the power of n » (ou « x to the n »), √x « the square root of x », a/b « a over b ». Les parenthèses : « open bracket … close bracket » (UK) ou « parentheses ». Les noms de mesure se construisent avec une forme adjectivale : the length → 5 metres long, the width → 2 metres wide, the height → 3 metres high/tall.
+
+> **Raccourci :** ² = SQUARED, ³ = CUBED, ⁿ = TO THE POWER OF n, / = OVER. Nom (length) ↔ adjectif (long) : « It is 5 m long ».
+
+- A = πr² → A equals pi r squared.
+- E = mc² → E equals m c squared.
+- x = 3/4 → x equals three over four (three quarters).
+- The pool is 25 metres long and 10 metres wide.
+
+### 4. Les 5 phrases clés
+
+- **Let's solve for x.** — Résolvons pour x.
+- **The area equals length times width.** — L'aire est égale à la longueur fois la largeur.
+- **Round it to two decimal places.** — Arrondis à deux décimales.
+- **The room is four metres long and three metres wide.** — La pièce fait quatre mètres de long et trois de large.
+- **I think there's an error in the second line of the calculation.** — Je pense qu'il y a une erreur à la deuxième ligne du calcul.
+
+### 5. Banque de quiz (21 questions)
+
+#### Catégorie A — Vocabulaire
+
+1. **« Le rayon » d'un cercle :**
+   - a) the ray
+   - b) the radius
+   - c) the diameter
+   - d) the shelf
+   - ✅ Réponse : **the radius**
+   - 💡 Radius (pluriel radii). « Ray » = un rayon de lumière ; le rayon d'un magasin = aisle.
+2. **« x² » se lit :**
+   - a) x two
+   - b) x squared
+   - c) x square root
+   - d) x double
+   - ✅ Réponse : **x squared**
+   - 💡 Squared = au carré.
+3. **« La largeur » :**
+   - a) the large
+   - b) the width
+   - c) the wideness
+   - d) the length
+   - ✅ Réponse : **the width**
+   - 💡 Width (nom) ← wide (adjectif). Length ← long, height ← high.
+4. **« Résoudre une équation » :**
+   - a) resolve an equation
+   - b) solve an equation
+   - c) answer an equation
+   - d) dissolve an equation
+   - ✅ Réponse : **solve an equation**
+   - 💡 Solve = résoudre (problème, équation). Resolve s'emploie pour un conflit ou une décision.
+5. **Définition inversée : « the total length of the sides of a shape ».**
+   - a) area
+   - b) perimeter
+   - c) volume
+   - d) radius
+   - ✅ Réponse : **perimeter**
+   - 💡 Perimeter = périmètre. Area = surface.
+6. **« Un angle droit » :**
+   - a) a straight angle
+   - b) a right angle
+   - c) a direct angle
+   - d) a correct angle
+   - ✅ Réponse : **a right angle**
+   - 💡 Right angle = 90°. Straight angle = 180°.
+7. **« 10³ » se lit :**
+   - a) ten three
+   - b) ten to the power of three
+   - c) ten times three
+   - d) ten over three
+   - ✅ Réponse : **ten to the power of three**
+   - 💡 Ou « ten cubed ».
+
+#### Catégorie B — Grammaire & syntaxe
+
+1. **Complète : « The wall is three metres ___. »**
+   - a) height
+   - b) high
+   - c) highness
+   - d) heights
+   - ✅ Réponse : **high**
+   - 💡 Après la mesure, on utilise l'adjectif : 3 metres high / long / wide.
+2. **« 3/4 » se lit :**
+   - a) three on four
+   - b) three over four
+   - c) three by four
+   - d) three in four parts
+   - ✅ Réponse : **three over four**
+   - 💡 a/b = a over b (ou « three quarters »).
+3. **Complète : « The area ___ length times width. »**
+   - a) equal
+   - b) equals
+   - c) are equal
+   - d) is equals
+   - ✅ Réponse : **equals**
+   - 💡 Sujet singulier → equals.
+4. **Complète : « Round the answer ___ two decimal places. »**
+   - a) to
+   - b) at
+   - c) on
+   - d) for
+   - ✅ Réponse : **to**
+   - 💡 Round TO + précision.
+5. **Question correcte :**
+   - a) How long is the room?
+   - b) How length is the room?
+   - c) What long is the room?
+   - d) How much long is the room?
+   - ✅ Réponse : **How long is the room?**
+   - 💡 How + adjectif : how long, how wide, how high.
+6. **Remets les mots dans l'ordre.** — mots : _eight / is / of / root / sixty-four / square / The_
+   - ✅ Réponse : **The square root of sixty-four is eight**
+   - 💡 « The square root OF » + nombre.
+7. **Remets les mots dans l'ordre.** — mots : _diameter / is / radius / the / The / twice_
+   - ✅ Réponse : **The diameter is twice the radius**
+   - 💡 Twice = deux fois.
+
+#### Catégorie C — Orthographe & textes à trous
+
+1. **Écris le mot manquant (équation).** — « Solve this ___ for y. »
+   - ✅ Réponse : **equation**
+   - 💡 E-Q-U-A-T-I-O-N.
+2. **Écris le mot manquant (périmètre).** — « The ___ of a square is four times the side. »
+   - ✅ Réponse : **perimeter**
+   - 💡 Perimeter : -ETER à la fin (≠ français -ètre).
+3. **Écris le mot manquant (hauteur).** — « What is the ___ of this building? »
+   - ✅ Réponse : **height**
+   - 💡 H-E-I-G-H-T (≠ « hight »).
+4. **Un mot est mal orthographié. Écris-le correctement.** — « Calculate the lenght of the rectangle. »
+   - ✅ « lenght » → **length**
+   - 💡 Length : le G avant le TH (long → length).
+5. **Un mot est mal orthographié. Écris-le correctement.** — « The diametre is ten centimetres. »
+   - ✅ « diametre » → **diameter**
+   - 💡 Diameter en anglais (UK et US) : -ETER.
+6. **Un mot est mal orthographié. Écris-le correctement.** — « A trianle has three sides. »
+   - ✅ « trianle » → **triangle**
+   - 💡 Triangle, comme en français.
+7. **Un mot est mal orthographié. Écris-le correctement.** — « The voluume of the cube is 27 cm³. »
+   - ✅ « voluume » → **volume**
+   - 💡 Volume : un seul U.
+
+### 6. Journal de Vie & Débat
+
+Décris ta pièce préférée ou un objet que tu as fabriqué : formes, dimensions, surface. Explique en français comment tu calculerais sa surface ou son volume, puis traduis en anglais en lisant chaque formule à voix haute (length times width, squared, metres long…).
+
 ## C1 · Leçon 1 — Rédiger un rapport de synthèse
 
 _Étape Avancé · Précision_
@@ -2154,6 +3222,184 @@ Pour frapper fort à l'oral comme à l'écrit, on place un adverbe négatif ou r
 ### 6. Journal de Vie & Débat
 
 Débat : « Faut-il interdire les smartphones aux moins de 15 ans ? » Écris en français un plaidoyer de 200 mots défendant TA position avec une concession et une réfutation. Traduis-le en anglais en utilisant au moins 3 inversions (Not only…, Rarely…, Under no circumstances…) et les mots albeit, nonetheless, compelling.
+
+## C1 · Leçon 3 — Rédiger une spécification technique
+
+_Étape Avancé · Précision_
+
+### 1. Thème
+
+Cahier des charges, documentation, normes : exprimer des exigences sans ambiguïté avec des anglophones (ingénierie, IT, industrie).
+
+### 2. Les 20 mots du jour
+
+| Anglais | Français | Exemple en contexte |
+|---|---|---|
+| **requirement** | exigence | Each requirement must be testable. |
+| **specification** | spécification / cahier des charges | Please read the technical specification. |
+| **shall** | doit (obligation contractuelle) | The system shall log every transaction. |
+| **compliance** | conformité | Compliance with ISO 9001 is mandatory. |
+| **comply with** | se conformer à | The device must comply with EU standards. |
+| **standard** | norme | This cable meets the industry standard. |
+| **tolerance** | tolérance | The tolerance is ± 0.5 mm. |
+| **constraint** | contrainte | Budget is our main constraint. |
+| **deliverable** | livrable | The first deliverable is due in May. |
+| **scope** | périmètre | This feature is out of scope. |
+| **stakeholder** | partie prenante | All stakeholders approved the specification. |
+| **feasibility** | faisabilité | A feasibility study is required. |
+| **throughput** | débit / capacité de traitement | The line has a throughput of 500 units per hour. |
+| **reliability** | fiabilité | Reliability is critical in aviation. |
+| **failure** | défaillance / panne | The probability of failure must be minimal. |
+| **prototype** | prototype | We will test the prototype next week. |
+| **benchmark** | banc d'essai / référence | We ran several benchmarks. |
+| **rated** | nominal | The rated voltage is 230 V. |
+| **ensure** | garantir / veiller à | The design shall ensure user safety. |
+| **drawback** | inconvénient | The main drawback of this design is its weight. |
+
+### 3. L'astuce du jour — SHALL, MUST, SHOULD, MAY : la hiérarchie des exigences
+
+Dans une spécification (et dans les normes type RFC/ISO), chaque modal a un poids contractuel précis : SHALL / MUST = obligatoire, SHOULD = recommandé (on peut s'en écarter avec une justification), MAY = optionnel. On écrit une exigence par phrase, au présent, avec un sujet clair (The system shall…) et des valeurs mesurables (within 2 seconds, ± 0.1 mm). On évite « will » (simple prédiction) et les adjectifs vagues (fast, user-friendly) non chiffrés.
+
+> **Raccourci :** SHALL/MUST = obligatoire · SHOULD = recommandé · MAY = optionnel. Une exigence = un sujet + un modal + un chiffre vérifiable.
+
+- The pump shall deliver 20 litres per minute.
+- The interface should be available in French and English.
+- Users may export reports in PDF format.
+- The response time shall not exceed 2 seconds.
+
+### 4. Les 5 phrases clés
+
+- **This requirement is out of scope for phase one.** — Cette exigence est hors périmètre pour la phase 1.
+- **The tolerance must not exceed ± 0.2 mm.** — La tolérance ne doit pas dépasser ± 0,2 mm.
+- **Could you clarify what "fast" means in measurable terms?** — Pouvez-vous préciser ce que « rapide » signifie en termes mesurables ?
+- **The prototype complies with all safety standards.** — Le prototype est conforme à toutes les normes de sécurité.
+- **Let's agree on the acceptance criteria.** — Mettons-nous d'accord sur les critères d'acceptation.
+
+### 5. Banque de quiz (21 questions)
+
+#### Catégorie A — Vocabulaire
+
+1. **« Un livrable » :**
+   - a) a deliverable
+   - b) a delivery book
+   - c) a liverable
+   - d) a deliverance
+   - ✅ Réponse : **a deliverable**
+   - 💡 Deliverable = résultat attendu d'un projet.
+2. **« Hors périmètre » :**
+   - a) out of scope
+   - b) out of perimeter
+   - c) off range
+   - d) beyond field
+   - ✅ Réponse : **out of scope**
+   - 💡 Scope = périmètre d'un projet.
+3. **« Se conformer à une norme » :**
+   - a) comply with a standard
+   - b) conform a norm
+   - c) apply to a standard
+   - d) obey to a norm
+   - ✅ Réponse : **comply with a standard**
+   - 💡 Comply WITH. « Norm » désigne plutôt une norme sociale.
+4. **Définition inversée : « the amount of work a system can process in a given time ».**
+   - a) throughput
+   - b) output only
+   - c) bandwidth
+   - d) tolerance
+   - ✅ Réponse : **throughput**
+   - 💡 Throughput = débit de traitement.
+5. **« Faisabilité » :**
+   - a) feasibility
+   - b) faisability
+   - c) doability
+   - d) possibleness
+   - ✅ Réponse : **feasibility**
+   - 💡 Feasible → feasibility.
+6. **« Tension nominale » :**
+   - a) rated voltage
+   - b) nominal tension
+   - c) named voltage
+   - d) normal stress
+   - ✅ Réponse : **rated voltage**
+   - 💡 Rated = nominal (rated power, rated voltage).
+7. **Synonyme de « ensure » dans une exigence :**
+   - a) guarantee
+   - b) insure
+   - c) assure someone
+   - d) hope
+   - ✅ Réponse : **guarantee**
+   - 💡 Ensure = garantir. Insure = assurer (contrat d'assurance), assure = rassurer quelqu'un.
+
+#### Catégorie B — Grammaire & syntaxe
+
+1. **Modal d'une exigence OBLIGATOIRE :**
+   - a) may
+   - b) should
+   - c) shall
+   - d) might
+   - ✅ Réponse : **shall**
+   - 💡 Shall (ou must) = obligatoire.
+2. **Modal d'une fonction OPTIONNELLE :**
+   - a) shall
+   - b) must
+   - c) may
+   - d) will
+   - ✅ Réponse : **may**
+   - 💡 May = optionnel.
+3. **Exigence la mieux rédigée :**
+   - a) The app will be fast.
+   - b) The app should be quite fast.
+   - c) The app shall load within 2 seconds.
+   - d) The app must be very fast and nice.
+   - ✅ Réponse : **The app shall load within 2 seconds.**
+   - 💡 Modal contractuel + valeur mesurable.
+4. **Complète : « The response time shall not ___ 2 s. »**
+   - a) exceed
+   - b) exceeds
+   - c) exceeding
+   - d) to exceed
+   - ✅ Réponse : **exceed**
+   - 💡 Après un modal : base verbale.
+5. **Complète : « The device must comply ___ EU regulations. »**
+   - a) to
+   - b) with
+   - c) at
+   - d) by
+   - ✅ Réponse : **with**
+   - 💡 Comply WITH.
+6. **Remets les mots dans l'ordre.** — mots : _every / log / shall / system / The / transaction_
+   - ✅ Réponse : **The system shall log every transaction**
+   - 💡 Sujet + shall + base verbale + complément.
+7. **Remets les mots dans l'ordre.** — mots : _feature / is / of / out / scope / This_
+   - ✅ Réponse : **This feature is out of scope**
+   - 💡 Out of scope = hors périmètre.
+
+#### Catégorie C — Orthographe & textes à trous
+
+1. **Écris le mot manquant (exigence).** — « Each ___ shall be numbered and testable. »
+   - ✅ Réponse : **requirement**
+   - 💡 Require + ment.
+2. **Écris le mot manquant (conformité).** — « ___ with safety standards is mandatory. »
+   - ✅ Réponse : **Compliance**
+   - 💡 Comply → compliance (Y → I).
+3. **Écris le mot manquant (fiabilité).** — « ___ is our top priority. »
+   - ✅ Réponse : **Reliability**
+   - 💡 Reliable → reliability.
+4. **Un mot est mal orthographié. Écris-le correctement.** — « Please read the technical specifcation. »
+   - ✅ « specifcation » → **specification**
+   - 💡 Specific + ation : n'oublie pas le I.
+5. **Un mot est mal orthographié. Écris-le correctement.** — « The tolerence is plus or minus 0.1 mm. »
+   - ✅ « tolerence » → **tolerance**
+   - 💡 Tolerance : -ANCE.
+6. **Un mot est mal orthographié. Écris-le correctement.** — « Budget is our main constrain. »
+   - ✅ « constrain » → **constraint**
+   - 💡 Le nom est « constraint » ; « constrain » est le verbe (contraindre).
+7. **Un mot est mal orthographié. Écris-le correctement.** — « We tested the prototipe last week. »
+   - ✅ « prototipe » → **prototype**
+   - 💡 Prototype : Y comme en grec (typos).
+
+### 6. Journal de Vie & Débat
+
+Imagine l'objet ou le service idéal pour ton travail ou ta vie quotidienne. Décris-le en français, puis rédige en anglais un mini cahier des charges de 8 exigences numérotées (REQ-01…) avec shall / should / may et des valeurs chiffrées.
 
 ## C2 · Leçon 1 — Décoder l'ironie et l'understatement
 
@@ -2511,6 +3757,184 @@ Au-delà de « although », le registre académique dispose de structures plus d
 
 Choisis une idée reçue que tu entends souvent (sur l'argent, l'éducation, la technologie). En français, rédige un paragraphe académique de 200 mots qui la nuance : concession, réserve méthodologique, contre-exemple, conclusion prudente. Traduis-le avec au moins 2 concessives avancées (Much as…, Compelling as… is, Try as… might) et les mots caveat, notwithstanding, insofar as.
 
+## C2 · Leçon 3 — Anglais mathématique : démontrer et raisonner
+
+_Étape Avancé · Maîtrise_
+
+### 1. Thème
+
+Lire et rédiger une démonstration, présenter un raisonnement rigoureux en séminaire ou dans un article scientifique.
+
+### 2. Les 20 mots du jour
+
+| Anglais | Français | Exemple en contexte |
+|---|---|---|
+| **theorem** | théorème | Pythagoras' theorem relates the sides of a right triangle. |
+| **lemma** | lemme | We first prove a lemma. |
+| **proof** | démonstration / preuve | The proof is left to the reader. |
+| **corollary** | corollaire | The following result is a corollary of Theorem 2. |
+| **assume** | supposer / admettre | Assume that n is even. |
+| **suppose** | supposons | Suppose, for contradiction, that x is rational. |
+| **let** | soit (définition) | Let x be a real number. |
+| **hence** | d'où / donc | Hence the function is continuous. |
+| **it follows that** | il s'ensuit que | It follows that a = b. |
+| **if and only if** | si et seulement si | n is even if and only if n² is even. |
+| **contradiction** | contradiction / absurde | This leads to a contradiction. |
+| **converge** | converger | The series converges. |
+| **derivative** | dérivée | The derivative of x² is 2x. |
+| **integral** | intégrale | Compute the integral from 0 to 1. |
+| **infinite** | infini | There are infinitely many primes. |
+| **prime number** | nombre premier | Seven is a prime number. |
+| **real number** | nombre réel | For every real number x, x² ≥ 0. |
+| **holds** | est vérifié(e) | The inequality holds for all n. |
+| **without loss of generality** | sans perte de généralité | Without loss of generality, assume a ≤ b. |
+| **QED** | CQFD | Therefore the claim is true. QED. |
+
+### 3. L'astuce du jour — La grammaire de la démonstration : Let… be, subjonctif et présent intemporel
+
+Les mathématiciens anglophones définissent avec « Let + nom + be » (Let f be a continuous function), une forme de subjonctif. Le raisonnement est au PRÉSENT intemporel (the function converges), même pour un résultat établi plus haut. On enchaîne les étapes avec hence, thus, it follows that, which implies that, et on introduit une hypothèse par « Suppose (that) » ou « Assume (that) ». Le « nous » d'auteur (we) est la norme : We now show that…
+
+> **Raccourci :** Définir = LET x BE… (jamais « Let x is »). Raisonner = présent + WE. Enchaîner = HENCE / THUS / IT FOLLOWS THAT.
+
+- Let n be a positive integer.
+- Suppose that x > 0. Then x² > 0.
+- Hence f is differentiable at a.
+- We now show that the sequence is bounded.
+
+### 4. Les 5 phrases clés
+
+- **Let us first prove the following lemma.** — Démontrons d'abord le lemme suivant.
+- **Suppose, for the sake of contradiction, that…** — Supposons, par l'absurde, que…
+- **This completes the proof.** — Ceci achève la démonstration.
+- **The result follows by induction on n.** — Le résultat s'obtient par récurrence sur n.
+- **The converse does not hold in general.** — La réciproque est fausse en général.
+
+### 5. Banque de quiz (21 questions)
+
+#### Catégorie A — Vocabulaire
+
+1. **« Une démonstration » (mathématiques) :**
+   - a) a demonstration
+   - b) a proof
+   - c) a show
+   - d) a protest
+   - ✅ Réponse : **a proof**
+   - 💡 Proof. « Demonstration » = démonstration pratique ou manifestation.
+2. **« Par récurrence » :**
+   - a) by recurrence
+   - b) by induction
+   - c) by repetition
+   - d) by deduction
+   - ✅ Réponse : **by induction**
+   - 💡 Raisonnement par récurrence = proof by induction.
+3. **« La réciproque » :**
+   - a) the reciprocal
+   - b) the converse
+   - c) the inverse statement only
+   - d) the opposite
+   - ✅ Réponse : **the converse**
+   - 💡 Converse = réciproque. « Reciprocal » = l'inverse d'un nombre (1/x).
+4. **« CQFD » :**
+   - a) QED
+   - b) WWD
+   - c) CQD
+   - d) END
+   - ✅ Réponse : **QED**
+   - 💡 QED = quod erat demonstrandum.
+5. **Définition inversée : « a minor result used to prove a larger theorem ».**
+   - a) lemma
+   - b) corollary
+   - c) axiom
+   - d) dilemma
+   - ✅ Réponse : **lemma**
+   - 💡 Lemma = lemme. Corollary = conséquence directe d'un théorème.
+6. **« The inequality holds » signifie :**
+   - a) l'inégalité tient (est vérifiée)
+   - b) l'inégalité contient
+   - c) l'inégalité est bloquée
+   - d) l'inégalité est retenue
+   - ✅ Réponse : **l'inégalité tient (est vérifiée)**
+   - 💡 Hold = être vrai, être vérifié.
+7. **« La dérivée » :**
+   - a) the derivate
+   - b) the derivative
+   - c) the deriving
+   - d) the drift
+   - ✅ Réponse : **the derivative**
+   - 💡 Derivative (nom). « Derive » = déduire / obtenir.
+
+#### Catégorie B — Grammaire & syntaxe
+
+1. **Définition correcte :**
+   - a) Let x is a real number.
+   - b) Let x be a real number.
+   - c) Let x to be a real number.
+   - d) Let be x a real number.
+   - ✅ Réponse : **Let x be a real number.**
+   - 💡 Let + sujet + BE (base verbale).
+2. **Complète : « Suppose that n ___ even. »**
+   - a) be
+   - b) is
+   - c) being
+   - d) to be
+   - ✅ Réponse : **is**
+   - 💡 Après suppose/assume that : indicatif présent.
+3. **Complète : « It follows ___ the sequence is bounded. »**
+   - a) what
+   - b) that
+   - c) than
+   - d) which
+   - ✅ Réponse : **that**
+   - 💡 It follows THAT + proposition.
+4. **Complète : « ___ loss of generality, assume a ≤ b. »**
+   - a) With
+   - b) Without
+   - c) Within
+   - d) Beyond
+   - ✅ Réponse : **Without**
+   - 💡 Formule figée : without loss of generality (WLOG).
+5. **Temps adapté dans une démonstration :**
+   - a) The series converged.
+   - b) The series converges.
+   - c) The series will have converged.
+   - d) The series was converging.
+   - ✅ Réponse : **The series converges.**
+   - 💡 Présent intemporel pour les vérités mathématiques.
+6. **Remets les mots dans l'ordre.** — mots : _a / contradiction / leads / This / to_
+   - ✅ Réponse : **This leads to a contradiction**
+   - 💡 Lead to = mener à.
+7. **Remets les mots dans l'ordre.** — mots : _by / follows / induction / n / on / result / The_
+   - ✅ Réponse : **The result follows by induction on n**
+   - 💡 Follow by induction ON une variable.
+
+#### Catégorie C — Orthographe & textes à trous
+
+1. **Écris le mot manquant (théorème).** — « By the mean value ___, such a point exists. »
+   - ✅ Réponse : **theorem**
+   - 💡 T-H-E-O-R-E-M.
+2. **Écris le mot manquant (si et seulement si : if and only ___).** — « n is even if and only ___ n² is even. »
+   - ✅ Réponse : **if**
+   - 💡 If and only if (iff).
+3. **Écris le mot manquant (corollaire).** — « The following ___ is immediate. »
+   - ✅ Réponse : **corollary**
+   - 💡 C-O-R-O-L-L-A-R-Y.
+4. **Un mot est mal orthographié. Écris-le correctement.** — « Hense the function is continuous. »
+   - ✅ « Hense » → **Hence**
+   - 💡 Hence : -NCE.
+5. **Un mot est mal orthographié. Écris-le correctement.** — « The proof is by contradition. »
+   - ✅ « contradition » → **contradiction**
+   - 💡 Contra + diction : n'oublie pas le C.
+6. **Un mot est mal orthographié. Écris-le correctement.** — « Compute the integrale of f. »
+   - ✅ « integrale » → **integral**
+   - 💡 Integral : pas de E final en anglais.
+7. **Un mot est mal orthographié. Écris-le correctement.** — « There are infinitly many primes. »
+   - ✅ « infinitly » → **infinitely**
+   - 💡 Infinite + ly : le E reste.
+
+### 6. Journal de Vie & Débat
+
+Choisis un raisonnement de ta vie (pourquoi tu as pris une décision, ou un petit problème logique) et rédige-le en français comme une démonstration : hypothèses, étapes, conclusion. Traduis-le avec Let… be, Suppose that, Hence, It follows that et termine par « This completes the proof. »
+
 ### Consignes générales du journal (rotation quotidienne)
 
 - _Vie_ — Raconte ta journée d'hier, du réveil au coucher : ce que tu as fait, avec qui, et le moment que tu as préféré.
@@ -2715,7 +4139,7 @@ Choisis une idée reçue que tu entends souvent (sur l'argent, l'éducation, la 
 
 ## Socle lexical
 
-349 mots fréquents (plus les 280 mots des leçons) alimentent le dictionnaire pop-up et la recherche FR ⇄ EN.
+349 mots fréquents (plus les 440 mots des leçons) alimentent le dictionnaire pop-up et la recherche FR ⇄ EN.
 
 ---
 
@@ -2723,7 +4147,7 @@ Choisis une idée reçue que tu entends souvent (sur l'argent, l'éducation, la 
 
 ## Examen de passage A1 ➔ A2
 
-Vérifie les fondations : le verbe être, le présent simple, les articles, les quantités et le vocabulaire du quotidien. 80 % requis.
+Vérifie les fondations : le verbe être, le présent simple, les articles, les quantités, les nombres, l'heure et le vocabulaire du quotidien. Ouvert aussi à ceux qui ont déjà le niveau : 80 % requis.
 
 1. _[Grammaire]_ **Complète : « My parents ___ from Senegal. »**
    - a) is
@@ -2821,10 +4245,32 @@ Vérifie les fondations : le verbe être, le présent simple, les articles, les 
    - ✅ **forty** — Forty s'écrit sans U (≠ four, fourteen).
 20. _[Orthographe]_ **Écris le mot manquant (acheter).** — « I want to ___ a new phone. »
    - ✅ **buy** — Buy (acheter) ≠ by (par) ≠ bye (au revoir).
+21. _[Nombres & maths]_ **« 15 » se dit :**
+   - a) fifty
+   - b) fifteen
+   - c) five-teen
+   - d) fiveteen
+   - ✅ **fifteen** — 15 = fifteen (accent sur -TEEN). 50 = fifty.
+22. _[Nombres & maths]_ **« Il est 7 h 30 » :**
+   - a) It's half past seven.
+   - b) It's half to seven.
+   - c) It's seven and half.
+   - d) It's thirty past half seven.
+   - ✅ **It's half past seven.** — Half PAST + heure.
+23. _[Nombres & maths]_ **« Troisième » :**
+   - a) threeth
+   - b) third
+   - c) thirth
+   - d) three
+   - ✅ **third** — First, second, third : les trois premiers ordinaux sont irréguliers.
+24. _[Nombres & maths]_ **Écris le nombre 12 en lettres.** — « A year has ___ months. »
+   - ✅ **twelve** — T-W-E-L-V-E.
+25. _[Nombres & maths]_ **Écris le nombre 40 en lettres.** — « There are ___ students in the room. »
+   - ✅ **forty** — Forty, sans U.
 
 ## Examen de passage A2 ➔ B1
 
-La porte d'entrée de l'autonomie : prétérit, comparatifs, prépositions, futur et structures simples. 80 % requis.
+La porte d'entrée de l'autonomie : prétérit, comparatifs, prépositions, futur, structures simples et calcul en anglais. 80 % requis.
 
 1. _[Grammaire]_ **Complète : « Yesterday we ___ to the beach. »**
    - a) go
@@ -2926,10 +4372,36 @@ La porte d'entrée de l'autonomie : prétérit, comparatifs, prépositions, futu
    - ✅ **between** — B-E-T-W-E-E-N.
 20. _[Orthographe]_ **Écris le comparatif de « happy ».** — « She is ___ now than last year. »
    - ✅ **happier** — Y précédé d'une consonne → IER : happy → happier.
+21. _[Nombres & maths]_ **« 6 × 7 = 42 » se lit :**
+   - a) Six times seven is forty-two.
+   - b) Six times seven are forty-two.
+   - c) Six multiply seven is forty-two.
+   - d) Six by seven make forty-two.
+   - ✅ **Six times seven is forty-two.** — Times pour ×, résultat au singulier (is).
+22. _[Nombres & maths]_ **« Subtract 3 from 10 » donne :**
+   - a) 3 − 10
+   - b) 10 − 3
+   - c) 10 + 3
+   - d) 3 × 10
+   - ✅ **10 − 3** — Subtract A FROM B = B − A.
+23. _[Nombres & maths]_ **« Nombre pair » :**
+   - a) odd number
+   - b) even number
+   - c) pair number
+   - d) equal number
+   - ✅ **even number** — Even = pair, odd = impair.
+24. _[Nombres & maths]_ **« Partageons l'addition » :**
+   - a) Let's split the bill.
+   - b) Let's share the addition.
+   - c) Let's divide the note.
+   - d) Let's cut the sum.
+   - ✅ **Let's split the bill.** — Split the bill (UK) / the check (US).
+25. _[Nombres & maths]_ **Écris le mot manquant (divisé).** — « Twenty ___ by five is four. »
+   - ✅ **divided** — Divided by = divisé par.
 
 ## Examen de passage B1 ➔ B2
 
-Valide l'autonomie : present perfect, past continuous, modaux, conditionnels, faux amis et argumentation. 80 % requis.
+Valide l'autonomie : present perfect, past continuous, modaux, conditionnels, faux amis, argumentation, pourcentages et anglais technique d'atelier. 80 % requis.
 
 1. _[Grammaire]_ **Complète : « I ___ here since 2018. »**
    - a) work
@@ -3031,10 +4503,36 @@ Valide l'autonomie : present perfect, past continuous, modaux, conditionnels, fa
    - ✅ **necessary** — Un C, deux S : ne-C-e-SS-ary (« one collar, two sleeves »).
 20. _[Orthographe]_ **Écris le mot manquant (environnement).** — « We must protect the ___. »
    - ✅ **environment** — E-N-V-I-R-O-N-M-E-N-T : le N avant -ment est souvent oublié.
+21. _[Nombres & maths]_ **« 2,5 % » s'écrit et se lit :**
+   - a) 2,5% — two comma five percent
+   - b) 2.5% — two point five percent
+   - c) 2.5% — two dot five percents
+   - d) 2,5% — two and five percent
+   - ✅ **2.5% — two point five percent** — Décimale = point (point five) ; percent est invariable.
+22. _[Nombres & maths]_ **Complète : « Sales rose ___ 10 % to 2 million. »**
+   - a) by
+   - b) to
+   - c) of
+   - d) at
+   - ✅ **by** — BY = l'écart, TO = le niveau atteint.
+23. _[Anglais technique]_ **Consigne de sécurité correcte :**
+   - a) Never open the cover while the machine is running.
+   - b) Don't never open the cover.
+   - c) You not open the cover.
+   - d) Opening never the cover.
+   - ✅ **Never open the cover while the machine is running.** — Never + impératif, sans double négation.
+24. _[Anglais technique]_ **Le contraire de « tighten » :**
+   - a) loosen
+   - b) lose
+   - c) lighten
+   - d) untie
+   - ✅ **loosen** — Tighten (serrer) ↔ loosen (desserrer).
+25. _[Anglais technique]_ **Écris le mot manquant (sécurité, adjectif + nom : lunettes de protection).** — « Always wear ___ goggles. »
+   - ✅ **safety** — Safety goggles.
 
 ## Examen de passage B2 ➔ C1
 
-Le saut vers la précision : vocabulaire des affaires, phrasal verbs, passif, conditionnels mixtes et nuances. 80 % requis.
+Le saut vers la précision : vocabulaire des affaires, phrasal verbs, passif, conditionnels mixtes, nuances, formules mathématiques et anglais informatique. 80 % requis.
 
 1. _[Phrasal verbs]_ **« We had to ___ the meeting until next week. » (reporter)**
    - a) put off
@@ -3136,10 +4634,36 @@ Le saut vers la précision : vocabulaire des affaires, phrasal verbs, passif, co
    - ✅ **accommodation** — Double C, double M : a-CC-o-MM-odation.
 20. _[Orthographe]_ **Écris le mot manquant (planning).** — « The project is behind ___. »
    - ✅ **schedule** — S-C-H-E-D-U-L-E.
+21. _[Nombres & maths]_ **« x² » se lit :**
+   - a) x two
+   - b) x squared
+   - c) x double
+   - d) x square root
+   - ✅ **x squared** — Squared = au carré.
+22. _[Nombres & maths]_ **Complète : « The pool is 25 metres ___. »**
+   - a) length
+   - b) long
+   - c) longer
+   - d) lengthy
+   - ✅ **long** — Après une mesure : adjectif (long, wide, high).
+23. _[Anglais technique]_ **Complète : « The app keeps ___ when I upload a file. »**
+   - a) crash
+   - b) crashing
+   - c) to crash
+   - d) crashed
+   - ✅ **crashing** — Keep + -ING = problème récurrent.
+24. _[Anglais technique]_ **Verbe correct : « Please ___ your data before the update. »**
+   - a) backup
+   - b) back up
+   - c) back-upped
+   - d) backed
+   - ✅ **back up** — Verbe en deux mots (back up), nom en un mot (a backup).
+25. _[Anglais technique]_ **Écris le mot manquant (solution de contournement, en un mot).** — « Until the patch is released, here's a ___. »
+   - ✅ **workaround** — Work + around.
 
 ## Examen de passage C1 ➔ C2
 
-L'excellence : registre littéraire et académique, ironie, inversions, concessives avancées et précision lexicale. 80 % requis.
+L'excellence : registre littéraire et académique, ironie, inversions, concessives avancées, précision lexicale, langage de la démonstration et spécifications techniques. 80 % requis.
 
 1. _[Ironie & registre]_ **« The weather was, shall we say, less than ideal » (pendant une tempête) relève de :**
    - a) l'understatement ironique
@@ -3241,3 +4765,29 @@ L'excellence : registre littéraire et académique, ironie, inversions, concessi
    - ✅ **occurrence** — Double C, double R : o-CC-u-RR-ence.
 20. _[Orthographe]_ **Écris le mot manquant (insinuation).** — « The article was laced with ___. »
    - ✅ **innuendo** — I-N-N-U-E-N-D-O.
+21. _[Mathématiques]_ **Définition mathématique correcte :**
+   - a) Let f is a continuous function.
+   - b) Let f be a continuous function.
+   - c) Let f to be a continuous function.
+   - d) Let be f a continuous function.
+   - ✅ **Let f be a continuous function.** — Let + sujet + BE (subjonctif).
+22. _[Mathématiques]_ **« La réciproque est fausse » :**
+   - a) The converse does not hold.
+   - b) The reciprocal does not hold.
+   - c) The inverse is not holding.
+   - d) The opposite is wrong in general.
+   - ✅ **The converse does not hold.** — Converse = réciproque ; hold = être vérifié.
+23. _[Anglais technique]_ **Modal d'une exigence OBLIGATOIRE dans une spécification :**
+   - a) may
+   - b) should
+   - c) shall
+   - d) might
+   - ✅ **shall** — Shall/must = obligatoire, should = recommandé, may = optionnel.
+24. _[Anglais technique]_ **Exigence la mieux rédigée :**
+   - a) The system will be fast.
+   - b) The system shall respond within 200 ms.
+   - c) The system should be quite quick.
+   - d) The system must be user-friendly and fast.
+   - ✅ **The system shall respond within 200 ms.** — Modal contractuel + valeur mesurable.
+25. _[Anglais technique]_ **Écris le mot manquant (conformité).** — « ___ with ISO standards is mandatory. »
+   - ✅ **Compliance** — Comply → compliance.

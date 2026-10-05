@@ -7,12 +7,19 @@ export interface ExamEligibility {
   /** null at C2: there is nothing above. */
   exam: Pick<Exam, 'id' | 'fromLevel' | 'toLevel' | 'title' | 'description' | 'passRatio'> | null;
   questionCount: number;
+  /** Always true when an exam exists: a learner who already has the level may test directly. */
   eligible: boolean;
+  /** Lessons of the level not yet completed — a recommendation, never a lock. */
   lessonsRemaining: number;
+  /** True once every lesson of the level is completed (the learner is "ready"). */
+  prepared: boolean;
   attempts: ExamAttempt[];
 }
 
-/** The exam is unlocked once every lesson of the current level has been completed. */
+/**
+ * The exam of the current level is always open (placement-style: someone who already has
+ * the level can prove it without doing the lessons). Lesson completion is reported as advice.
+ */
 export class GetExamEligibilityUseCase {
   constructor(
     private readonly exams: IExamRepository,
@@ -22,7 +29,7 @@ export class GetExamEligibilityUseCase {
   async execute(level: Level): Promise<ExamEligibility> {
     const exam = await this.exams.getExamFrom(level);
     if (!exam || nextLevel(level) === null) {
-      return { exam: null, questionCount: 0, eligible: false, lessonsRemaining: 0, attempts: [] };
+      return { exam: null, questionCount: 0, eligible: false, lessonsRemaining: 0, prepared: false, attempts: [] };
     }
     const [summaries, attempts] = await Promise.all([
       this.courses.getLessonSummaries(level),
@@ -33,8 +40,9 @@ export class GetExamEligibilityUseCase {
     return {
       exam: meta,
       questionCount: questions.length,
-      eligible: lessonsRemaining === 0,
+      eligible: true,
       lessonsRemaining,
+      prepared: lessonsRemaining === 0,
       attempts,
     };
   }
@@ -47,12 +55,11 @@ export class ExamNotAvailableError extends Error {
   }
 }
 
-/** Loads the exam for the learner's current level, refusing it when not yet eligible. */
+/** Loads the exam for the learner's current level (exams of other levels are refused). */
 export class StartExamUseCase {
   constructor(
     private readonly exams: IExamRepository,
     private readonly progress: IProgressRepository,
-    private readonly eligibility: GetExamEligibilityUseCase,
   ) {}
 
   async execute(examId: string): Promise<Exam> {
@@ -61,12 +68,6 @@ export class StartExamUseCase {
     const user = await this.progress.getUserProgress();
     if (exam.fromLevel !== user.currentLevel) {
       throw new ExamNotAvailableError(`Cet examen se passe depuis le niveau ${exam.fromLevel}.`);
-    }
-    const status = await this.eligibility.execute(user.currentLevel);
-    if (!status.eligible) {
-      throw new ExamNotAvailableError(
-        `Termine encore ${status.lessonsRemaining} leçon(s) du niveau ${exam.fromLevel} pour débloquer l'examen.`,
-      );
     }
     return exam;
   }

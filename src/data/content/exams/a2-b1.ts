@@ -11,7 +11,7 @@ export const EXAM_A2_B1: ExamSeed = {
   toLevel: 'B1',
   title: 'Examen de passage A2 ➔ B1',
   description:
-    "La porte d'entrée de l'autonomie : prétérit, comparatifs, prépositions, futur et structures simples. 80 % requis.",
+    "La porte d'entrée de l'autonomie : prétérit, comparatifs, prépositions, futur, structures simples et calcul en anglais. 80 % requis.",
   passRatio: 0.8,
   questions: [
     examMcq(
@@ -152,6 +152,46 @@ export const EXAM_A2_B1: ExamSeed = {
       'She is ___ now than last year.',
       'happier',
       "Y précédé d'une consonne → IER : happy → happier.",
+    ),
+    examMcq(
+      'Nombres & maths',
+      '« 6 × 7 = 42 » se lit :',
+      [
+        'Six times seven is forty-two.',
+        'Six times seven are forty-two.',
+        'Six multiply seven is forty-two.',
+        'Six by seven make forty-two.',
+      ],
+      'Six times seven is forty-two.',
+      'Times pour ×, résultat au singulier (is).',
+    ),
+    examMcq(
+      'Nombres & maths',
+      '« Subtract 3 from 10 » donne :',
+      ['3 − 10', '10 − 3', '10 + 3', '3 × 10'],
+      '10 − 3',
+      'Subtract A FROM B = B − A.',
+    ),
+    examMcq(
+      'Nombres & maths',
+      '« Nombre pair » :',
+      ['odd number', 'even number', 'pair number', 'equal number'],
+      'even number',
+      'Even = pair, odd = impair.',
+    ),
+    examMcq(
+      'Nombres & maths',
+      "« Partageons l'addition » :",
+      ["Let's split the bill.", "Let's share the addition.", "Let's divide the note.", "Let's cut the sum."],
+      "Let's split the bill.",
+      'Split the bill (UK) / the check (US).',
+    ),
+    examFill(
+      'Nombres & maths',
+      'Écris le mot manquant (divisé).',
+      'Twenty ___ by five is four.',
+      'divided',
+      'Divided by = divisé par.',
     ),
   ],
 };
