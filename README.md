@@ -12,7 +12,7 @@ Son cœur est un **Bootcamp quotidien de 7 heures fractionnables** : chaque minu
 ```bash
 npm install
 npx expo start          # puis « a » (Android) / « i » (iOS) dans un development build
-npm test                # 229 tests : logique, cas d'usage, intégrité du contenu
+npm test                # 242 tests : logique, cas d'usage, intégrité du contenu
 npm run typecheck
 npm run export:content  # régénère docs/CONTENU_PEDAGOGIQUE.md depuis les données
 npm run build:lexicon   # régénère le lexique orthographique hors ligne (SCOWL)
@@ -32,6 +32,16 @@ npm run build:lexicon   # régénère le lexique orthographique hors ligne (SCOW
 | Journal de Vie & Débat (FR + traduction EN), correcteur local, coffre-fort                                 | `JournalPage`, `JournalEditor`, `JournalHistoryPage`                  |
 | Dictionnaire pop-up EN ⇄ FR + 🔊 accent UK/US                                                              | `DictionaryPopup`, `DictionaryPage`, `SpeakerButton`                  |
 | Rappel quotidien local + série de jours                                                                    | `ProfilePage`, `ExpoNotificationService`, `computeStreak`             |
+
+### Facile, immersif, motivant
+
+- **Parcours du jour guidé** : quatre étapes courtes (réviser · apprendre · écouter · écrire 3 phrases) et un seul bouton « Continuer » qui ouvre toujours la prochaine étape.
+- **Accueil au premier lancement** : trois écrans, puis « Je débute » (A1 en douceur) ou « J'ai déjà des bases » (test A1 ➔ A2 direct).
+- **Cartes mémoire à répétition espacée** (Leitner, 5 boîtes) : chaque leçon ouverte ajoute ses 20 mots ; un mot oublié revient le jour même, un mot su revient de plus en plus tard.
+- **Écoute active** : on entend l'anglais sans le voir (choisir le sens, puis dictée corrigée avec indulgence : 80 % des mots suffisent), avec réécoute lente.
+- **Mode immersion** : le français reste masqué jusqu'au toucher, les cartes sont lues à voix haute ; « Écouter les 20 mots » dans chaque leçon.
+- **Indices dans les quiz** : deux mauvaises réponses retirées, premier mot placé, première lettre ou mot fautif signalé (demi-points).
+- **Motivation** : points d'expérience (XP) et paliers (Curieux → Maître des mots), 16 succès à débloquer, mot du jour, messages d'encouragement variés et célébration discrète à chaque réussite.
 
 ### Suivi du temps (7 h fractionnables)
 

@@ -4,3 +4,6 @@ export * from './exams';
 export * from './journal';
 export * from './dictionary';
 export * from './settings';
+export * from './motivation';
+export * from './flashcards';
+export * from './listening';

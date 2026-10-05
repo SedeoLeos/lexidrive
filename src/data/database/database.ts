@@ -175,6 +175,41 @@ const MIGRATIONS: readonly string[] = [
     value  TEXT NOT NULL
   );
   `,
+  // ── v2 ─ motivation (XP, achievements) and spaced-repetition flashcards ──────────
+  `
+  CREATE TABLE IF NOT EXISTS xp_log (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    date_key    TEXT NOT NULL,
+    source      TEXT NOT NULL,
+    ref_id      TEXT NOT NULL,
+    points      INTEGER NOT NULL CHECK (points >= 0),
+    created_at  TEXT NOT NULL
+  );
+  CREATE INDEX IF NOT EXISTS idx_xp_date ON xp_log (date_key);
+  CREATE INDEX IF NOT EXISTS idx_xp_source ON xp_log (source, ref_id);
+
+  CREATE TABLE IF NOT EXISTS achievements (
+    id           TEXT PRIMARY KEY NOT NULL,
+    unlocked_at  TEXT NOT NULL
+  );
+
+  -- Leitner deck: one card per English headword, filled as lessons are opened.
+  CREATE TABLE IF NOT EXISTS flashcards (
+    word_key          TEXT PRIMARY KEY NOT NULL,
+    english           TEXT NOT NULL,
+    french            TEXT NOT NULL,
+    example           TEXT NOT NULL,
+    lesson_id         TEXT NOT NULL,
+    level             TEXT NOT NULL CHECK (level IN ${LEVEL_CHECK}),
+    box               INTEGER NOT NULL DEFAULT 1 CHECK (box BETWEEN 1 AND 5),
+    due_date          TEXT NOT NULL,
+    reviews           INTEGER NOT NULL DEFAULT 0,
+    lapses            INTEGER NOT NULL DEFAULT 0,
+    last_reviewed_at  TEXT,
+    created_at        TEXT NOT NULL
+  );
+  CREATE INDEX IF NOT EXISTS idx_flashcards_due ON flashcards (due_date, box);
+  `,
 ];
 
 export const SCHEMA_VERSION = MIGRATIONS.length;

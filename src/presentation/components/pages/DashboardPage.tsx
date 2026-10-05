@@ -4,8 +4,8 @@ import { formatLongFrenchDate } from '@/core/utils/date';
 import { useUseCases } from '../../di/DependenciesProvider';
 import { useAsync } from '../../hooks/useAsync';
 import { AppText, Surface } from '../atoms';
-import { ErrorState, LoadingState, QuickActionTile, SectionHeader, StatBlock } from '../molecules';
-import { DailyGauge, LevelHero } from '../organisms';
+import { ErrorState, LoadingState, QuickActionTile, SectionHeader, StatBlock, XpBadge } from '../molecules';
+import { DailyGauge, DailyPathCard, LevelHero, WordOfTheDayCard } from '../organisms';
 import { ScreenTemplate } from '../templates';
 
 function greeting(date: Date): string {
@@ -15,13 +15,26 @@ function greeting(date: Date): string {
   return 'Bonsoir.';
 }
 
-/** Home: unlocked level, the fractionable 7-hour gauge and quick access to every module. */
+/**
+ * Home: experience level, the guided daily path (one obvious next step), word of the day,
+ * unlocked CEFR level, the fractionable 7-hour gauge and quick access to every module.
+ */
 export function DashboardPage() {
   const router = useRouter();
-  const { getDashboard } = useUseCases();
-  const { data, error, loading, reload } = useAsync(() => getDashboard.execute(), [getDashboard], {
-    refreshOnFocus: true,
-  });
+  const { getDashboard, getDailyPath, getMotivationOverview, getWordOfTheDay } = useUseCases();
+  const { data, error, loading, reload } = useAsync(
+    async () => {
+      const [dashboard, path, motivation, word] = await Promise.all([
+        getDashboard.execute(),
+        getDailyPath.execute(),
+        getMotivationOverview.execute(),
+        getWordOfTheDay.execute(),
+      ]);
+      return { ...dashboard, path, motivation, word };
+    },
+    [getDashboard, getDailyPath, getMotivationOverview, getWordOfTheDay],
+    { refreshOnFocus: true },
+  );
   const now = new Date();
 
   const header = (
@@ -57,6 +70,12 @@ export function DashboardPage() {
 
   return (
     <ScreenTemplate header={header}>
+      <XpBadge xp={data.motivation.xp} />
+
+      <DailyPathCard path={data.path} onOpen={(href) => router.push(href as never)} />
+
+      {data.word ? <WordOfTheDayCard entry={data.word} onPress={() => router.push('/dictionary')} /> : null}
+
       <LevelHero
         level={data.level}
         meta={data.levelMeta}
@@ -80,7 +99,6 @@ export function DashboardPage() {
         <SectionHeader overline="Accès rapide" title="Reprendre là où tu t'es arrêté" />
         {nextLesson ? (
           <QuickActionTile
-            emphasis
             icon="play"
             label={nextLesson.completed ? 'Réviser la leçon' : 'Continuer la leçon'}
             caption={`${nextLesson.level} · ${nextLesson.title}`}
@@ -95,6 +113,18 @@ export function DashboardPage() {
             onPress={() => router.push(`/quiz/${nextLesson.id}`)}
           />
         ) : null}
+        <QuickActionTile
+          icon="layers"
+          label="Révisions"
+          caption="Cartes mémoire à répétition espacée"
+          onPress={() => router.push('/review')}
+        />
+        <QuickActionTile
+          icon="headphones"
+          label="Écoute active"
+          caption="Entendre, comprendre, écrire sous la dictée"
+          onPress={() => router.push('/listening')}
+        />
         <QuickActionTile
           icon="feather"
           label="Journal & Débat"

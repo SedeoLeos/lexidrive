@@ -1,15 +1,18 @@
 import { View } from 'react-native';
 import type { VocabularyItem } from '@/domain/entities';
 import { AppText } from '../atoms';
+import { RevealText } from './RevealText';
 import { SpeakerButton } from './SpeakerButton';
 
 export interface VocabularyRowProps {
   item: VocabularyItem;
   index: number;
+  /** Immersion mode: translation hidden until tapped. */
+  hideTranslation?: boolean;
 }
 
 /** Word | traduction | exemple — with pronunciation for both the word and the sentence. */
-export function VocabularyRow({ item, index }: VocabularyRowProps) {
+export function VocabularyRow({ item, index, hideTranslation = false }: VocabularyRowProps) {
   return (
     <View className="gap-3 py-5">
       <View className="flex-row items-center gap-4">
@@ -20,9 +23,7 @@ export function VocabularyRow({ item, index }: VocabularyRowProps) {
           <AppText variant="heading" className="font-sans">
             {item.english}
           </AppText>
-          <AppText variant="caption" tone="muted">
-            {item.french}
-          </AppText>
+          <RevealText variant="caption" tone="muted" text={item.french} hidden={hideTranslation} />
         </View>
         <SpeakerButton text={item.english} speechKey={`w:${item.english}`} />
       </View>

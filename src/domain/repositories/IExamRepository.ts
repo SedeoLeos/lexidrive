@@ -6,4 +6,5 @@ export interface IExamRepository {
   getExam(id: string): Promise<Exam | null>;
   saveAttempt(examId: string, score: number, maxScore: number, passed: boolean): Promise<void>;
   getAttempts(examId: string): Promise<ExamAttempt[]>;
+  countPassed(): Promise<number>;
 }

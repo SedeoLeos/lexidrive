@@ -13,3 +13,5 @@ export * from './FeedbackPanel';
 export * from './SpellCheckedText';
 export * from './StateViews';
 export * from './ModuleProgressRow';
+export * from './XpBadge';
+export * from './RevealText';

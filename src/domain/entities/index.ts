@@ -5,3 +5,8 @@ export * from './DictionaryEntry';
 export * from './JournalEntry';
 export * from './Progress';
 export * from './Settings';
+export * from './Motivation';
+export * from './Flashcard';
+export * from './Listening';
+export * from './DailyPath';
+export * from './icons';

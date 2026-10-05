@@ -9,6 +9,10 @@ export interface AppSettings {
   reminderMinute: number;
   /** Words the learner told the spell checker to accept. */
   customWords: string[];
+  /** Immersion: French translations hidden until tapped, English read aloud automatically. */
+  immersionMode: boolean;
+  /** Whether the welcome flow has been completed. */
+  onboarded: boolean;
 }
 
 export const DEFAULT_SETTINGS: AppSettings = {
@@ -18,4 +22,6 @@ export const DEFAULT_SETTINGS: AppSettings = {
   reminderHour: 19,
   reminderMinute: 30,
   customWords: [],
+  immersionMode: false,
+  onboarded: false,
 };

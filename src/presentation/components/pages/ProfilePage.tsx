@@ -8,7 +8,16 @@ import { useUseCases } from '../../di/DependenciesProvider';
 import { useAsync } from '../../hooks/useAsync';
 import { useSettings } from '../../state/SettingsProvider';
 import { AppText, Button, Surface } from '../atoms';
-import { LoadingState, SectionHeader, SegmentedControl, SpeakerButton, StatBlock, Stepper } from '../molecules';
+import {
+  LoadingState,
+  SectionHeader,
+  SegmentedControl,
+  SpeakerButton,
+  StatBlock,
+  Stepper,
+  XpBadge,
+} from '../molecules';
+import { AchievementGrid } from '../organisms';
 import { ScreenTemplate } from '../templates';
 
 const DAY_INITIALS = ['D', 'L', 'M', 'M', 'J', 'V', 'S'];
@@ -28,7 +37,10 @@ function closestRate(rate: number): RateValue {
 
 /** Progress overview, pronunciation preferences, daily reminder and offline promise. */
 export function ProfilePage() {
-  const { getProgressOverview } = useUseCases();
+  const { getProgressOverview, getMotivationOverview } = useUseCases();
+  const { data: motivation } = useAsync(() => getMotivationOverview.execute(), [getMotivationOverview], {
+    refreshOnFocus: true,
+  });
   const { settings, update } = useSettings();
   const { data, loading } = useAsync(() => getProgressOverview.execute(), [getProgressOverview], {
     refreshOnFocus: true,
@@ -116,6 +128,40 @@ export function ProfilePage() {
           ) : null}
         </View>
       ) : null}
+
+      {motivation ? (
+        <View className="gap-5">
+          <SectionHeader
+            overline="Expérience"
+            title={`${motivation.unlockedCount} succès sur ${motivation.achievements.length}`}
+          />
+          <XpBadge xp={motivation.xp} />
+          <AppText variant="caption" tone="muted">
+            {motivation.wordsLearned} mot(s) ancré(s) durablement grâce aux révisions.
+          </AppText>
+          <AchievementGrid achievements={motivation.achievements} />
+        </View>
+      ) : null}
+
+      <View className="gap-5">
+        <SectionHeader overline="Immersion" title="Penser en anglais" />
+        <View className="flex-row items-center justify-between rounded-3xl bg-surface px-5 py-4">
+          <View className="flex-1 gap-0.5 pr-4">
+            <AppText variant="subheading">Mode immersion</AppText>
+            <AppText variant="caption" tone="muted">
+              Le français se cache jusqu’au toucher ; les cartes mémoire sont lues à voix haute.
+            </AppText>
+          </View>
+          <Switch
+            value={settings.immersionMode}
+            onValueChange={(immersionMode) => void safeUpdate({ immersionMode })}
+            trackColor={{ false: colors.brandMist, true: colors.brand }}
+            thumbColor={colors.white}
+            ios_backgroundColor={colors.brandMist}
+            accessibilityLabel="Mode immersion"
+          />
+        </View>
+      </View>
 
       <View className="gap-5">
         <SectionHeader overline="Prononciation" title="Accent et vitesse" />

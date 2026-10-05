@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { useRouter } from 'expo-router';
 import type { StudyActivity } from '@/core/constants/bootcamp';
@@ -6,6 +6,8 @@ import { LessonLockedError } from '@/domain/usecases';
 import { useUseCases } from '../../di/DependenciesProvider';
 import { useAsync } from '../../hooks/useAsync';
 import { useStudySession } from '../../hooks/useStudySession';
+import { useSpeech } from '../../hooks/useSpeech';
+import { useSettings } from '../../state/SettingsProvider';
 import { AppText, Button, Pill, Surface } from '../atoms';
 import {
   EmptyState,
@@ -36,10 +38,17 @@ const SECTION_ACTIVITY: Record<Section, StudyActivity> = {
 /** Lesson sheet: 20 words, the grammar shortcut, key phrases — then the quiz bank. */
 export function LessonPage({ id }: { id: string }) {
   const router = useRouter();
-  const { getLesson } = useUseCases();
+  const { getLesson, addLessonToDeck } = useUseCases();
+  const { settings } = useSettings();
+  const { speak, speakingKey } = useSpeech();
   const [section, setSection] = useState<Section>('vocabulary');
   const { data: lesson, error, loading, reload } = useAsync(() => getLesson.execute(id), [getLesson, id]);
   useStudySession(SECTION_ACTIVITY[section]);
+
+  // Opening a lesson feeds its words to the spaced-repetition deck.
+  useEffect(() => {
+    if (lesson) void addLessonToDeck.execute(lesson).catch(() => undefined);
+  }, [lesson, addLessonToDeck]);
 
   if (loading)
     return (
@@ -86,11 +95,25 @@ export function LessonPage({ id }: { id: string }) {
 
       {section === 'vocabulary' ? (
         <View>
-          <AppText variant="overline" tone="muted" className="mb-2">
-            Les 20 mots indispensables du jour
-          </AppText>
+          <View className="mb-2 flex-row items-center justify-between">
+            <AppText variant="overline" tone="muted">
+              Les 20 mots du jour
+            </AppText>
+            <Button
+              label={speakingKey === `all:${lesson.id}` ? 'Arrêter' : 'Écouter les 20 mots'}
+              icon={speakingKey === `all:${lesson.id}` ? 'pause' : 'headphones'}
+              variant="secondary"
+              className="px-4 py-2.5"
+              onPress={() => void speak(lesson.vocabulary.map((v) => v.english).join('. '), `all:${lesson.id}`)}
+            />
+          </View>
+          {settings.immersionMode ? (
+            <AppText variant="caption" tone="brand" className="mb-1">
+              Mode immersion : devine le sens, puis touche pour vérifier.
+            </AppText>
+          ) : null}
           {lesson.vocabulary.map((item, i) => (
-            <VocabularyRow key={item.english} item={item} index={i} />
+            <VocabularyRow key={item.english} item={item} index={i} hideTranslation={settings.immersionMode} />
           ))}
         </View>
       ) : null}
@@ -136,7 +159,12 @@ export function LessonPage({ id }: { id: string }) {
             5 phrases prêtes à l'emploi — écoute, puis répète à voix haute
           </AppText>
           {lesson.keyPhrases.map((ph) => (
-            <PhraseRow key={ph.english} english={ph.english} french={ph.french} />
+            <PhraseRow
+              key={ph.english}
+              english={ph.english}
+              french={ph.french}
+              hideTranslation={settings.immersionMode}
+            />
           ))}
         </View>
       ) : null}
@@ -147,6 +175,13 @@ export function LessonPage({ id }: { id: string }) {
           icon="zap"
           fullWidth
           onPress={() => router.push(`/quiz/${lesson.id}`)}
+        />
+        <Button
+          label="Écoute active sur cette leçon"
+          variant="secondary"
+          icon="headphones"
+          fullWidth
+          onPress={() => router.push(`/listening?lesson=${lesson.id}`)}
         />
         <Button
           label="Écrire dans mon journal"

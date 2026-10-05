@@ -11,6 +11,8 @@ export interface QuizOutcome {
   quiz: Quiz;
   correct: boolean;
   expected: string;
+  /** The learner asked for a hint on this item (half points). */
+  usedHint: boolean;
 }
 
 export interface QuizRunnerProps {
@@ -55,6 +57,8 @@ export function QuizRunner({ quizzes, seed, onFinish }: QuizRunnerProps) {
   const [selected, setSelected] = useState<number | null>(null);
   const [typed, setTyped] = useState('');
   const [placed, setPlaced] = useState<number[]>([]);
+  const [hinted, setHinted] = useState(false);
+  const [eliminated, setEliminated] = useState<number[]>([]);
 
   const quiz = quizzes[index];
 
@@ -104,7 +108,10 @@ export function QuizRunner({ quizzes, seed, onFinish }: QuizRunnerProps) {
 
   const next = () => {
     if (!evaluation) return;
-    const updated = [...outcomes, { quiz, correct: evaluation.correct, expected: evaluation.expected }];
+    const updated = [
+      ...outcomes,
+      { quiz, correct: evaluation.correct, expected: evaluation.expected, usedHint: hinted },
+    ];
     if (index + 1 >= quizzes.length) {
       onFinish(updated);
       return;
@@ -113,9 +120,37 @@ export function QuizRunner({ quizzes, seed, onFinish }: QuizRunnerProps) {
     setSelected(null);
     setTyped('');
     setPlaced([]);
+    setHinted(false);
+    setEliminated([]);
     setEvaluation(null);
     setIndex(index + 1);
   };
+
+  /**
+   * Gentle help, never the full answer: removes two wrong options, places the first word,
+   * points at the misspelled word, or gives the first letter and length.
+   */
+  const applyHint = () => {
+    if (hinted || evaluation) return;
+    setHinted(true);
+    if (quiz.kind === 'mcq') {
+      setEliminated(shuffled.filter((i) => i !== quiz.answerIndex).slice(0, 2));
+      if (selected !== null && selected !== quiz.answerIndex) setSelected(null);
+    } else if (quiz.kind === 'reorder') {
+      setPlaced([0]);
+    }
+  };
+
+  const hintText =
+    !hinted || evaluation
+      ? null
+      : quiz.kind === 'fill'
+        ? `Commence par « ${quiz.answers[0].charAt(0)} » · ${quiz.answers[0].length} lettres`
+        : quiz.kind === 'correct'
+          ? `Le mot fautif est « ${quiz.wrong} »`
+          : quiz.kind === 'reorder'
+            ? 'Le premier mot est placé pour toi.'
+            : 'Deux mauvaises réponses ont été retirées.';
 
   const locked = evaluation !== null;
   const correctSoFar = outcomes.filter((o) => o.correct).length;
@@ -144,6 +179,8 @@ export function QuizRunner({ quizzes, seed, onFinish }: QuizRunnerProps) {
             {shuffled.map((optionIndex, position) => {
               let state: 'idle' | 'selected' | 'correct' | 'wrong' | 'dimmed' =
                 selected === optionIndex ? 'selected' : 'idle';
+              const removed = eliminated.includes(optionIndex);
+              if (removed) state = 'dimmed';
               if (locked) {
                 if (optionIndex === quiz.answerIndex) state = 'correct';
                 else if (optionIndex === selected) state = 'wrong';
@@ -155,7 +192,7 @@ export function QuizRunner({ quizzes, seed, onFinish }: QuizRunnerProps) {
                   letter={LETTERS[position]}
                   label={quiz.options[optionIndex]}
                   state={state}
-                  disabled={locked}
+                  disabled={locked || removed}
                   onPress={() => setSelected(optionIndex)}
                 />
               );
@@ -232,8 +269,21 @@ export function QuizRunner({ quizzes, seed, onFinish }: QuizRunnerProps) {
         ) : null}
       </View>
 
+      {hintText ? (
+        <View className="flex-row items-center gap-2 rounded-full bg-brand-haze px-5 py-3">
+          <AppText variant="caption" tone="brand">
+            💡 {hintText}
+          </AppText>
+        </View>
+      ) : null}
+
       {evaluation ? (
-        <FeedbackPanel correct={evaluation.correct} expected={evaluation.expected} explanation={quiz.explanation} />
+        <FeedbackPanel
+          correct={evaluation.correct}
+          expected={evaluation.expected}
+          explanation={quiz.explanation}
+          seed={hashString(quiz.id) + index}
+        />
       ) : null}
 
       {locked ? (
@@ -244,7 +294,12 @@ export function QuizRunner({ quizzes, seed, onFinish }: QuizRunnerProps) {
           onPress={next}
         />
       ) : (
-        <Button label="Valider" fullWidth disabled={!response} onPress={validate} />
+        <View className="gap-2">
+          <Button label="Valider" fullWidth disabled={!response} onPress={validate} />
+          {!hinted ? (
+            <Button label="Un indice ?" variant="ghost" icon="help-circle" fullWidth onPress={applyHint} />
+          ) : null}
+        </View>
       )}
     </View>
   );

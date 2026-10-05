@@ -16,6 +16,9 @@ export interface IProgressRepository {
   getLessonProgress(lessonId: string): Promise<LessonProgress | null>;
   saveLessonAttempt(lessonId: string, ratio: number, completed: boolean): Promise<void>;
 
+  countCompletedLessons(): Promise<number>;
+  getTotalStudySeconds(): Promise<number>;
+
   addScore(source: ScoreSource, refId: string, score: number, maxScore: number): Promise<void>;
   getScoreHistory(limit: number): Promise<ScoreRecord[]>;
 }

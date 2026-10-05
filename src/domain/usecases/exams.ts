@@ -1,5 +1,6 @@
 import { nextLevel, type Level } from '@/core/constants/levels';
-import type { Exam, ExamAnswer, ExamAttempt, ExamResult } from '../entities';
+import type { Exam, ExamAnswer, ExamAttempt, ExamResult, Reward } from '../entities';
+import type { AwardXpUseCase } from './motivation';
 import { gradeExam } from '../logic/examGrading';
 import type { ICourseRepository, IExamRepository, IProgressRepository } from '../repositories';
 
@@ -77,6 +78,7 @@ export interface ExamSubmission {
   result: ExamResult;
   /** Set when the exam was passed and the learner moved up. */
   promotedTo: Level | null;
+  reward: Reward | null;
 }
 
 /** Grades the exam, records it, and promotes the learner when passed. */
@@ -84,6 +86,7 @@ export class SubmitExamUseCase {
   constructor(
     private readonly exams: IExamRepository,
     private readonly progress: IProgressRepository,
+    private readonly award?: AwardXpUseCase,
   ) {}
 
   async execute(exam: Exam, answers: Readonly<Record<string, ExamAnswer>>): Promise<ExamSubmission> {
@@ -99,6 +102,10 @@ export class SubmitExamUseCase {
         promotedTo = exam.toLevel;
       }
     }
-    return { result, promotedTo };
+    const reward =
+      promotedTo && this.award
+        ? await this.award.execute('exam_passed', exam.id, undefined, `Niveau ${promotedTo} atteint`)
+        : null;
+    return { result, promotedTo, reward };
   }
 }
