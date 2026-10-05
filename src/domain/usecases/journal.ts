@@ -14,7 +14,14 @@ export class GetDailyPromptUseCase {
     private readonly progress: IProgressRepository,
   ) {}
 
-  async execute(now: Date = new Date()): Promise<{ lessonPrompt: JournalPrompt | null; dailyPrompt: JournalPrompt }> {
+  /**
+   * @param lessonId when given (journal opened from a lesson), that lesson's prompt is used
+   *                 instead of the next lesson's.
+   */
+  async execute(
+    now: Date = new Date(),
+    lessonId?: string,
+  ): Promise<{ lessonPrompt: JournalPrompt | null; dailyPrompt: JournalPrompt }> {
     const prompts = await this.journal.getPrompts();
     const pool = prompts.filter((p) => !p.lessonId);
     const dailyPrompt = pool[dayNumber(now) % Math.max(1, pool.length)] ?? {
@@ -24,10 +31,10 @@ export class GetDailyPromptUseCase {
     };
 
     const user = await this.progress.getUserProgress();
-    const next = await this.courses.getNextLesson(user.currentLevel);
+    const targetId = lessonId ?? (await this.courses.getNextLesson(user.currentLevel))?.id;
     let lessonPrompt: JournalPrompt | null = null;
-    if (next) {
-      const lesson = await this.courses.getLesson(next.id);
+    if (targetId) {
+      const lesson = await this.courses.getLesson(targetId);
       if (lesson) {
         lessonPrompt = { id: `lesson:${lesson.id}`, kind: 'debate', text: lesson.journalPrompt, lessonId: lesson.id };
       }

@@ -17,6 +17,7 @@ module.exports = {
           soft: '#6C73B8',
           mist: '#E9EAF4',
           haze: '#F2F2F8',
+          veil: '#EBECF5',
         },
         canvas: '#FAF9F6',
         surface: {

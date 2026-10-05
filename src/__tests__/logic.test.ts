@@ -74,30 +74,70 @@ describe('quiz grading', () => {
   });
 
   it('grades each quiz kind', () => {
-    const mcq: Quiz = { id: '1', category: 'vocabulary', kind: 'mcq', prompt: '', options: ['a', 'b'], answerIndex: 1, explanation: '' };
+    const mcq: Quiz = {
+      id: '1',
+      category: 'vocabulary',
+      kind: 'mcq',
+      prompt: '',
+      options: ['a', 'b'],
+      answerIndex: 1,
+      explanation: '',
+    };
     expect(evaluateQuiz(mcq, { kind: 'mcq', index: 1 }).correct).toBe(true);
     expect(evaluateQuiz(mcq, { kind: 'mcq', index: 0 }).correct).toBe(false);
 
-    const reorder: Quiz = { id: '2', category: 'grammar', kind: 'reorder', prompt: '', words: ['Where', 'are', 'you', 'from', '?'], explanation: '' };
+    const reorder: Quiz = {
+      id: '2',
+      category: 'grammar',
+      kind: 'reorder',
+      prompt: '',
+      words: ['Where', 'are', 'you', 'from', '?'],
+      explanation: '',
+    };
     expect(evaluateQuiz(reorder, { kind: 'reorder', words: ['Where', 'are', 'you', 'from', '?'] }).correct).toBe(true);
     expect(evaluateQuiz(reorder, { kind: 'reorder', words: ['Where', 'you', 'are', 'from', '?'] }).correct).toBe(false);
 
-    const fix: Quiz = { id: '3', category: 'spelling', kind: 'correct', prompt: '', text: 'freind', wrong: 'freind', answers: ['friend'], explanation: '' };
+    const fix: Quiz = {
+      id: '3',
+      category: 'spelling',
+      kind: 'correct',
+      prompt: '',
+      text: 'freind',
+      wrong: 'freind',
+      answers: ['friend'],
+      explanation: '',
+    };
     expect(evaluateQuiz(fix, { kind: 'correct', text: 'Friend' })).toEqual({ correct: true, expected: 'friend' });
   });
 });
 
 describe('exam grading', () => {
   const exam: Exam = {
-    id: 'e', fromLevel: 'A2', toLevel: 'B1', title: '', description: '', passRatio: 0.8,
+    id: 'e',
+    fromLevel: 'A2',
+    toLevel: 'B1',
+    title: '',
+    description: '',
+    passRatio: 0.8,
     questions: Array.from({ length: 5 }, (_, i) => ({
-      id: `q${i}`, section: 's', prompt: '', explanation: '', points: 1,
-      kind: 'mcq' as const, options: ['a', 'b'], answerIndex: 0,
+      id: `q${i}`,
+      section: 's',
+      prompt: '',
+      explanation: '',
+      points: 1,
+      kind: 'mcq' as const,
+      options: ['a', 'b'],
+      answerIndex: 0,
     })),
   };
 
   it('passes at exactly the pass ratio', () => {
-    const answers = { q0: { kind: 'mcq' as const, index: 0 }, q1: { kind: 'mcq' as const, index: 0 }, q2: { kind: 'mcq' as const, index: 0 }, q3: { kind: 'mcq' as const, index: 0 } };
+    const answers = {
+      q0: { kind: 'mcq' as const, index: 0 },
+      q1: { kind: 'mcq' as const, index: 0 },
+      q2: { kind: 'mcq' as const, index: 0 },
+      q3: { kind: 'mcq' as const, index: 0 },
+    };
     const r = gradeExam(exam, answers);
     expect(r.score).toBe(4);
     expect(r.passed).toBe(true);

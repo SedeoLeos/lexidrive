@@ -130,7 +130,8 @@ export async function seedContent(db: SQLiteDatabase): Promise<void> {
       let position = 0;
       for (const q of exam.questions) {
         position += 1;
-        const payload = q.kind === 'mcq' ? { options: q.options, answerIndex: q.answerIndex } : { text: q.text, answers: q.answers };
+        const payload =
+          q.kind === 'mcq' ? { options: q.options, answerIndex: q.answerIndex } : { text: q.text, answers: q.answers };
         await questionStmt.executeAsync({
           $id: examQuestionId(exam.id, position),
           $exam: exam.id,

@@ -96,7 +96,5 @@ export function rankSuggestions(word: string, candidates: Iterable<string>, max 
   }
   scored.sort((x, y) => x.d - y.d || y.p - x.p || x.w.localeCompare(y.w));
   const isCapitalized = /^[A-Z]/.test(word);
-  return scored
-    .slice(0, max)
-    .map((s) => (isCapitalized ? s.w.charAt(0).toUpperCase() + s.w.slice(1) : s.w));
+  return scored.slice(0, max).map((s) => (isCapitalized ? s.w.charAt(0).toUpperCase() + s.w.slice(1) : s.w));
 }

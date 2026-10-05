@@ -22,8 +22,7 @@ export class ExpoSpeechService implements ISpeechService {
     const voices = await this.loadVoices();
     const wanted = accent.toLowerCase();
     const candidates = voices.filter((v) => v.language.replace('_', '-').toLowerCase() === wanted);
-    const best =
-      candidates.find((v) => v.quality === Speech.VoiceQuality.Enhanced) ?? candidates[0] ?? null;
+    const best = candidates.find((v) => v.quality === Speech.VoiceQuality.Enhanced) ?? candidates[0] ?? null;
     this.voicesByAccent[accent] = best?.identifier ?? null;
     return best?.identifier;
   }

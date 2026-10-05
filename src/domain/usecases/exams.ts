@@ -101,4 +101,3 @@ export class SubmitExamUseCase {
     return { result, promotedTo };
   }
 }
-

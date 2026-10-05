@@ -15,9 +15,19 @@ export interface LevelMeta {
 
 export const LEVEL_META: Record<Level, LevelMeta> = {
   A1: { code: 'A1', stage: 'Débutant', title: 'Fondations', tagline: 'Les mots et phrases qui font tenir debout.' },
-  A2: { code: 'A2', stage: 'Débutant', title: 'Quotidien', tagline: 'Se débrouiller seul dans la vie de tous les jours.' },
+  A2: {
+    code: 'A2',
+    stage: 'Débutant',
+    title: 'Quotidien',
+    tagline: 'Se débrouiller seul dans la vie de tous les jours.',
+  },
   B1: { code: 'B1', stage: 'Cœur', title: 'Autonomie', tagline: 'Discuter, raconter, donner son avis sans bloquer.' },
-  B2: { code: 'B2', stage: 'Cœur', title: 'Aisance professionnelle', tagline: 'Négocier, argumenter, travailler avec des anglophones.' },
+  B2: {
+    code: 'B2',
+    stage: 'Cœur',
+    title: 'Aisance professionnelle',
+    tagline: 'Négocier, argumenter, travailler avec des anglophones.',
+  },
   C1: { code: 'C1', stage: 'Avancé', title: 'Précision', tagline: 'Nuance, registre et élégance de la syntaxe.' },
   C2: { code: 'C2', stage: 'Avancé', title: 'Maîtrise', tagline: 'La langue littéraire, académique et ironique.' },
 };

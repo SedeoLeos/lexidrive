@@ -21,3 +21,10 @@ export function shuffle<T>(items: readonly T[], rng: () => number = Math.random)
   }
   return copy;
 }
+
+/** djb2 string hash → unsigned 32-bit int, for deriving per-item seeds. */
+export function hashString(value: string): number {
+  let h = 5381;
+  for (let i = 0; i < value.length; i++) h = ((h << 5) + h + value.charCodeAt(i)) >>> 0;
+  return h;
+}

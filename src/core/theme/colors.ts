@@ -8,6 +8,7 @@ export const colors = {
   brandSoft: '#6C73B8',
   brandMist: '#E9EAF4',
   brandHaze: '#F2F2F8',
+  brandVeil: '#EBECF5',
   canvas: '#FAF9F6',
   surface: '#F4F3EF',
   surfaceRaised: '#EFEEEA',
