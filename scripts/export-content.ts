@@ -1,12 +1,15 @@
 /**
- * Exports the embedded curriculum as a readable document (docs/CONTENU_PEDAGOGIQUE.md),
- * generated from the exact data seeded into SQLite — the two can never diverge.
+ * Exports the embedded curriculum as readable documents, generated from the exact data seeded
+ * into SQLite — the two can never diverge:
+ *  - docs/CONTENU_PEDAGOGIQUE.md : overview, lesson index, dictionary (Volet 2) and exams (Volet 3)
+ *  - docs/contenu/<LEVEL>.md     : every lesson of a level in full, with its quiz bank (Volet 1)
  *
  * Usage: npm run export:content
  */
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { LEVEL_META } from '../src/core/constants/levels';
+import { LEVELS, LEVEL_META } from '../src/core/constants/levels';
+import type { LessonSeed } from '../src/data/content/types';
 import { BOOTCAMP_MODULES, DAILY_GOAL_MINUTES } from '../src/core/constants/bootcamp';
 import { EXAMS, JOURNAL_PROMPTS, LESSONS } from '../src/data/content';
 import { PILLAR_WORDS } from '../src/data/content/dictionary/pillars';
@@ -52,25 +55,8 @@ function quizToMarkdown(q: QuizSeed, n: number): string {
   }
 }
 
-const out: string[] = [];
-out.push('# LexiDrive — Contenu pédagogique (A1 → C2)');
-out.push('');
-out.push(
-  '> Document généré automatiquement depuis `src/data/content` (`npm run export:content`). Il reflète exactement les données insérées dans la base SQLite embarquée.',
-);
-out.push('');
-out.push(`## Le Bootcamp quotidien (${DAILY_GOAL_MINUTES / 60} h fractionnables)`);
-out.push('');
-out.push('| Module | Objectif | Contenu |');
-out.push('|---|---|---|');
-for (const m of BOOTCAMP_MODULES) out.push(`| ${m.label} | ${m.targetMinutes} min | ${m.description} |`);
-out.push('');
-
-out.push('---');
-out.push('');
-out.push('# VOLET 1 — Curriculum et banques de quiz');
-out.push('');
-for (const lesson of LESSONS) {
+function lessonToMarkdown(lesson: LessonSeed): string {
+  const out: string[] = [];
   const meta = LEVEL_META[lesson.level];
   out.push(`## ${lesson.level} · Leçon ${lesson.order} — ${lesson.title}`);
   out.push('');
@@ -110,6 +96,49 @@ for (const lesson of LESSONS) {
   out.push('');
   out.push(lesson.journalPrompt);
   out.push('');
+  return out.join('\n');
+}
+
+const out: string[] = [];
+out.push('# LexiDrive — Contenu pédagogique (A1 → C2)');
+out.push('');
+out.push(
+  '> Document généré automatiquement depuis `src/data/content` (`npm run export:content`). Il reflète exactement les données insérées dans la base SQLite embarquée.',
+);
+out.push('');
+out.push(`## Le Bootcamp quotidien (${DAILY_GOAL_MINUTES / 60} h fractionnables)`);
+out.push('');
+out.push('| Module | Objectif | Contenu |');
+out.push('|---|---|---|');
+for (const m of BOOTCAMP_MODULES) out.push(`| ${m.label} | ${m.targetMinutes} min | ${m.description} |`);
+out.push('');
+
+out.push('---');
+out.push('');
+out.push('# VOLET 1 — Curriculum et banques de quiz');
+out.push('');
+out.push(
+  `${LESSONS.length} leçons, chacune avec 20 mots, une astuce de grammaire, 5 phrases clés, ${LESSONS.reduce((n, l) => n + l.quizzes.length, 0)} quiz au total et une consigne de journal. Le détail complet de chaque niveau est dans \`docs/contenu/\`.`,
+);
+out.push('');
+mkdirSync(join(__dirname, '..', 'docs', 'contenu'), { recursive: true });
+for (const level of LEVELS) {
+  const lessons = LESSONS.filter((l) => l.level === level);
+  const meta = LEVEL_META[level];
+  out.push(`## ${level} · ${meta.title} — ${lessons.length} leçons ([détail](contenu/${level}.md))`);
+  out.push('');
+  out.push('| # | Leçon | Thème | Grammaire |');
+  out.push('|---|---|---|---|');
+  for (const l of lessons) out.push(`| ${l.order} | ${l.title} | ${l.theme} | ${l.grammarTip.title} |`);
+  out.push('');
+  const doc = [
+    `# LexiDrive — Niveau ${level} · ${meta.title}`,
+    '',
+    `> Généré automatiquement (\`npm run export:content\`). ${lessons.length} leçons. [← Retour au sommaire](../CONTENU_PEDAGOGIQUE.md)`,
+    '',
+    ...lessons.map(lessonToMarkdown),
+  ];
+  writeFileSync(join(__dirname, '..', 'docs', 'contenu', `${level}.md`), doc.join('\n'));
 }
 
 out.push('### Consignes générales du journal (rotation quotidienne)');
