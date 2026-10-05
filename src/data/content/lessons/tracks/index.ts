@@ -13,6 +13,9 @@ import { B1_PART3 } from './b1-part3';
 import { B2_PART1 } from './b2-part1';
 import { B2_PART2 } from './b2-part2';
 import { B2_PART3 } from './b2-part3';
+import { C1_PART1 } from './c1-part1';
+import { C1_PART2 } from './c1-part2';
+import { C1_PART3 } from './c1-part3';
 
 /**
  * Generated tracks: authored specs (words, phrases, prompts) + grammar library → full lessons.
@@ -23,4 +26,5 @@ export const GENERATED_LESSONS: LessonSeed[] = [
   ...buildTrack('A2', 4, [...A2_PART1, ...A2_PART2, ...A2_PART3], GRAMMAR_LIBRARY),
   ...buildTrack('B1', 6, [...B1_PART1, ...B1_PART2, ...B1_PART3], GRAMMAR_LIBRARY),
   ...buildTrack('B2', 6, [...B2_PART1, ...B2_PART2, ...B2_PART3], GRAMMAR_LIBRARY),
+  ...buildTrack('C1', 4, [...C1_PART1, ...C1_PART2, ...C1_PART3], GRAMMAR_LIBRARY),
 ];
