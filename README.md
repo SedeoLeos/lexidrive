@@ -12,9 +12,9 @@ Son cœur est un **Bootcamp quotidien de 7 heures fractionnables** : chaque minu
 ```bash
 npm install
 npx expo start          # puis « a » (Android) / « i » (iOS) dans un development build
-npm test                # 242 tests : logique, cas d'usage, intégrité du contenu
+npm test                # ~3 300 tests : logique, cas d'usage, intégrité de chaque leçon
 npm run typecheck
-npm run export:content  # régénère docs/CONTENU_PEDAGOGIQUE.md depuis les données
+npm run export:content  # régénère docs/CONTENU_PEDAGOGIQUE.md et docs/contenu/<niveau>.md
 npm run build:lexicon   # régénère le lexique orthographique hors ligne (SCOWL)
 ```
 
@@ -113,13 +113,14 @@ Les tables de contenu sont ré-insérées quand `CONTENT_VERSION` change ; les d
 
 ## Contenu pédagogique
 
-Tout le contenu est en texte dans `src/data/content/` et lisible dans **[docs/CONTENU_PEDAGOGIQUE.md](docs/CONTENU_PEDAGOGIQUE.md)** :
+Tout le contenu est en texte dans `src/data/content/` et lisible dans **[docs/CONTENU_PEDAGOGIQUE.md](docs/CONTENU_PEDAGOGIQUE.md)** (sommaire) et **`docs/contenu/A1.md` … `C2.md`** (chaque leçon en entier) :
 
-- **Volet 1** : 22 leçons, dont une filière **Nombres & maths** (A1 compter, A2 calculer, B1 pourcentages et graphiques, B2 géométrie et équations, C2 langage de la démonstration) et une filière **Anglais technique** (B1 outils et sécurité, B2 informatique et dépannage, C1 spécifications) ; chacune avec 20 mots, une astuce, 5 phrases, 21 quiz répartis en catégories A/B/C (462 au total) avec explications, et une consigne de journal ; plus 30 consignes générales (vie / débat).
-- **Volet 2** : 56 mots piliers (faux amis, calques) avec alternatives et collocations, ~70 connecteurs et idiomes classés de B1 à C2, et un socle de ~350 mots fréquents, soit 862 entrées de dictionnaire une fois fusionnées avec le vocabulaire des leçons.
+- **Volet 1** : **367 leçons**, de 60 à 63 par niveau (A1 60 · A2 63 · B1 62 · B2 62 · C1 60 · C2 60), dont une filière **Nombres & maths** (A1 compter, A2 calculer, B1 pourcentages et graphiques, B2 géométrie et équations, C2 langage de la démonstration) et une filière **Anglais technique** (B1 outils et sécurité, B2 informatique et dépannage, C1 spécifications). Chaque leçon a 20 mots en contexte, une astuce de grammaire, 5 phrases clés, 21 quiz répartis en catégories A/B/C (**7 707 au total**) avec explications, et une consigne de journal ; plus 30 consignes générales (vie / débat).
+  - Les leçons sont rédigées à la main (thème, mots, exemples, phrases, consigne) dans `src/data/content/lessons/tracks/`. Leur banque de quiz est générée de façon déterministe par `generator.ts` à partir du vocabulaire et d'une bibliothèque de 60 points de grammaire (10 par niveau, `content/grammar/`). Les fautes d'orthographe volontaires sont vérifiées contre le lexique hors ligne : ce ne sont jamais de vrais mots.
+- **Volet 2** : 56 mots piliers (faux amis, calques) avec alternatives et collocations, ~70 connecteurs et idiomes classés de B1 à C2, et un socle de ~350 mots fréquents, soit **4 905 entrées** de dictionnaire une fois fusionnées avec le vocabulaire des leçons.
 - **Volet 3** : 5 examens de passage de 25 questions corrigées (grammaire, vocabulaire, orthographe, nombres et maths, anglais technique).
 
-Les tests `src/__tests__/content.test.ts` vérifient ce contrat : 20 mots, 20+ quiz bien formés dans les 3 catégories, un examen par transition, des fautes volontaires bien signalées par le correcteur, etc.
+Les tests `src/__tests__/content.test.ts` et `generator.test.ts` vérifient ce contrat pour chacune des 367 leçons : 20 mots uniques, au moins 14 exemples contenant leur mot, 21 quiz bien formés (7 par catégorie), aucune phrase réutilisée entre deux exercices, un examen par transition, des fautes volontaires bien signalées par le correcteur, etc.
 
 ## Crédits
 
