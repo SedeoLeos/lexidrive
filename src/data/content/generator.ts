@@ -2,6 +2,7 @@ import type { Level } from '@/core/constants/levels';
 import { createRng, hashString, shuffle } from '@/core/utils/random';
 import type { GrammarTip, KeyPhrase, VocabularyItem } from '@/domain/entities';
 import { LEXICON } from './spelling/lexicon';
+import { PROPER_NOUNS } from './spelling/properNouns';
 import type { LessonSeed, QuizSeed } from './types';
 
 /**
@@ -77,7 +78,7 @@ export function parsePhrases(block: string): KeyPhrase[] {
 
 let lexiconSet: Set<string> | null = null;
 function isRealWord(word: string): boolean {
-  if (!lexiconSet) lexiconSet = new Set(LEXICON.split('\n'));
+  if (!lexiconSet) lexiconSet = new Set([...LEXICON.split('\n'), ...PROPER_NOUNS]);
   return lexiconSet.has(word.toLowerCase());
 }
 

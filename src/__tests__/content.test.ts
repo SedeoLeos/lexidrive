@@ -148,7 +148,14 @@ describe('spelling quizzes agree with the offline spell checker', () => {
   const { LEXICON } = require('@/data/content/spelling/lexicon') as { LEXICON: string };
   // eslint-disable-next-line @typescript-eslint/no-require-imports
   const { isWordCorrect } = require('@/domain/logic/spelling') as typeof import('@/domain/logic/spelling');
-  const lexicon = new Set(LEXICON.split('\n'));
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { PROPER_NOUNS } = require('@/data/content/spelling/properNouns') as { PROPER_NOUNS: string[] };
+  // Mirrors the runtime checker: SCOWL + proper nouns + every dictionary/lesson headword token.
+  const lexicon = new Set([
+    ...LEXICON.split('\n'),
+    ...PROPER_NOUNS,
+    ...LESSONS.flatMap((l) => l.vocabulary.flatMap((v) => v.english.toLowerCase().split(/[^a-z']+/))),
+  ]);
   const HOMOPHONE_TRAPS = ['bred', 'by', 'form', 'fare', 'draught', 'of', 'self-depreciating', 'constrain'];
   const quizzes = LESSONS.flatMap((l) => l.quizzes.map((q) => [l.id, q] as const));
 
