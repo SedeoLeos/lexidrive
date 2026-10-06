@@ -9,6 +9,7 @@ import { useAsync } from '../../hooks/useAsync';
 import { useSettings } from '../../state/SettingsProvider';
 import { AppText, Button, Surface } from '../atoms';
 import {
+  ErrorState,
   LoadingState,
   SectionHeader,
   SegmentedControl,
@@ -42,7 +43,7 @@ export function ProfilePage() {
     refreshOnFocus: true,
   });
   const { settings, update } = useSettings();
-  const { data, loading } = useAsync(() => getProgressOverview.execute(), [getProgressOverview], {
+  const { data, loading, error, reload } = useAsync(() => getProgressOverview.execute(), [getProgressOverview], {
     refreshOnFocus: true,
   });
   const [reminderError, setReminderError] = useState<string | null>(null);
@@ -72,6 +73,7 @@ export function ProfilePage() {
   return (
     <ScreenTemplate header={header}>
       {loading && !data ? <LoadingState /> : null}
+      {!loading && !data ? <ErrorState error={error ?? new Error('Données indisponibles')} onRetry={reload} /> : null}
       {data ? (
         <View className="gap-10">
           <View className="flex-row gap-10">
