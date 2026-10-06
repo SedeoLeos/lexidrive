@@ -12,7 +12,9 @@ export function NavigationTemplate() {
       tabBar={(props) => <FloatingTabBar {...props} />}
       screenOptions={{
         headerShown: false,
-        animation: 'fade',
+        // No tab transition: the 'fade' animation could leave a revisited tab stuck at opacity 0
+        // (blank screen when coming back to Profile).
+        animation: 'none',
         sceneStyle: { backgroundColor: colors.canvas },
       }}
     >
