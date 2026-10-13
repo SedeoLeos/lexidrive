@@ -5,7 +5,7 @@ import { useRouter } from 'expo-router';
 import { colors } from '@/core/theme/colors';
 import { useUseCases } from '../../di/DependenciesProvider';
 import { useSettings } from '../../state/SettingsProvider';
-import { AppText, Button, Icon, type IconName } from '../atoms';
+import { AppText, Button, Icon, Logo, type IconName } from '../atoms';
 
 const SLIDES: { icon: IconName; overline: string; title: string; body: string }[] = [
   {
@@ -58,9 +58,13 @@ export function WelcomePage() {
 
       {!isChoice ? (
         <View className="flex-1 justify-center gap-6">
-          <View className="h-16 w-16 items-center justify-center rounded-full bg-brand-haze">
-            <Icon name={SLIDES[step].icon} size={26} color={colors.brand} />
-          </View>
+          {step === 0 ? (
+            <Logo size={72} />
+          ) : (
+            <View className="h-16 w-16 items-center justify-center rounded-full bg-brand-haze">
+              <Icon name={SLIDES[step].icon} size={26} color={colors.brand} />
+            </View>
+          )}
           <AppText variant="overline" tone="muted">
             {SLIDES[step].overline}
           </AppText>

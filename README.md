@@ -16,6 +16,7 @@ npm test                # ~3 300 tests : logique, cas d'usage, intégrité de ch
 npm run typecheck
 npm run export:content  # régénère docs/CONTENU_PEDAGOGIQUE.md et docs/contenu/<niveau>.md
 npm run build:lexicon   # régénère le lexique orthographique hors ligne (SCOWL)
+npm run build:assets    # régénère icônes, splash et favicon depuis assets/brand/glyph.svg
 ```
 
 > Pour tester le rappel quotidien (`expo-notifications`) dans des conditions réelles, utilise un _development build_ (`npx expo run:android|ios` ou `eas build --profile development`).
@@ -124,4 +125,4 @@ Les tests `src/__tests__/content.test.ts` et `generator.test.ts` vérifient ce c
 
 ## Crédits
 
-Lexique orthographique : SCOWL © 2000-2016 Kevin Atkinson (licence permissive, voir l'en-tête de `src/data/content/spelling/lexicon.ts`). Icônes : Feather. Police : Inter (SIL OFL).
+Lexique orthographique : SCOWL © 2000-2016 Kevin Atkinson (licence permissive, voir l'en-tête de `src/data/content/spelling/lexicon.ts`). Icônes : Feather. Police : Inter (SIL OFL). Logo : un « L » tracé comme une route qui tourne, avec le point du « i » (`assets/brand/`).

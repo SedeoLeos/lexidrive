@@ -7,3 +7,4 @@ export * from './Pill';
 export * from './Surface';
 export * from './TextArea';
 export * from './TextField';
+export * from './Logo';

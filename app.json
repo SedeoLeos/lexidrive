@@ -15,7 +15,7 @@
     "android": {
       "package": "com.lexidrive.app",
       "adaptiveIcon": {
-        "backgroundColor": "#FAF9F6",
+        "backgroundColor": "#3D469D",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -31,7 +31,7 @@
         "expo-splash-screen",
         {
           "image": "./assets/splash-icon.png",
-          "imageWidth": 160,
+          "imageWidth": 120,
           "resizeMode": "contain",
           "backgroundColor": "#FAF9F6"
         }
@@ -39,12 +39,16 @@
       [
         "expo-notifications",
         {
-          "color": "#3D469D"
+          "color": "#3D469D",
+          "icon": "./assets/notification-icon.png"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
     }
   }
 }

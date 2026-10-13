@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Alert, Switch, View } from 'react-native';
+import Constants from 'expo-constants';
 import { LEVEL_META } from '@/core/constants/levels';
 import { colors } from '@/core/theme/colors';
 import { formatClock, formatDuration, fromLocalDateKey } from '@/core/utils/date';
@@ -7,7 +8,7 @@ import type { Accent } from '@/domain/entities';
 import { useUseCases } from '../../di/DependenciesProvider';
 import { useAsync } from '../../hooks/useAsync';
 import { useSettings } from '../../state/SettingsProvider';
-import { AppText, Button, Surface } from '../atoms';
+import { AppText, Button, Logo, Surface } from '../atoms';
 import {
   ErrorState,
   LoadingState,
@@ -273,6 +274,13 @@ export function ProfilePage() {
           Cours, dictionnaire, examens, voix et journal vivent sur ton téléphone. Aucune donnée ne le quitte.
         </AppText>
       </Surface>
+
+      <View className="items-center gap-3 pb-2">
+        <Logo size={40} />
+        <AppText variant="caption" tone="muted">
+          LexiDrive · version {Constants.expoConfig?.version ?? '1.0.0'}
+        </AppText>
+      </View>
     </ScreenTemplate>
   );
 }

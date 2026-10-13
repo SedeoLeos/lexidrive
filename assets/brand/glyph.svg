@@ -1,0 +1,5 @@
+<!-- LexiDrive glyph: an "L" drawn as a road that turns, and the dot of the "i". 1024×1024, centred. -->
+<g transform="translate(-6 34)">
+  <path d="M 400 300 V 600 Q 400 650 450 650 H 640" fill="none" stroke="{{L}}" stroke-width="112" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="640" cy="330" r="60" fill="{{DOT}}"/>
+</g>
